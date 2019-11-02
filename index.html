@@ -1,38 +1,32 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>My Sample</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> 
-<script type="text/javascript"> 
-var new_num = 40; // global variable
-jQuery(document).ready(function(){ 
-	http://api.jquery.com/css/
-	$('p').css({border: '5px solid red', color: 'green', padding: '20px'});
-	
-	// http://api.jquery.com/bind/
-	// http://api.jquery.com/css/
-	// http://api.jquery.com/text/
-	$('#countme').css({
-		margin: '0 auto',
-		backgroundColor: '#ccc',
-		textAlign: 'center',
-		fontSize: '40px'
-	}).bind('click mousemove', function(){
-		var current = parseInt($(this).text(), 10);
-		new_num = new_num + 1
-		$(this).text(current+1).css({fontSize: new_num+'px'})
-	});
-});
-</script>
+<style>
+div {
+width:250px;
+height:300px;
+position:absolute;
+border:1px solid black;
+overflow:hidden;
+}
+
+iframe {
+position:absolute;
+width:450px;
+height:1080px;
+top:-600px;
+right:-10px;
+
+
+</style>
 </head>
 <body>
 
-	<p>Hello</p>
 
-	<p>World</p>
+<iframe src="http://www.vric.org" scrolling="no" frameborder ="no" align="center"> </iframe>
 
-	<div id="countme">0</div>
 
-	<a href="https://api.jquery.com/">Learn more about jQuery's methods</a>
-
+</iframe>
+</div>
 </body>
 </html>
