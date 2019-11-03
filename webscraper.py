@@ -44,7 +44,7 @@ iciArr = []
 iantArr = []
 epicArr = []
 iaccArr = []
-icfArr = []
+icfArr = {}
 
 #IRVING MASJID ICI
 iciIqamahTimings = icisoup.findAll('td', attrs={"class": "jamah"})
@@ -119,17 +119,16 @@ with open('iacc.json', 'w') as outfile:
 
 #ISLAMIC CENTER OF FRISCO ICF
 icfIqamahTimings = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
-icfFprayer = (str("FajrIqamah:"+str(icfIqamahTimings[1].text)).strip())
-icfDprayer = (str("DhurIqamah:"+str(icfIqamahTimings[2].text)).strip())
-icfAprayer = (str("AsrIqamah:"+str(icfIqamahTimings[3].text)).strip())
-icfMprayer = (str("MaghribIqamah:"+str(icfIqamahTimings[4].text)).strip())
-icfIprayer = (str("IshaIqamah:"+str(icfIqamahTimings[5].text)).strip())
+icfArr.update({'FajrIqamah': str(icfIqamahTimings[1].text)})
+icfArr.update({'DhurIqamah': str(icfIqamahTimings[2].text)})
+icfArr.update({'AsrIqamah': str(icfIqamahTimings[3].text)})
+icfArr.update({'MaghribIqamah': str(icfIqamahTimings[4].text)})
+icfArr.update({'IshaIqamah': str(icfIqamahTimings[5].text)})
 
-icfArr.append(icfFprayer)
-icfArr.append(icfDprayer)
-icfArr.append(icfAprayer)
-icfArr.append(icfMprayer)
-icfArr.append(icfIprayer)
+#icfArr.extend(icfDprayer)
+#icfArr.extend(icfAprayer)
+#icfArr.extend(icfMprayer)
+#icfArr.extend(icfIprayer)
 
 icfIqamahJSON = json.dumps(icfArr)
 with open('icf.json', 'w') as outfile:
