@@ -119,11 +119,11 @@ with open('iacc.json', 'w') as outfile:
 
 #ISLAMIC CENTER OF FRISCO ICF
 icfIqamahTimings = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
-icfFprayer = (str("FajrIqamah\":\""+str(icfIqamahTimings[1].text)).strip())
-icfDprayer = (str("DhurIqamah\":\""+str(icfIqamahTimings[2].text)).strip())
-icfAprayer = (str("AsrIqamah\":\""+str(icfIqamahTimings[3].text)).strip())
-icfMprayer = (str("MaghribIqamah\":\""+str(icfIqamahTimings[4].text)).strip())
-icfIprayer = (str("IshaIqamah\":\""+str(icfIqamahTimings[5].text)).strip())
+icfFprayer = (str("FajrIqamah:"+str(icfIqamahTimings[1].text)).strip())
+icfDprayer = (str("DhurIqamah:"+str(icfIqamahTimings[2].text)).strip())
+icfAprayer = (str("AsrIqamah:"+str(icfIqamahTimings[3].text)).strip())
+icfMprayer = (str("MaghribIqamah:"+str(icfIqamahTimings[4].text)).strip())
+icfIprayer = (str("IshaIqamah:"+str(icfIqamahTimings[5].text)).strip())
 
 icfArr.append(icfFprayer)
 icfArr.append(icfDprayer)
