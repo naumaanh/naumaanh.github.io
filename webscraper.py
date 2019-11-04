@@ -92,19 +92,17 @@ with open('iant.json', 'w') as outfile:
 
 #EAST PLANO ISLAMIC CENTER EPIC
 epicIqamahTimings = epicsoup.findAll('td', attrs={"class": "subtext"})
-epicFprayer = "FajrIqamah\":\""+str(epicIqamahTimings[1].text)
-epicDprayer = "DhurIqamah\":\""+str(epicIqamahTimings[4].text)
-epicAprayer = "AsrIqamah\":\""+str(epicIqamahTimings[6].text)
-epicMprayer = "MaghribIqamah\":\""+str(epicIqamahTimings[8].text)
-epicIprayer = "IshaIqamah\":\""+str(epicIqamahTimings[10].text)
-epicArr.append(epicFprayer)
-epicArr.append(epicDprayer)
-epicArr.append(epicAprayer)
-epicArr.append(epicMprayer)
-epicArr.append(epicIprayer)
-epicIqamahJSON = json.dumps(epicArr)
+epicIqamahTimingsAsDictionary = {
+	'FajrIqamah': epicIqamahTimings[1].text,
+	'DhurIqamah': epicIqamahTimings[4].text,
+	'AsrIqamah': epicIqamahTimings[6].text,
+	'MaghribIqamah': epicIqamahTimings[8].text,
+	'IshaIqamah': epicIqamahTimings[10].text,
+}
+epicIqamahTimingsAsList = [epicIqamahTimingsAsDictionary]
+epicIqamahJSON = json.dumps(epicIqamahTimingsAsList)
 with open('epic.json', 'w') as outfile:
-	json.dump(epicArr, outfile)
+	json.dump(epicIqamahTimingsAsList, outfile)
 
 #ISLAMIC ASSOCIATION OF COLLIN COUNTY IACC
 iaccIqamahTimings = iaccsoup.findAll('td', attrs={"style": "text-align:right"})
@@ -145,7 +143,7 @@ icfsoup2 = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})
 print 
 print
 #print
-print iaccIqamahJSON
+print epicIqamahJSON
 #print (content)
 
 
