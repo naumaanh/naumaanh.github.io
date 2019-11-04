@@ -5,6 +5,11 @@ import json
 import urllib
 import requests
 
+class Object:
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__, 
+            sort_keys=True, indent=4)
+
 header = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36',
     'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -119,15 +124,18 @@ with open('iacc.json', 'w') as outfile:
 
 #ISLAMIC CENTER OF FRISCO ICF
 icfIqamahTimings = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
+z = {
+	'FajrIqamah': icfIqamahTimings[1].text,
+	'DhurIqamah': icfIqamahTimings[2].text,
+	'AsrIqamah': icfIqamahTimings[3].text,
+	'MaghribIqamah': icfIqamahTimings[4].text,
+	'IshaIqamah': icfIqamahTimings[5].text,
+}
+i = [z]
 
-icfArr.append({'FajrIqamah': str(icfIqamahTimings[1].text)})
-icfArr.append({'DhurIqamah': str(icfIqamahTimings[2].text)})
-icfArr.append({'AsrIqamah': str(icfIqamahTimings[3].text)})
-icfArr.append({'MaghribIqamah': str(icfIqamahTimings[4].text)})
-icfArr.append({'IshaIqamah': str(icfIqamahTimings[5].text)})
-icfIqamahJSON = json.dumps(icfArr)
+icfIqamahJSON = json.dumps(i)
 with open('icf.json', 'w') as outfile:
-	json.dump(icfArr, outfile)	
+	json.dump(i, outfile)	
 
 icfsoup2 = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})
 print 
