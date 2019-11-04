@@ -43,29 +43,21 @@ epicsoup = BeautifulSoup(epicHTML, "html.parser")
 iaccsoup = BeautifulSoup(iaccHTML, "html.parser")
 icfsoup = BeautifulSoup(icfHTML, "html.parser")
 
-iciArr = []
-#UNUSED: VRIC ALREADY HAS PREFORMED JSON
-#vricArr = []
-iantArr = []
-epicArr = []
-iaccArr = []
-icfArr = []
 
 #IRVING MASJID ICI
 iciIqamahTimings = icisoup.findAll('td', attrs={"class": "jamah"})
-iciFprayer = "FajrIqamah\":\""+str(iciIqamahTimings[0].text)
-iciDprayer = "DhurIqamah\":\""+str(iciIqamahTimings[1].text)
-iciAprayer = "AsrIqamah\":\""+str(iciIqamahTimings[2].text)
-iciMprayer = "MaghribIqamah\":\""+str(iciIqamahTimings[3].text)
-iciIprayer = "IshaIqamah\":\""+str(iciIqamahTimings[4].text)
-iciArr.append(iciFprayer)
-iciArr.append(iciDprayer)
-iciArr.append(iciAprayer)
-iciArr.append(iciMprayer)
-iciArr.append(iciIprayer)
-iciIqamahJSON = json.dumps(iciArr)
+iciIqamahTimingsAsDictionary = {
+	'FajrIqamah': iciIqamahTimings[0].text,
+	'DhurIqamah': iciIqamahTimings[1].text,
+	'AsrIqamah': iciIqamahTimings[2].text,
+	'MaghribIqamah': iciIqamahTimings[3].text,
+	'IshaIqamah': iciIqamahTimings[4].text,
+}
+iciIqamahTimingsAsList = [iciIqamahTimingsAsDictionary]
+
+iciIqamahJSON = json.dumps(iciIqamahTimingsAsList)
 with open('ici.json', 'w') as outfile:
-	json.dump(iciArr, outfile)
+	json.dump(iciIqamahTimingsAsList, outfile)
 
 #VALLEY RANCH ISLAMIC CENTER VRIC
 vricResponse = urllib.urlopen(vricURL)
@@ -138,10 +130,10 @@ with open('icf.json', 'w') as outfile:
 	json.dump(icfIqamahTimingsAsList, outfile)	
 
 icfsoup2 = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})
-print 
+print vricJSON
 print
 #print
-print iantIqamahJSON
+print iciIqamahJSON
 #print (content)
 
 
