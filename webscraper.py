@@ -76,19 +76,17 @@ with open('vric.json', 'w') as outfile:
 
 #ISLAMIC ASSOCIATION OF NORTH TEXAS IANT
 iantIqamahTimings = iantsoup.findAll('td', attrs={"class": "mit_time"})
-iantFprayer = "FajrIqamah\":\""+str(iantIqamahTimings[1].text)
-iantDprayer = "DhurIqamah\":\""+str(iantIqamahTimings[3].text)
-iantAprayer = "AsrIqamah\":\""+str(iantIqamahTimings[5].text)
-iantMprayer = "MaghribIqamah\":\" 10 minutes after "+str(iantIqamahTimings[6].text)
-iantIprayer = "IshaIqamah\":\""+str(iantIqamahTimings[9].text)
-iantArr.append(iantFprayer)
-iantArr.append(iantDprayer)
-iantArr.append(iantAprayer)
-iantArr.append(iantMprayer)
-iantArr.append(iantIprayer)
-iantIqamahJSON = json.dumps(iantArr)
+iantIqamahTimingsAsDictionary = {
+	'FajrIqamah': iantIqamahTimings[1].text,
+	'DhurIqamah': iantIqamahTimings[3].text,
+	'AsrIqamah': iantIqamahTimings[5].text,
+	'MaghribIqamah': '10 minutes after '+iantIqamahTimings[6].text,
+	'IshaIqamah': iantIqamahTimings[9].text,
+}
+iantIqamahTimingsAsList = [iantIqamahTimingsAsDictionary]
+iantIqamahJSON = json.dumps(iantIqamahTimingsAsList)
 with open('iant.json', 'w') as outfile:
-	json.dump(iantArr, outfile)
+	json.dump(iantIqamahTimingsAsList, outfile)
 
 #EAST PLANO ISLAMIC CENTER EPIC
 epicIqamahTimings = epicsoup.findAll('td', attrs={"class": "subtext"})
@@ -106,11 +104,11 @@ with open('epic.json', 'w') as outfile:
 
 #ISLAMIC ASSOCIATION OF COLLIN COUNTY IACC
 iaccIqamahTimings = iaccsoup.findAll('td', attrs={"style": "text-align:right"})
-iaccFprayer = ((str(iaccIqamahTimings[0].text)).strip()+'AM')
-iaccDprayer = ((str(iaccIqamahTimings[2].text)).strip()+'PM')
-iaccAprayer = ((str(iaccIqamahTimings[3].text)).strip()+'PM')
-iaccMprayer = ((str(iaccIqamahTimings[4].text)).strip()+'PM')
-iaccIprayer = ((str(iaccIqamahTimings[5].text)).strip()+'PM')
+iaccFprayer = ((str(iaccIqamahTimings[0].text)).strip()+' AM')
+iaccDprayer = ((str(iaccIqamahTimings[2].text)).strip()+' PM')
+iaccAprayer = ((str(iaccIqamahTimings[3].text)).strip()+' PM')
+iaccMprayer = ((str(iaccIqamahTimings[4].text)).strip()+' PM')
+iaccIprayer = ((str(iaccIqamahTimings[5].text)).strip()+' PM')
 iaccIqamahTimingsAsDictionary = {
 	'FajrIqamah': iaccFprayer,
 	'DhurIqamah': iaccDprayer,
@@ -143,7 +141,7 @@ icfsoup2 = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})
 print 
 print
 #print
-print epicIqamahJSON
+print iantIqamahJSON
 #print (content)
 
 
