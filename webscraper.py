@@ -125,15 +125,9 @@ icfArr.append({'DhurIqamah': str(icfIqamahTimings[2].text)})
 icfArr.append({'AsrIqamah': str(icfIqamahTimings[3].text)})
 icfArr.append({'MaghribIqamah': str(icfIqamahTimings[4].text)})
 icfArr.append({'IshaIqamah': str(icfIqamahTimings[5].text)})
-#icfArr.append("IqamahTimings:", (str("FajrIqamah\":\""+str(icfIqamahTimings[1].text)).strip(), str("DhurIqamah\":\""+str(icfIqamahTimings[2].text)).strip()))
-#icfArr.extend(icfDprayer)
-#icfArr.extend(icfAprayer)
-#icfArr.extend(icfMprayer)
-#icfArr.extend(icfIprayer)
-
 icfIqamahJSON = json.dumps(icfArr)
 with open('icf.json', 'w') as outfile:
-	json.dumps(icfArr, outfile, indent=2)	
+	json.dump(icfArr, outfile)	
 
 icfsoup2 = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})
 print 
