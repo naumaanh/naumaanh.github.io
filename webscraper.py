@@ -108,40 +108,44 @@ with open('epic.json', 'w') as outfile:
 
 #ISLAMIC ASSOCIATION OF COLLIN COUNTY IACC
 iaccIqamahTimings = iaccsoup.findAll('td', attrs={"style": "text-align:right"})
-iaccFprayer = (str("FajrIqamah\":\""+str(iaccIqamahTimings[0].text)).strip())
-iaccDprayer = (str("DhurIqamah\":\""+str(iaccIqamahTimings[2].text)).strip())
-iaccAprayer = (str("AsrIqamah\":\""+str(iaccIqamahTimings[3].text)).strip())
-iaccMprayer = (str("MaghribIqamah\":\""+str(iaccIqamahTimings[4].text)).strip())
-iaccIprayer = (str("IshaIqamah\":\""+str(iaccIqamahTimings[5].text)).strip())
-iaccArr.append(iaccFprayer)
-iaccArr.append(iaccDprayer)
-iaccArr.append(iaccAprayer)
-iaccArr.append(iaccMprayer)
-iaccArr.append(iaccIprayer)
-iaccIqamahJSON = json.dumps(iaccArr)
+iaccFprayer = ((str(iaccIqamahTimings[0].text)).strip()+'AM')
+iaccDprayer = ((str(iaccIqamahTimings[2].text)).strip()+'PM')
+iaccAprayer = ((str(iaccIqamahTimings[3].text)).strip()+'PM')
+iaccMprayer = ((str(iaccIqamahTimings[4].text)).strip()+'PM')
+iaccIprayer = ((str(iaccIqamahTimings[5].text)).strip()+'PM')
+iaccIqamahTimingsAsDictionary = {
+	'FajrIqamah': iaccFprayer,
+	'DhurIqamah': iaccDprayer,
+	'AsrIqamah': iaccAprayer,
+	'MaghribIqamah': iaccMprayer,
+	'IshaIqamah': iaccIprayer,
+}
+
+iaccIqamahTimingsAsList = [iaccIqamahTimingsAsDictionary]
+iaccIqamahJSON = json.dumps(iaccIqamahTimingsAsList)
 with open('iacc.json', 'w') as outfile:
-	json.dump(iaccArr, outfile)
+	json.dump(iaccIqamahTimingsAsList, outfile)
 
 #ISLAMIC CENTER OF FRISCO ICF
 icfIqamahTimings = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
-z = {
+icfIqamahTimingsAsDictionary = {
 	'FajrIqamah': icfIqamahTimings[1].text,
 	'DhurIqamah': icfIqamahTimings[2].text,
 	'AsrIqamah': icfIqamahTimings[3].text,
 	'MaghribIqamah': icfIqamahTimings[4].text,
 	'IshaIqamah': icfIqamahTimings[5].text,
 }
-i = [z]
+icfIqamahTimingsAsList = [icfIqamahTimingsAsDictionary]
 
-icfIqamahJSON = json.dumps(i)
+icfIqamahJSON = json.dumps(icfIqamahTimingsAsList)
 with open('icf.json', 'w') as outfile:
-	json.dump(i, outfile)	
+	json.dump(icfIqamahTimingsAsList, outfile)	
 
 icfsoup2 = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})
 print 
 print
 #print
-print icfIqamahJSON
+print iaccIqamahJSON
 #print (content)
 
 
