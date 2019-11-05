@@ -47,7 +47,7 @@ icfsoup = BeautifulSoup(icfHTML, "html.parser")
 #IRVING MASJID ICI
 iciIqamahTimings = icisoup.findAll('td', attrs={"class": "jamah"})
 iciIqamahTimingsAsDictionary = {
-	"Islamic Center of Irving": [
+	"iqamahTimings": [
 	{'FajrIqamah': iciIqamahTimings[0].text},
 	{'DhurIqamah': iciIqamahTimings[1].text},
 	{'AsrIqamah': iciIqamahTimings[2].text},
@@ -66,7 +66,7 @@ with open('ici.json', 'w') as outfile:
 vricResponse = urllib.urlopen(vricURL)
 vricJSON = json.loads(vricResponse.read())
 vricIqamahTimingsAsDictionary = {
-	"Valley Ranch Islamic Center": [
+	"iqamahTimings": [
 	{'FajrIqamah': vricJSON['fajrIqamah']},
 	{'DhurIqamah': vricJSON['duhrIqamah']},
 	{'AsrIqamah': vricJSON['asrIqamah']},
@@ -84,7 +84,7 @@ with open('vric.json', 'w') as outfile:
 #ISLAMIC ASSOCIATION OF NORTH TEXAS IANT
 iantIqamahTimings = iantsoup.findAll('td', attrs={"class": "mit_time"})
 iantIqamahTimingsAsDictionary = {
-	"Islamic Association of North Texas": [
+	"iqamahTimings": [
 	{'FajrIqamah': iantIqamahTimings[1].text},
 	{'DhurIqamah': iantIqamahTimings[3].text},
 	{'AsrIqamah': iantIqamahTimings[5].text},
@@ -103,7 +103,7 @@ with open('iant.json', 'w') as outfile:
 #EAST PLANO ISLAMIC CENTER EPIC
 epicIqamahTimings = epicsoup.findAll('td', attrs={"class": "subtext"})
 epicIqamahTimingsAsDictionary = {
-	"East Plano Islamic Center": [
+	"iqamahTimings": [
 	{'FajrIqamah': epicIqamahTimings[1].text},
 	{'DhurIqamah': epicIqamahTimings[4].text},
 	{'AsrIqamah': epicIqamahTimings[6].text},
@@ -127,7 +127,7 @@ iaccAprayer = ((str(iaccIqamahTimings[3].text)).strip()+' PM')
 iaccMprayer = ((str(iaccIqamahTimings[4].text)).strip()+' PM')
 iaccIprayer = ((str(iaccIqamahTimings[5].text)).strip()+' PM')
 iaccIqamahTimingsAsDictionary = {
-	"Islamic Association of Collin County": [
+	"iqamahTimings": [
 	{'FajrIqamah': iaccFprayer},
 	{'DhurIqamah': iaccDprayer},
 	{'AsrIqamah': iaccAprayer},
@@ -146,7 +146,7 @@ with open('iacc.json', 'w') as outfile:
 #ISLAMIC CENTER OF FRISCO ICF
 icfIqamahTimings = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
 icfIqamahTimingsAsDictionary = {
-	"Islamic Association of Frisco": [
+	"iqamahTimings": [
 	{'FajrIqamah': icfIqamahTimings[1].text},
 	{'DhurIqamah': icfIqamahTimings[2].text},
 	{'AsrIqamah': icfIqamahTimings[3].text},
