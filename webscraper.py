@@ -62,10 +62,18 @@ with open('ici.json', 'w') as outfile:
 #VALLEY RANCH ISLAMIC CENTER VRIC
 vricResponse = urllib.urlopen(vricURL)
 vricJSON = json.loads(vricResponse.read())
-vricPrayerJSON = json.dumps(vricJSON)
+vricIqamahTimingsAsDictionary = {
+	'FajrIqamah': vricJSON['fajrIqamah'],
+	'DhurIqamah': vricJSON['duhrIqamah'],
+	'AsrIqamah': vricJSON['asrIqamah'],
+	'MaghribIqamah': vricJSON['maghribIqamah'],
+	'IshaIqamah': vricJSON['ishaIqamah'],
+}
+vricIqamahTimingsAsList = [vricIqamahTimingsAsDictionary]
+vricPrayerJSON = json.dumps(vricIqamahTimingsAsList)
 with open('vric.json', 'w') as outfile:
-	json.dump(vricJSON, outfile)
-
+	json.dump(vricIqamahTimingsAsList, outfile)
+	
 #ISLAMIC ASSOCIATION OF NORTH TEXAS IANT
 iantIqamahTimings = iantsoup.findAll('td', attrs={"class": "mit_time"})
 iantIqamahTimingsAsDictionary = {
@@ -128,12 +136,3 @@ icfIqamahTimingsAsList = [icfIqamahTimingsAsDictionary]
 icfIqamahJSON = json.dumps(icfIqamahTimingsAsList)
 with open('icf.json', 'w') as outfile:
 	json.dump(icfIqamahTimingsAsList, outfile)	
-
-icfsoup2 = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})
-print vricJSON
-print
-#print
-print iciIqamahJSON
-#print (content)
-
-
