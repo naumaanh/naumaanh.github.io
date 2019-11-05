@@ -77,19 +77,24 @@ vricPrayerJSON = json.dumps(vricIqamahTimingsAsList)
 with open('vric.json', 'w') as outfile:
 	json.dump(vricIqamahTimingsAsList, outfile)
 	
+
+
+
 #ISLAMIC ASSOCIATION OF NORTH TEXAS IANT
 iantIqamahTimings = iantsoup.findAll('td', attrs={"class": "mit_time"})
 iantIqamahTimingsAsDictionary = {
-	'FajrIqamah': iantIqamahTimings[1].text,
-	'DhurIqamah': iantIqamahTimings[3].text,
-	'AsrIqamah': iantIqamahTimings[5].text,
-	'MaghribIqamah': '10 minutes after '+iantIqamahTimings[6].text,
-	'IshaIqamah': iantIqamahTimings[9].text,
+	'FajrIqamah': iantIqamahTimings[1].text+"AM",
+	'DhurIqamah': iantIqamahTimings[3].text+"PM",
+	'AsrIqamah': iantIqamahTimings[5].text+"PM",
+	'MaghribIqamah': '10 minutes after '+iantIqamahTimings[6].text+"PM",
+	'IshaIqamah': iantIqamahTimings[9].text+"PM",
 }
 iantIqamahTimingsAsList = [iantIqamahTimingsAsDictionary]
 iantIqamahJSON = json.dumps(iantIqamahTimingsAsList)
 with open('iant.json', 'w') as outfile:
 	json.dump(iantIqamahTimingsAsList, outfile)
+
+
 
 #EAST PLANO ISLAMIC CENTER EPIC
 epicIqamahTimings = epicsoup.findAll('td', attrs={"class": "subtext"})
