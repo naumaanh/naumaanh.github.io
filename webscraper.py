@@ -45,7 +45,17 @@ icfsoup = BeautifulSoup(icfHTML, "html.parser")
 
 
 #IRVING MASJID ICI
+
 iciIqamahTimings = icisoup.findAll('td', attrs={"class": "jamah"})
+iciAdhanTimings = icisoup.findAll('td')
+
+iciAdhanTimingsAsDictionary = {
+	"FajrAdhan": iciAdhanTimings[0].text,
+	'DhurAdhan': iciAdhanTimings[3].text,
+	'AsrAdhan': iciAdhanTimings[5].text,
+	'MaghribAdhan': iciAdhanTimings[7].text,
+	'IshaAdhan': iciAdhanTimings[9].text,
+}
 iciIqamahTimingsAsDictionary = {
 	"FajrIqamah": iciIqamahTimings[0].text,
 	'DhurIqamah': iciIqamahTimings[1].text,
@@ -155,6 +165,7 @@ allFajr = {
 	'ID': 1,
 	'VRICi': vricJSON['fajrIqamah'],
 	'ICIi': iciIqamahTimings[0].text,
+	'ICIa': iciAdhanTimings[0].text,
 	'ICFi': icfIqamahTimings[1].text,
 	'IACCi': iaccFprayer,
 	'IANTi': iantIqamahTimings[1].text+"AM",
@@ -166,6 +177,7 @@ allDhur = {
 	'ID': 2,
 	'VRICi': vricJSON['duhrIqamah'],
 	'ICIi': iciIqamahTimings[1].text,
+	'ICIa': iciAdhanTimings[3].text,
 	'ICFi': icfIqamahTimings[2].text,
 	'IACCi': iaccDprayer,
 	'IANTi': iantIqamahTimings[3].text+"PM",
@@ -177,6 +189,7 @@ allAsr = {
 	'ID': 3,
 	'VRICi': vricJSON['asrIqamah'],
 	'ICIi': iciIqamahTimings[2].text,
+	'ICIa': iciAdhanTimings[5].text,
 	'ICFi': icfIqamahTimings[3].text,
 	'IACCi': iaccAprayer,
 	'IANTi': iantIqamahTimings[5].text+"PM",
@@ -189,6 +202,7 @@ allMaghrib = {
 	'VRICi': vricJSON['maghribIqamah'],
 	'ICIi': iciIqamahTimings[3].text,
 	'ICFi': icfIqamahTimings[4].text,
+	'ICIa': iciAdhanTimings[7].text,
 	'IACCi': iaccMprayer,
 	'IANTi': '10 minutes after '+ iantIqamahTimings[6].text+"PM",
 	'EPICi': epicIqamahTimings[8].text,
@@ -199,6 +213,7 @@ allIsha = {
 	'ID': 5,
 	'VRICi': vricJSON['ishaIqamah'],
 	'ICIi': iciIqamahTimings[4].text,
+	'ICIa': iciAdhanTimings[9].text,
 	'ICFi': icfIqamahTimings[5].text,
 	'IACCi': iaccIprayer,
 	'IANTi': iantIqamahTimings[9].text+"PM",
