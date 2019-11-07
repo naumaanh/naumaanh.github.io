@@ -204,4 +204,4 @@ allIsha = {
 outputer = [allFajr, allDhur, allAsr, allMaghrib, allIsha]
 z = json.dumps(outputer)
 with open('allData.json', 'w') as outfile:
-	json.dump(outputer,outfile, indent=4)	
+	json.dump(outputer,outfile, indent=2)	
