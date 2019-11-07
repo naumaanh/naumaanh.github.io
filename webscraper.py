@@ -47,19 +47,16 @@ icfsoup = BeautifulSoup(icfHTML, "html.parser")
 #IRVING MASJID ICI
 iciIqamahTimings = icisoup.findAll('td', attrs={"class": "jamah"})
 iciIqamahTimingsAsDictionary = {
-	'FajrIqamah': iciIqamahTimings[0].text,
+	"FajrIqamah": iciIqamahTimings[0].text,
 	'DhurIqamah': iciIqamahTimings[1].text,
 	'AsrIqamah': iciIqamahTimings[2].text,
 	'MaghribIqamah': iciIqamahTimings[3].text,
 	'IshaIqamah': iciIqamahTimings[4].text,
 }
 iciIqamahTimingsAsList = [iciIqamahTimingsAsDictionary]
-
 iciIqamahJSON = json.dumps(iciIqamahTimingsAsList)
-with open('ici.json', 'w') as outfile:
-	json.dump(iciIqamahTimingsAsList, outfile)
-
-	print iciIqamahJSON
+#with open('ici.json', 'w') as outfile:
+#	json.dump(iciIqamahTimingsAsList, outfile)
 
 
 #VALLEY RANCH ISLAMIC CENTER VRIC
@@ -74,8 +71,8 @@ vricIqamahTimingsAsDictionary = {
 }
 vricIqamahTimingsAsList = [vricIqamahTimingsAsDictionary]
 vricPrayerJSON = json.dumps(vricIqamahTimingsAsList)
-with open('vric.json', 'w') as outfile:
-	json.dump(vricIqamahTimingsAsList, outfile)
+#with open('vric.json', 'w') as outfile:
+#	json.dump(vricIqamahTimingsAsList, outfile)
 	
 
 
@@ -91,8 +88,8 @@ iantIqamahTimingsAsDictionary = {
 }
 iantIqamahTimingsAsList = [iantIqamahTimingsAsDictionary]
 iantIqamahJSON = json.dumps(iantIqamahTimingsAsList)
-with open('iant.json', 'w') as outfile:
-	json.dump(iantIqamahTimingsAsList, outfile)
+#with open('iant.json', 'w') as outfile:
+#	json.dump(iantIqamahTimingsAsList, outfile)
 
 
 
@@ -107,8 +104,8 @@ epicIqamahTimingsAsDictionary = {
 }
 epicIqamahTimingsAsList = [epicIqamahTimingsAsDictionary]
 epicIqamahJSON = json.dumps(epicIqamahTimingsAsList)
-with open('epic.json', 'w') as outfile:
-	json.dump(epicIqamahTimingsAsList, outfile)
+#with open('epic.json', 'w') as outfile:
+#	json.dump(epicIqamahTimingsAsList, outfile)
 
 #ISLAMIC ASSOCIATION OF COLLIN COUNTY IACC
 iaccIqamahTimings = iaccsoup.findAll('td', attrs={"style": "text-align:right"})
@@ -127,8 +124,8 @@ iaccIqamahTimingsAsDictionary = {
 
 iaccIqamahTimingsAsList = [iaccIqamahTimingsAsDictionary]
 iaccIqamahJSON = json.dumps(iaccIqamahTimingsAsList)
-with open('iacc.json', 'w') as outfile:
-	json.dump(iaccIqamahTimingsAsList, outfile)
+#with open('iacc.json', 'w') as outfile:
+#	json.dump(iaccIqamahTimingsAsList, outfile)
 
 #ISLAMIC CENTER OF FRISCO ICF
 icfIqamahTimings = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
@@ -140,7 +137,71 @@ icfIqamahTimingsAsDictionary = {
 	'IshaIqamah': icfIqamahTimings[5].text,
 }
 icfIqamahTimingsAsList = [icfIqamahTimingsAsDictionary]
-
 icfIqamahJSON = json.dumps(icfIqamahTimingsAsList)
-with open('icf.json', 'w') as outfile:
-	json.dump(icfIqamahTimingsAsList, outfile)	
+#with open('icf.json', 'w') as outfile:
+#	json.dump(icfIqamahTimingsAsList, outfile)	
+
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+###############______Code to actually create 5 layer JSON____________________########################
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+#####################################################################################################
+
+allFajr = {
+	'ID': 1,
+	'VRICi': vricJSON['fajrIqamah'],
+	'ICIi': iciIqamahTimings[0].text,
+	'ICFi': icfIqamahTimings[1].text,
+	'IACCi': iaccFprayer,
+	'IANTi': iantIqamahTimings[1].text+"AM",
+	'EPICi': epicIqamahTimings[1].text,
+	'FajrBody': "Fajr: "
+}
+allDhur = {
+	'ID': 2,
+	'VRICi': vricJSON['duhrIqamah'],
+	'ICIi': iciIqamahTimings[1].text,
+	'ICFi': icfIqamahTimings[2].text,
+	'IACCi': iaccDprayer,
+	'IANTi': iantIqamahTimings[3].text+"PM",
+	'EPICi': epicIqamahTimings[4].text,
+	'DhurBody': "Dhur: "
+}
+allAsr = {
+	'ID': 3,
+	'VRICi': vricJSON['asrIqamah'],
+	'ICIi': iciIqamahTimings[2].text,
+	'ICFi': icfIqamahTimings[3].text,
+	'IACCi': iaccAprayer,
+	'IANTi': iantIqamahTimings[5].text+"PM",
+	'EPICi': epicIqamahTimings[6].text,
+	'AsrBody': "Asr: "
+}
+allMaghrib = {
+	'ID': 4,
+	'VRICi': vricJSON['maghribIqamah'],
+	'ICIi': iciIqamahTimings[3].text,
+	'ICFi': icfIqamahTimings[4].text,
+	'IACCi': iaccMprayer,
+	'IANTi': '10 minutes after '+ iantIqamahTimings[6].text+"PM",
+	'EPICi': epicIqamahTimings[8].text,
+	'MaghribBody': "Maghrib: "
+}
+allIsha = {
+	'ID': 5,
+	'VRICi': vricJSON['ishaIqamah'],
+	'ICIi': iciIqamahTimings[4].text,
+	'ICFi': icfIqamahTimings[5].text,
+	'IACCi': iaccIprayer,
+	'IANTi': iantIqamahTimings[9].text+"PM",
+	'EPICi': epicIqamahTimings[10].text,
+	'IshaBody': "Isha: "
+}
+outputer = [allFajr, allDhur, allAsr, allMaghrib, allIsha]
+z = json.dumps(outputer)
+with open('allData.json', 'w') as outfile:
+	json.dump(outputer,outfile, indent=4)	
