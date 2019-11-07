@@ -57,7 +57,7 @@ iciIqamahTimingsAsList = [iciIqamahTimingsAsDictionary]
 iciIqamahJSON = json.dumps(iciIqamahTimingsAsList)
 #with open('ici.json', 'w') as outfile:
 #	json.dump(iciIqamahTimingsAsList, outfile)
-
+print iciIqamahTimingsAsDictionary
 
 #VALLEY RANCH ISLAMIC CENTER VRIC
 vricResponse = urllib.urlopen(vricURL)
