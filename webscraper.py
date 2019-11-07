@@ -159,7 +159,8 @@ allFajr = {
 	'IACCi': iaccFprayer,
 	'IANTi': iantIqamahTimings[1].text+"AM",
 	'EPICi': epicIqamahTimings[1].text,
-	'FajrBody': "Fajr: "
+	'FajrBody': "Fajr: ",
+	'Body': "Fajr Iqamah: "
 }
 allDhur = {
 	'ID': 2,
@@ -169,7 +170,8 @@ allDhur = {
 	'IACCi': iaccDprayer,
 	'IANTi': iantIqamahTimings[3].text+"PM",
 	'EPICi': epicIqamahTimings[4].text,
-	'DhurBody': "Dhur: "
+	'DhurBody': "Dhur: ",
+	'Body': "Dhur Iqamah: "
 }
 allAsr = {
 	'ID': 3,
@@ -179,7 +181,8 @@ allAsr = {
 	'IACCi': iaccAprayer,
 	'IANTi': iantIqamahTimings[5].text+"PM",
 	'EPICi': epicIqamahTimings[6].text,
-	'AsrBody': "Asr: "
+	'AsrBody': "Asr: ",
+	'Body': "Asr Iqamah: "
 }
 allMaghrib = {
 	'ID': 4,
@@ -189,7 +192,8 @@ allMaghrib = {
 	'IACCi': iaccMprayer,
 	'IANTi': '10 minutes after '+ iantIqamahTimings[6].text+"PM",
 	'EPICi': epicIqamahTimings[8].text,
-	'MaghribBody': "Maghrib: "
+	'MaghribBody': "Maghrib: ",
+	'Body': "Maghrib Iqamah: "
 }
 allIsha = {
 	'ID': 5,
@@ -199,7 +203,8 @@ allIsha = {
 	'IACCi': iaccIprayer,
 	'IANTi': iantIqamahTimings[9].text+"PM",
 	'EPICi': epicIqamahTimings[10].text,
-	'IshaBody': "Isha: "
+	'IshaBody': "Isha: ",
+	'Body': "Isha Iqamah: "
 }
 outputer = [allFajr, allDhur, allAsr, allMaghrib, allIsha]
 z = json.dumps(outputer)
