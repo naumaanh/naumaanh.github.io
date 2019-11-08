@@ -45,14 +45,8 @@ icfsoup = BeautifulSoup(icfHTML, "html.parser")
 
 
 #IRVING MASJID ICI
-iciAdhanTimings = icisoup.findAll('td')
-iciAdhanTimingsAsDictionary = {
-	"FajrAdhan": iciAdhanTimings[0].text,
-	'DhurAdhan': iciAdhanTimings[3].text,
-	'AsrAdhan': iciAdhanTimings[5].text,
-	'MaghribAdhan': iciAdhanTimings[7].text,
-	'IshaAdhan': iciAdhanTimings[9].text,
-}
-print iciAdhanTimingsAsDictionary
+icfAdhanTimings = icfsoup.findAll('div', attrs={"class": "prayer_azaan_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
+
+print icfAdhanTimings
 
 #print iciIqamahTimingsAsDictionary

@@ -67,11 +67,17 @@ iciIqamahTimingsAsList = [iciIqamahTimingsAsDictionary]
 iciIqamahJSON = json.dumps(iciIqamahTimingsAsList)
 #with open('ici.json', 'w') as outfile:
 #	json.dump(iciIqamahTimingsAsList, outfile)
-print iciIqamahTimingsAsDictionary
 
 #VALLEY RANCH ISLAMIC CENTER VRIC
 vricResponse = urllib.urlopen(vricURL)
 vricJSON = json.loads(vricResponse.read())
+vricAdhanTimingsAsDictionary = {
+	'FajrAdhan': vricJSON['fajrAdhan'],
+	'DhurAdhan': vricJSON['duhrAdhan'],
+	'AsrAdhan': vricJSON['asrAdhan'],
+	'MaghribAdhan': vricJSON['maghribAdhan'],
+	'IshaAdhan': vricJSON['ishaAdhan'],
+}
 vricIqamahTimingsAsDictionary = {
 	'FajrIqamah': vricJSON['fajrIqamah'],
 	'DhurIqamah': vricJSON['duhrIqamah'],
@@ -89,6 +95,13 @@ vricPrayerJSON = json.dumps(vricIqamahTimingsAsList)
 
 #ISLAMIC ASSOCIATION OF NORTH TEXAS IANT
 iantIqamahTimings = iantsoup.findAll('td', attrs={"class": "mit_time"})
+iantAdhanTimingsAsDictionary = {
+	'FajrAdhan': iantIqamahTimings[0].text+" AM",
+	'DhurAdhan': iantIqamahTimings[2].text+" PM",
+	'AsrAdhan': iantIqamahTimings[4].text+" PM",
+	'MaghribAdhan': iantIqamahTimings[6].text+" PM",
+	'IshaAdhan': iantIqamahTimings[8].text+" PM",
+}
 iantIqamahTimingsAsDictionary = {
 	'FajrIqamah': iantIqamahTimings[1].text+"AM",
 	'DhurIqamah': iantIqamahTimings[3].text+"PM",
@@ -105,6 +118,9 @@ iantIqamahJSON = json.dumps(iantIqamahTimingsAsList)
 
 #EAST PLANO ISLAMIC CENTER EPIC
 epicIqamahTimings = epicsoup.findAll('td', attrs={"class": "subtext"})
+epicAdhanTimingsAsDictionary = {
+	
+}
 epicIqamahTimingsAsDictionary = {
 	'FajrIqamah': epicIqamahTimings[1].text,
 	'DhurIqamah': epicIqamahTimings[4].text,
@@ -139,6 +155,8 @@ iaccIqamahJSON = json.dumps(iaccIqamahTimingsAsList)
 
 #ISLAMIC CENTER OF FRISCO ICF
 icfIqamahTimings = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
+icfAdhanTimings = icfsoup.findAll('div', attrs={"class": "prayer_azaan_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
+
 icfIqamahTimingsAsDictionary = {
 	'FajrIqamah': icfIqamahTimings[1].text,
 	'DhurIqamah': icfIqamahTimings[2].text,
@@ -160,7 +178,6 @@ icfIqamahJSON = json.dumps(icfIqamahTimingsAsList)
 #####################################################################################################
 #####################################################################################################
 #####################################################################################################
-
 allFajr = {
 	'ID': 1,
 	'VRICi': vricJSON['fajrIqamah'],
@@ -168,10 +185,16 @@ allFajr = {
 	'ICIa': iciAdhanTimings[0].text,
 	'ICFi': icfIqamahTimings[1].text,
 	'IACCi': iaccFprayer,
-	'IANTi': iantIqamahTimings[1].text+"AM",
+	'IANTi': iantIqamahTimings[1].text+" AM",
 	'EPICi': epicIqamahTimings[1].text,
 	'FajrBody': "Fajr: ",
-	'Body': "Fajr Iqamah: "
+	'Body': "Fajr Iqamah: ",
+	'VRICa' : vricJSON['fajrAdhan'],
+	'IANTa' : iantIqamahTimings[0].text+" AM",
+	'EPICa' : epicIqamahTimings[0].text,
+	'ICFa': icfAdhanTimings[1].text,
+
+
 }
 allDhur = {
 	'ID': 2,
@@ -180,10 +203,16 @@ allDhur = {
 	'ICIa': iciAdhanTimings[3].text,
 	'ICFi': icfIqamahTimings[2].text,
 	'IACCi': iaccDprayer,
-	'IANTi': iantIqamahTimings[3].text+"PM",
+	'IANTi': iantIqamahTimings[3].text+" PM",
 	'EPICi': epicIqamahTimings[4].text,
 	'DhurBody': "Dhur: ",
-	'Body': "Dhur Iqamah: "
+	'Body': "Dhur Iqamah: ",
+	'VRICa': vricJSON['duhrAdhan'],
+	'IANTa': iantIqamahTimings[2].text+" PM",
+	'EPICa': epicIqamahTimings[3].text,
+	'ICFa': icfAdhanTimings[2].text,
+
+
 }
 allAsr = {
 	'ID': 3,
@@ -192,10 +221,15 @@ allAsr = {
 	'ICIa': iciAdhanTimings[5].text,
 	'ICFi': icfIqamahTimings[3].text,
 	'IACCi': iaccAprayer,
-	'IANTi': iantIqamahTimings[5].text+"PM",
+	'IANTi': iantIqamahTimings[5].text+" PM",
 	'EPICi': epicIqamahTimings[6].text,
 	'AsrBody': "Asr: ",
-	'Body': "Asr Iqamah: "
+	'Body': "Asr Iqamah: ",
+	'VRICa': vricJSON['asrAdhan'],
+	'IANTa': iantIqamahTimings[4].text+" PM",
+	'ICFa': icfAdhanTimings[3].text,
+
+
 }
 allMaghrib = {
 	'ID': 4,
@@ -204,10 +238,17 @@ allMaghrib = {
 	'ICFi': icfIqamahTimings[4].text,
 	'ICIa': iciAdhanTimings[7].text,
 	'IACCi': iaccMprayer,
-	'IANTi': '10 minutes after '+ iantIqamahTimings[6].text+"PM",
+	'IANTi': '10 minutes after '+ iantIqamahTimings[6].text+" PM",
 	'EPICi': epicIqamahTimings[8].text,
 	'MaghribBody': "Maghrib: ",
-	'Body': "Maghrib Iqamah: "
+	'Body': "Maghrib Iqamah: ",
+	'VRICa': vricJSON['maghribAdhan'],
+	'IANTa': iantIqamahTimings[6].text+" PM",
+	'EPICa': epicIqamahTimings[7].text,
+	'ICFa': icfAdhanTimings[4].text,
+
+
+
 }
 allIsha = {
 	'ID': 5,
@@ -216,10 +257,17 @@ allIsha = {
 	'ICIa': iciAdhanTimings[9].text,
 	'ICFi': icfIqamahTimings[5].text,
 	'IACCi': iaccIprayer,
-	'IANTi': iantIqamahTimings[9].text+"PM",
+	'IANTi': iantIqamahTimings[9].text+" PM",
 	'EPICi': epicIqamahTimings[10].text,
 	'IshaBody': "Isha: ",
-	'Body': "Isha Iqamah: "
+	'Body': "Isha Iqamah: ",
+	'VRICa': vricJSON['ishaAdhan'],
+	'IANTa': iantIqamahTimings[8].text+" PM",
+	'EPICi': epicIqamahTimings[9].text,
+	'ICFa': icfAdhanTimings[5].text,
+
+
+
 }
 outputer = [allFajr, allDhur, allAsr, allMaghrib, allIsha]
 z = json.dumps(outputer)
