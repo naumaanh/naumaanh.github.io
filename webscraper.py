@@ -227,6 +227,7 @@ allAsr = {
 	'Body': "Asr Iqamah: ",
 	'VRICa': vricJSON['asrAdhan'],
 	'IANTa': iantIqamahTimings[4].text+" PM",
+	'EPICa': epicIqamahTimings[5].text,
 	'ICFa': icfAdhanTimings[3].text,
 
 
@@ -263,7 +264,7 @@ allIsha = {
 	'Body': "Isha Iqamah: ",
 	'VRICa': vricJSON['ishaAdhan'],
 	'IANTa': iantIqamahTimings[8].text+" PM",
-	'EPICi': epicIqamahTimings[9].text,
+	'EPICa': epicIqamahTimings[9].text,
 	'ICFa': icfAdhanTimings[5].text,
 
 
