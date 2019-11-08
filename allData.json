@@ -10,7 +10,7 @@
     "EPICa": "05:41 AM", 
     "VRICa": "05:41 AM", 
     "ID": 1, 
-    "Body": "Fajr Iqamah: ", 
+    "Body": "Fajr: ", 
     "ICIa": "5:27 am", 
     "ICIi": "6:00 am", 
     "FajrBody": "Fajr: "
@@ -26,7 +26,7 @@
     "EPICa": "12:11 PM", 
     "VRICa": "12:11 PM", 
     "ID": 2, 
-    "Body": "Dhur Iqamah: ", 
+    "Body": "Dhur: ", 
     "ICIa": "12:17 pm", 
     "ICIi": "1:45 pm", 
     "DhurBody": "Dhur: "
@@ -42,7 +42,7 @@
     "EPICa": "03:09 PM", 
     "VRICa": "03:10 PM", 
     "ID": 3, 
-    "Body": "Asr Iqamah: ", 
+    "Body": "Asr: ", 
     "ICIa": "3:10 pm", 
     "ICIi": "3:45 pm", 
     "AsrBody": "Asr: "
@@ -58,7 +58,7 @@
     "EPICa": "05:31 PM", 
     "VRICa": "05:32 PM", 
     "ID": 4, 
-    "Body": "Maghrib Iqamah: ", 
+    "Body": "Maghrib: ", 
     "ICIa": "5:34 pm", 
     "ICIi": "5:39 pm", 
     "MaghribBody": "Maghrib: "
@@ -75,7 +75,7 @@
     "EPICa": "06:41 PM", 
     "VRICa": "06:42 PM", 
     "ID": 5, 
-    "Body": "Isha Iqamah: ", 
+    "Body": "Isha: ", 
     "ICIa": "6:55 pm", 
     "ICIi": "7:45 pm"
   }
