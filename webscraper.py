@@ -37,7 +37,7 @@ allenR = requests.get(allenURL, headers=header).text
 icsR = requests.get(icsURL)
 mmR = requests.get(mmURL)
 micR = requests.get(micURL, headers=header).text
-myaseenR = requests.get(myaseenR)
+myaseenR = requests.get(myaseenURL)
 
 iciHTML = iciR.text
 vricHTML = vricR.text
