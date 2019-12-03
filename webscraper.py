@@ -61,13 +61,13 @@ micsoup = BeautifulSoup(micHTML, "html.parser")
 
 
 #Mesquite Masjid
-micIqamahTimings = micsoup.findAll('td')
+micIqamahTimings = micsoup.findAll('div', attrs={"class": "time"})
 
 
 #MAKKAH MASJID GARLAND
 mmIqamahTimings = mmsoup.findAll('td')
 
-print mmIqamahTimings
+print micIqamahTimings
 
 
 #SOUTHLAKE MASJID
@@ -240,6 +240,7 @@ allFajr = {
 	'Alleni' : iallenFprayer,
 	'ICSi' : icsIqamahTimings[1].text,
 	'ICSa' : icsAdhanTimings[1].text,
+	'MMi' : mmIqamahTimings[1].text,
 
 }
 allDhur = {
@@ -261,6 +262,7 @@ allDhur = {
 	'Alleni' : iallenDprayer,
 	'ICSi' : icsIqamahTimings[2].text,
 	'ICSa' : icsAdhanTimings[2].text,
+	'MMi' : mmIqamahTimings[3].text,
 
 }
 allAsr = {
@@ -282,6 +284,7 @@ allAsr = {
 	'Alleni' : iallenAprayer,
 	'ICSi' : icsIqamahTimings[3].text,
 	'ICSa' : icsAdhanTimings[3].text,
+	'MMi' : mmIqamahTimings[5].text,
 
 }
 allMaghrib = {
@@ -303,6 +306,7 @@ allMaghrib = {
 	'Alleni' : iallenMprayer,
 	'ICSi' : icsIqamahTimings[4].text,
 	'ICSa' : icsAdhanTimings[4].text,
+	'MMi' : mmIqamahTimings[7].text,
 
 }
 allIsha = {
@@ -324,6 +328,7 @@ allIsha = {
 	'Alleni' : iallenIprayer,
 	'ICSi' : icsIqamahTimings[5].text,
 	'ICSa' : icsAdhanTimings[5].text,
+	'MMi' : mmIqamahTimings[9].text,
 
 }
 
