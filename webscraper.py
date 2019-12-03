@@ -49,7 +49,7 @@ epicsoup = BeautifulSoup(epicHTML, "html.parser")
 iaccsoup = BeautifulSoup(iaccHTML, "html.parser")
 icfsoup = BeautifulSoup(icfHTML, "html.parser")
 allensoup = BeautifulSoup(allenR, "html.parser")
-icssoup = BeautifulSoup(icsR, "html.parser")
+icssoup = BeautifulSoup(icsHTML, "html.parser")
 
 
 #SOUTHLAKE MASJID
