@@ -220,8 +220,8 @@ allFajr = {
 	'ICFa': icfAdhanTimings[1].text,
 	'Allena' : aallenFprayer,
 	'Alleni' : iallenFprayer,
-	'ICFi' : icfIqamahTimings[1].text,
-	'ICFa' : icfAdhanTimings[1].text,
+	'ICSi' : icsIqamahTimings[1].text,
+	'ICSa' : icsAdhanTimings[1].text,
 
 }
 allDhur = {
@@ -241,8 +241,8 @@ allDhur = {
 	'ICFa': icfAdhanTimings[2].text,
 	'Allena' : aallenDprayer,
 	'Alleni' : iallenDprayer,
-	'ICFi' : icfIqamahTimings[2].text,
-	'ICFa' : icfAdhanTimings[2].text,
+	'ICSi' : icsIqamahTimings[2].text,
+	'ICSa' : icsAdhanTimings[2].text,
 
 }
 allAsr = {
@@ -262,8 +262,8 @@ allAsr = {
 	'ICFa': icfAdhanTimings[3].text,
 	'Allena' : aallenAprayer,
 	'Alleni' : iallenAprayer,
-	'ICFi' : icfIqamahTimings[3].text,
-	'ICFa' : icfAdhanTimings[3].text,
+	'ICSi' : icsIqamahTimings[3].text,
+	'ICSa' : icsAdhanTimings[3].text,
 
 }
 allMaghrib = {
@@ -283,8 +283,8 @@ allMaghrib = {
 	'ICFa': icfAdhanTimings[4].text,
 	'Allena' : aallenMprayer,
 	'Alleni' : iallenMprayer,
-	'ICFi' : icfIqamahTimings[4].text,
-	'ICFa' : icfAdhanTimings[4].text,
+	'ICSi' : icsIqamahTimings[4].text,
+	'ICSa' : icsAdhanTimings[4].text,
 
 }
 allIsha = {
@@ -304,8 +304,8 @@ allIsha = {
 	'ICFa': icfAdhanTimings[5].text,
 	'Allena' : aallenIprayer,
 	'Alleni' : iallenIprayer,
-	'ICFi' : icfIqamahTimings[5].text,
-	'ICFa' : icfAdhanTimings[5].text,
+	'ICSi' : icsIqamahTimings[5].text,
+	'ICSa' : icsAdhanTimings[5].text,
 
 }
 
