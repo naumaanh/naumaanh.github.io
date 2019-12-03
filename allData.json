@@ -5,6 +5,7 @@
     "ICIa": "5:47 am", 
     "ICFi": "06:15 AM", 
     "Allena": "5:46 AM", 
+    "ICSi": "06:45 AM", 
     "ICIi": "6:15 am", 
     "ICFa": "05:47 AM", 
     "IANTi": "06:02 AM", 
@@ -15,13 +16,15 @@
     "EPICa": "06:02 AM", 
     "Alleni": "6:15 AM", 
     "VRICa": "06:01 AM", 
-    "ID": 1
+    "ID": 1, 
+    "ICSa": "06:40 AM"
   }, 
   {
     "IACCi": "2:00 PM", 
     "Body": "Dhur: ", 
     "ICIa": "12:23 pm", 
     "ICFi": "02:00 PM", 
+    "ICSi": "01:45 PM", 
     "ICIi": "1:45 pm", 
     "ICFa": "12:22 PM", 
     "IANTi": "01:45 PM", 
@@ -33,13 +36,15 @@
     "DhurBody": "Dhur: ", 
     "Alleni": "2:00 PM", 
     "VRICa": "12:18 PM", 
-    "ID": 2
+    "ID": 2, 
+    "ICSa": "01:40 PM"
   }, 
   {
     "IACCi": "4:00 PM", 
     "Body": "Asr: ", 
     "ICIa": "3:03 pm", 
     "ICFi": "04:00 PM", 
+    "ICSi": "04:15 PM", 
     "ICIi": "3:45 pm", 
     "ICFa": "03:01 PM", 
     "IANTi": "04:00 PM", 
@@ -51,13 +56,15 @@
     "AsrBody": "Asr: ", 
     "Alleni": "4:00 PM", 
     "VRICa": "03:02 PM", 
-    "ID": 3
+    "ID": 3, 
+    "ICSa": "04:10 PM"
   }, 
   {
     "IACCi": "5:28 PM", 
     "Body": "Maghrib: ", 
     "ICIa": "5:23 pm", 
     "ICFi": "05:26 PM", 
+    "ICSi": "05:27 PM", 
     "ICIi": "5:28 pm", 
     "ICFa": "05:21 PM", 
     "IANTi": "After 10 mins", 
@@ -69,13 +76,15 @@
     "MaghribBody": "Maghrib: ", 
     "Alleni": "5:26 PM", 
     "VRICa": "05:21 PM", 
-    "ID": 4
+    "ID": 4, 
+    "ICSa": "05:22 PM"
   }, 
   {
     "IACCi": "7:45 PM", 
     "IshaBody": "Isha: ", 
     "ICIa": "6:49 pm", 
     "ICFi": "07:45 PM", 
+    "ICSi": "08:00 PM", 
     "ICIi": "7:45 pm", 
     "ICFa": "06:47 PM", 
     "IANTi": "08:00 PM", 
@@ -87,6 +96,7 @@
     "EPICa": "06:33 PM", 
     "Alleni": "7:45 PM", 
     "VRICa": "06:34 PM", 
-    "ID": 5
+    "ID": 5, 
+    "ICSa": "07:55 PM"
   }
 ]

@@ -31,7 +31,7 @@ epicR = requests.get(epicURL)
 iaccR = requests.get(iaccURL)
 icfR = requests.get(icfURL)
 allenR = requests.get(allenURL, headers=header).text
-icsR = requests.get(icsURL, headers=header).text
+icsR = requests.get(icsURL)
 
 iciHTML = iciR.text
 vricHTML = vricR.text
@@ -40,7 +40,7 @@ epicHTML = epicR.text
 iaccHTML = iaccR.text
 icfHTML = icfR.text
 #allenHTML = allenR.text
-#icsHTML = icsR.text
+icsHTML = icsR.text
 
 icisoup = BeautifulSoup(iciHTML, "html.parser")
 vricsoup = BeautifulSoup(vricHTML, "html.parser")
@@ -49,12 +49,12 @@ epicsoup = BeautifulSoup(epicHTML, "html.parser")
 iaccsoup = BeautifulSoup(iaccHTML, "html.parser")
 icfsoup = BeautifulSoup(icfHTML, "html.parser")
 allensoup = BeautifulSoup(allenR, "html.parser")
-icssoup = BeautifulSoup(icsR, "html.parser")
+icssoup = BeautifulSoup(icsHTML, "html.parser")
 
 
 #SOUTHLAKE MASJID
-icsIqamahTimings = icssoup.findAll('prayer_iqama_div')
-icsAdhanTimings = icssoup.findAll('prayer_azaan_div')
+icsIqamahTimings = icssoup.findAll('div', attrs={"class": "prayer_iqama_div"})
+icsAdhanTimings = icssoup.findAll('div', attrs={"class": "prayer_azaan_div"})
 
 # ALLEN MASJID
 allenIqamahTimings = allensoup.findAll('td')
@@ -220,6 +220,8 @@ allFajr = {
 	'ICFa': icfAdhanTimings[1].text,
 	'Allena' : aallenFprayer,
 	'Alleni' : iallenFprayer,
+	'ICSi' : icsIqamahTimings[1].text,
+	'ICSa' : icsAdhanTimings[1].text,
 
 }
 allDhur = {
@@ -239,7 +241,9 @@ allDhur = {
 	'ICFa': icfAdhanTimings[2].text,
 	'Allena' : aallenDprayer,
 	'Alleni' : iallenDprayer,
-	
+	'ICSi' : icsIqamahTimings[2].text,
+	'ICSa' : icsAdhanTimings[2].text,
+
 }
 allAsr = {
 	'ID': 3,
@@ -258,7 +262,8 @@ allAsr = {
 	'ICFa': icfAdhanTimings[3].text,
 	'Allena' : aallenAprayer,
 	'Alleni' : iallenAprayer,
-	
+	'ICSi' : icsIqamahTimings[3].text,
+	'ICSa' : icsAdhanTimings[3].text,
 
 }
 allMaghrib = {
@@ -278,7 +283,9 @@ allMaghrib = {
 	'ICFa': icfAdhanTimings[4].text,
 	'Allena' : aallenMprayer,
 	'Alleni' : iallenMprayer,
-	
+	'ICSi' : icsIqamahTimings[4].text,
+	'ICSa' : icsAdhanTimings[4].text,
+
 }
 allIsha = {
 	'ID': 5,
@@ -297,10 +304,11 @@ allIsha = {
 	'ICFa': icfAdhanTimings[5].text,
 	'Allena' : aallenIprayer,
 	'Alleni' : iallenIprayer,
-	
+	'ICSi' : icsIqamahTimings[5].text,
+	'ICSa' : icsAdhanTimings[5].text,
+
 }
-print icsIqamahTimings
-print icsAdhanTimings
+
 
 outputer = [allFajr, allDhur, allAsr, allMaghrib, allIsha]
 z = json.dumps(outputer)
