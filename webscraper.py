@@ -56,9 +56,6 @@ icssoup = BeautifulSoup(icsHTML, "html.parser")
 icsIqamahTimings = icssoup.findAll('prayer_iqama_div')
 icsAdhanTimings = icssoup.findAll('prayer_azaan_div')
 
-print icsIqamahTimings
-print icsAdhanTimings
-
 # ALLEN MASJID
 allenIqamahTimings = allensoup.findAll('td')
 aallenFprayer = ((str(allenIqamahTimings[1].text)).strip()+' AM')
@@ -247,7 +244,6 @@ allDhur = {
 	'ICFi' : icfIqamahTimings[2].text,
 	'ICFa' : icfAdhanTimings[2].text,
 
-
 }
 allAsr = {
 	'ID': 3,
@@ -290,8 +286,6 @@ allMaghrib = {
 	'ICFi' : icfIqamahTimings[4].text,
 	'ICFa' : icfAdhanTimings[4].text,
 
-
-
 }
 allIsha = {
 	'ID': 5,
@@ -312,8 +306,6 @@ allIsha = {
 	'Alleni' : iallenIprayer,
 	'ICFi' : icfIqamahTimings[5].text,
 	'ICFa' : icfAdhanTimings[5].text,
-
-
 
 }
 
