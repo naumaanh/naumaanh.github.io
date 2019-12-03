@@ -61,7 +61,7 @@ micsoup = BeautifulSoup(micHTML, "html.parser")
 
 
 #Mesquite Masjid
-micIqamahTimings = micsoup.findAll('div', attrs={"class": "time"})
+micIqamahTimings = micsoup.findAll('div')
 
 
 #MAKKAH MASJID GARLAND
