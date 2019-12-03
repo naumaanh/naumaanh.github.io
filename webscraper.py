@@ -23,6 +23,7 @@ iaccURL = 'https://planomasjid.org'
 icfURL = 'https://us.mohid.co/tx/dallas/icf/masjid/widget/api/index/?m=prayertimings'
 allenURL = 'https://allenmasjid.com'
 icsURL = 'https://us.mohid.co/tx/dallas/ics/masjid'
+mmURL = 'http://www.makkahmasjid.net'
 
 iciR = requests.get(iciURL)
 vricR = requests.get(vricURL)
@@ -32,6 +33,7 @@ iaccR = requests.get(iaccURL)
 icfR = requests.get(icfURL)
 allenR = requests.get(allenURL, headers=header).text
 icsR = requests.get(icsURL)
+mmR = requests.get(mmURL)
 
 iciHTML = iciR.text
 vricHTML = vricR.text
@@ -41,6 +43,7 @@ iaccHTML = iaccR.text
 icfHTML = icfR.text
 #allenHTML = allenR.text
 icsHTML = icsR.text
+mmHTML = mmR.text
 
 icisoup = BeautifulSoup(iciHTML, "html.parser")
 vricsoup = BeautifulSoup(vricHTML, "html.parser")
@@ -50,6 +53,13 @@ iaccsoup = BeautifulSoup(iaccHTML, "html.parser")
 icfsoup = BeautifulSoup(icfHTML, "html.parser")
 allensoup = BeautifulSoup(allenR, "html.parser")
 icssoup = BeautifulSoup(icsHTML, "html.parser")
+mmsoup = BeautifulSoup(mmHTML, "html.parser")
+
+
+#MAKKAH MASJID GARLAND
+mmIqamahTimings = mmsoup.findAll('td')
+
+print mmIqamahTimings
 
 
 #SOUTHLAKE MASJID
