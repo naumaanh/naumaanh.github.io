@@ -25,6 +25,7 @@ allenURL = 'https://allenmasjid.com'
 icsURL = 'https://us.mohid.co/tx/dallas/ics/masjid'
 mmURL = 'http://www.makkahmasjid.net'
 micURL = 'http://www.micmasjid.com'
+myaseenURL = 'http://masjidyaseen.org'
 
 iciR = requests.get(iciURL)
 vricR = requests.get(vricURL)
@@ -36,6 +37,7 @@ allenR = requests.get(allenURL, headers=header).text
 icsR = requests.get(icsURL)
 mmR = requests.get(mmURL)
 micR = requests.get(micURL, headers=header).text
+myaseenR = requests.get(myaseenR)
 
 iciHTML = iciR.text
 vricHTML = vricR.text
@@ -47,6 +49,7 @@ icfHTML = icfR.text
 icsHTML = icsR.text
 mmHTML = mmR.text
 #micHTML = micR.text
+myaseenHTML = myaseenR.text
 
 icisoup = BeautifulSoup(iciHTML, "html.parser")
 vricsoup = BeautifulSoup(vricHTML, "html.parser")
@@ -58,8 +61,12 @@ allensoup = BeautifulSoup(allenR, "html.parser")
 icssoup = BeautifulSoup(icsHTML, "html.parser")
 mmsoup = BeautifulSoup(mmHTML, "html.parser")
 micsoup = BeautifulSoup(micR, "html.parser")
+myaseensoup = BeautifulSoup(myaseenHTML, "html.parser")
 
 
+#Masjid Yaseen
+myaseenIqamahTiming = myaseensoup.findAll('td', attrs={"style": "text-align:right"})
+print myaseenIqamahTiming
 #Mesquite Masjid
 micIqamahTimings = micsoup.findAll('div', attrs={"class": "time"})
 
