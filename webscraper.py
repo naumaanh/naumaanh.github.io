@@ -24,6 +24,7 @@ icfURL = 'https://us.mohid.co/tx/dallas/icf/masjid/widget/api/index/?m=prayertim
 allenURL = 'https://allenmasjid.com'
 icsURL = 'https://us.mohid.co/tx/dallas/ics/masjid'
 mmURL = 'http://www.makkahmasjid.net'
+micURL = 'http://www.micmasjid.com'
 
 iciR = requests.get(iciURL)
 vricR = requests.get(vricURL)
@@ -34,6 +35,7 @@ icfR = requests.get(icfURL)
 allenR = requests.get(allenURL, headers=header).text
 icsR = requests.get(icsURL)
 mmR = requests.get(mmURL)
+micR = requests.get(micURL)
 
 iciHTML = iciR.text
 vricHTML = vricR.text
@@ -44,6 +46,7 @@ icfHTML = icfR.text
 #allenHTML = allenR.text
 icsHTML = icsR.text
 mmHTML = mmR.text
+micHTML = micR.text
 
 icisoup = BeautifulSoup(iciHTML, "html.parser")
 vricsoup = BeautifulSoup(vricHTML, "html.parser")
@@ -54,6 +57,11 @@ icfsoup = BeautifulSoup(icfHTML, "html.parser")
 allensoup = BeautifulSoup(allenR, "html.parser")
 icssoup = BeautifulSoup(icsHTML, "html.parser")
 mmsoup = BeautifulSoup(mmHTML, "html.parser")
+micsoup = BeautifulSoup(micHTML, "html.parser")
+
+
+#Mesquite Masjid
+micIqamahTimings = micsoup.findAll('td')
 
 
 #MAKKAH MASJID GARLAND
@@ -319,8 +327,6 @@ allIsha = {
 
 }
 
-print icsIqamahTimings
-print icsAdhanTimings
 
 
 outputer = [allFajr, allDhur, allAsr, allMaghrib, allIsha]
