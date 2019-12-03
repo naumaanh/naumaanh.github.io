@@ -66,7 +66,19 @@ myaseensoup = BeautifulSoup(myaseenHTML, "html.parser")
 
 #Masjid Yaseen
 myaseenIqamahTiming = myaseensoup.findAll('td', attrs={"style": "text-align:right"})
-print myaseenIqamahTiming
+amyaseenFprayer = ((str(myaseenIqamahTiming[0].text)).strip())
+amyaseenDprayer = ((str(myaseenIqamahTiming[2].text)).strip())
+amyaseenAprayer = ((str(myaseenIqamahTiming[4].text)).strip())
+amyaseenMprayer = ((str(myaseenIqamahTiming[6].text)).strip())
+amyaseenIprayer = ((str(myaseenIqamahTiming[8].text)).strip())
+
+imyaseenFprayer = ((str(myaseenIqamahTiming[1].text)).strip())
+imyaseenDprayer = ((str(myaseenIqamahTiming[3].text)).strip())
+imyaseenAprayer = ((str(myaseenIqamahTiming[5].text)).strip())
+imyaseenMprayer = ((str(myaseenIqamahTiming[7].text)).strip())
+imyaseenIprayer = ((str(myaseenIqamahTiming[9].text)).strip())
+
+
 #Mesquite Masjid
 micIqamahTimings = micsoup.findAll('div', attrs={"class": "time"})
 
@@ -247,6 +259,8 @@ allFajr = {
 	'ICSa' : icsAdhanTimings[1].text,
 	'MMi' : mmIqamahTimings[1].text,
 	'Mici' : micIqamahTimings[0].text,
+	'MYaseena' : amyaseenFprayer,
+	'MYaseeni' : imyaseenFprayer,
 
 }
 allDhur = {
@@ -270,6 +284,8 @@ allDhur = {
 	'ICSa' : icsAdhanTimings[2].text,
 	'MMi' : mmIqamahTimings[3].text,
 	'Mici' : micIqamahTimings[1].text,
+	'MYaseena' : amyaseenDprayer,
+	'MYaseeni' : imyaseenDprayer,
 
 }
 allAsr = {
@@ -293,7 +309,8 @@ allAsr = {
 	'ICSa' : icsAdhanTimings[3].text,
 	'MMi' : mmIqamahTimings[5].text,
 	'Mici' : micIqamahTimings[2].text,
-
+	'MYaseena' : amyaseenAprayer,
+	'MYaseeni' : imyaseenAprayer,
 }
 allMaghrib = {
 	'ID': 4,
@@ -316,7 +333,8 @@ allMaghrib = {
 	'ICSa' : icsAdhanTimings[4].text,
 	'MMi' : mmIqamahTimings[7].text,
 	'Mici' : micIqamahTimings[3].text,
-
+	'MYaseena' : amyaseenMprayer,
+	'MYaseeni' : imyaseenMprayer,
 }
 allIsha = {
 	'ID': 5,
@@ -338,7 +356,9 @@ allIsha = {
 	'ICSi' : icsIqamahTimings[5].text,
 	'ICSa' : icsAdhanTimings[5].text,
 	'MMi' : mmIqamahTimings[9].text,
-	'Mici' : micIqamahTimings[4].text,
+	'Mici' : micIqamahTimings[4].text,	
+	'MYaseena' : amyaseenIprayer,
+	'MYaseeni' : imyaseenIprayer,
 
 }
 
