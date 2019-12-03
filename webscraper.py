@@ -309,6 +309,9 @@ allIsha = {
 
 }
 
+print icsIqamahTimings
+print icsAdhanTimings
+
 
 outputer = [allFajr, allDhur, allAsr, allMaghrib, allIsha]
 z = json.dumps(outputer)
