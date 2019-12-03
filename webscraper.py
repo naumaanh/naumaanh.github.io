@@ -22,6 +22,7 @@ epicURL = 'https://www.epicmasjid.org'
 iaccURL = 'https://planomasjid.org'
 icfURL = 'https://us.mohid.co/tx/dallas/icf/masjid/widget/api/index/?m=prayertimings'
 allenURL = 'https://allenmasjid.com'
+icsURL = 'https://us.mohid.co/tx/dallas/ics/masjid'
 
 iciR = requests.get(iciURL)
 vricR = requests.get(vricURL)
@@ -30,6 +31,7 @@ epicR = requests.get(epicURL)
 iaccR = requests.get(iaccURL)
 icfR = requests.get(icfURL)
 allenR = requests.get(allenURL, headers=header).text
+icsR = requests.get(icsURL)
 
 iciHTML = iciR.text
 vricHTML = vricR.text
@@ -38,6 +40,7 @@ epicHTML = epicR.text
 iaccHTML = iaccR.text
 icfHTML = icfR.text
 #allenHTML = allenR.text
+icsHTML = icsR.text
 
 icisoup = BeautifulSoup(iciHTML, "html.parser")
 vricsoup = BeautifulSoup(vricHTML, "html.parser")
@@ -46,6 +49,15 @@ epicsoup = BeautifulSoup(epicHTML, "html.parser")
 iaccsoup = BeautifulSoup(iaccHTML, "html.parser")
 icfsoup = BeautifulSoup(icfHTML, "html.parser")
 allensoup = BeautifulSoup(allenR, "html.parser")
+icssoup = BeautifulSoup(icsR, "html.parser")
+
+
+#SOUTHLAKE MASJID
+icsIqamahTimings = icssoup.findAll('prayer_iqama_div')
+icsAdhanTimings = icssoup.findAll('prayer_azaan_div')
+
+print icsIqamahTimings
+print icsAdhanTimings
 
 # ALLEN MASJID
 allenIqamahTimings = allensoup.findAll('td')
