@@ -57,7 +57,7 @@ icfsoup = BeautifulSoup(icfHTML, "html.parser")
 allensoup = BeautifulSoup(allenR, "html.parser")
 icssoup = BeautifulSoup(icsHTML, "html.parser")
 mmsoup = BeautifulSoup(mmHTML, "html.parser")
-micsoup = BeautifulSoup(micURL, "html.parser")
+micsoup = BeautifulSoup(micR, "html.parser")
 
 
 #Mesquite Masjid
