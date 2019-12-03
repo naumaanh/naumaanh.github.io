@@ -220,8 +220,6 @@ allFajr = {
 	'ICFa': icfAdhanTimings[1].text,
 	'Allena' : aallenFprayer,
 	'Alleni' : iallenFprayer,
-	'ICSi' : icsIqamahTimings[1].text,
-	'ICSa' : icsAdhanTimings[1].text,
 
 }
 allDhur = {
@@ -241,9 +239,7 @@ allDhur = {
 	'ICFa': icfAdhanTimings[2].text,
 	'Allena' : aallenDprayer,
 	'Alleni' : iallenDprayer,
-	'ICSi' : icsIqamahTimings[2].text,
-	'ICSa' : icsAdhanTimings[2].text,
-
+	
 }
 allAsr = {
 	'ID': 3,
@@ -262,8 +258,7 @@ allAsr = {
 	'ICFa': icfAdhanTimings[3].text,
 	'Allena' : aallenAprayer,
 	'Alleni' : iallenAprayer,
-	'ICSi' : icsIqamahTimings[3].text,
-	'ICSa' : icsAdhanTimings[3].text,
+	
 
 }
 allMaghrib = {
@@ -283,9 +278,7 @@ allMaghrib = {
 	'ICFa': icfAdhanTimings[4].text,
 	'Allena' : aallenMprayer,
 	'Alleni' : iallenMprayer,
-	'ICSi' : icsIqamahTimings[4].text,
-	'ICSa' : icsAdhanTimings[4].text,
-
+	
 }
 allIsha = {
 	'ID': 5,
@@ -304,11 +297,10 @@ allIsha = {
 	'ICFa': icfAdhanTimings[5].text,
 	'Allena' : aallenIprayer,
 	'Alleni' : iallenIprayer,
-	'ICSi' : icsIqamahTimings[5].text,
-	'ICSa' : icsAdhanTimings[5].text,
-
+	
 }
-
+print icsIqamahTimings
+print icsAdhanTimings
 
 outputer = [allFajr, allDhur, allAsr, allMaghrib, allIsha]
 z = json.dumps(outputer)
