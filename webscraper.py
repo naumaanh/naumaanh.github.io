@@ -247,7 +247,6 @@ allFajr = {
 	'IACCi': iaccFprayer,
 	'IANTi': iantIqamahTimings[3].text,
 	'EPICi': epicIqamahTimings[1].text,
-	'FajrBody': "Fajr: ",
 	'Body': "Fajr: ",
 	'VRICa' : vricJSON['fajrAdhan'],
 	'IANTa' : iantIqamahTimings[2].text,
@@ -272,7 +271,6 @@ allDhur = {
 	'IACCi': iaccDprayer,
 	'IANTi': iantIqamahTimings[7].text,
 	'EPICi': epicIqamahTimings[4].text,
-	'DhurBody': "Dhur: ",
 	'Body': "Dhur: ",
 	'VRICa': vricJSON['duhrAdhan'],
 	'IANTa': iantIqamahTimings[6].text,
@@ -297,7 +295,6 @@ allAsr = {
 	'IACCi': iaccAprayer,
 	'IANTi': iantIqamahTimings[11].text,
 	'EPICi': epicIqamahTimings[6].text,
-	'AsrBody': "Asr: ",
 	'Body': "Asr: ",
 	'VRICa': vricJSON['asrAdhan'],
 	'IANTa': iantIqamahTimings[10].text,
@@ -321,7 +318,6 @@ allMaghrib = {
 	'IACCi': iaccMprayer,
 	'IANTi': iantIqamahTimings[15].text,
 	'EPICi': epicIqamahTimings[8].text,
-	'MaghribBody': "Maghrib: ",
 	'Body': "Maghrib: ",
 	'VRICa': vricJSON['maghribAdhan'],
 	'IANTa': iantIqamahTimings[14].text,
@@ -345,7 +341,6 @@ allIsha = {
 	'IACCi': iaccIprayer,
 	'IANTi': iantIqamahTimings[19].text,
 	'EPICi': epicIqamahTimings[10].text,
-	'IshaBody': "Isha: ",
 	'Body': "Isha: ",
 	'VRICa': vricJSON['ishaAdhan'],
 	'IANTa': iantIqamahTimings[18].text,
@@ -360,6 +355,12 @@ allIsha = {
 	'MYaseena' : amyaseenIprayer,
 	'MYaseeni' : imyaseenIprayer,
 
+}
+allJummahKhutbah1 = {
+	
+}
+allJummahKhutbah2 = {
+	
 }
 
 
