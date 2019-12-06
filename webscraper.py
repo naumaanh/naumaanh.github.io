@@ -88,7 +88,7 @@ darelimansoup = BeautifulSoup(darelimanR, "html.parser")
 maisoup = BeautifulSoup(maiHTML, "html.parser")
 dncfwsoup = BeautifulSoup(dncfwR, "html.parser")
 isdsoup = BeautifulSoup(isdR, "html.parser")
-ialfmsoup = BeautifulSoup(ialfmR, "html.parser")
+ialfmsoup = BeautifulSoup(ialfmHTML, "html.parser")
 
 
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMER MOUND
