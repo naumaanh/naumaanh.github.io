@@ -74,7 +74,7 @@ mckinneyIqamahTiming = mckinneysoup.findAll('td')
 Mckinneyf = mckinneyIqamahTiming[4].text.strip()
 Mckinneyd = mckinneyIqamahTiming[7].text.strip()
 Mckinneya = mckinneyIqamahTiming[10].text.strip()
-mckinneym = mckinneyIqamahTiming[13].text.strip()
+Mckinneym = mckinneyIqamahTiming[13].text.strip()
 Mckinneyi = mckinneyIqamahTiming[16].text.strip()
 
 #Masjid Yaseen
