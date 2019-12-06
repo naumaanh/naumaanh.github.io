@@ -268,6 +268,8 @@ allFajr = {
 	'Mici' : micIqamahTimings[0].text,
 	'MYaseena' : amyaseenFprayer,
 	'MYaseeni' : imyaseenFprayer,
+	'Mckinneya': mckinneyIqamahTiming[4].text,
+	'Mckinneyi': mckinneyIqamahTiming[5].text,
 
 }
 allDhur = {
@@ -292,7 +294,8 @@ allDhur = {
 	'Mici' : micIqamahTimings[1].text,
 	'MYaseena' : amyaseenDprayer,
 	'MYaseeni' : imyaseenDprayer,
-
+	'Mckinneya': mckinneyIqamahTiming[7].text,
+	'Mckinneyi': mckinneyIqamahTiming[8].text,
 }
 allAsr = {
 	'ID': 3,
@@ -316,6 +319,8 @@ allAsr = {
 	'Mici' : micIqamahTimings[2].text,
 	'MYaseena' : amyaseenAprayer,
 	'MYaseeni' : imyaseenAprayer,
+	'Mckinneya': mckinneyIqamahTiming[10].text,
+	'Mckinneyi': mckinneyIqamahTiming[11].text,
 }
 allMaghrib = {
 	'ID': 4,
@@ -339,6 +344,8 @@ allMaghrib = {
 	'Mici' : micIqamahTimings[3].text,
 	'MYaseena' : amyaseenMprayer,
 	'MYaseeni' : imyaseenMprayer,
+	'Mckinneya': mckinneyIqamahTiming[13].text,
+	'Mckinneyi': mckinneyIqamahTiming[14].text,
 }
 allIsha = {
 	'ID': 5,
@@ -362,14 +369,14 @@ allIsha = {
 	'Mici' : micIqamahTimings[4].text,	
 	'MYaseena' : amyaseenIprayer,
 	'MYaseeni' : imyaseenIprayer,
+	'Mckinneya': mckinneyIqamahTiming[16].text,
+	'Mckinneyi': mckinneyIqamahTiming[17].text,
 
 }
-allJummahKhutbah1 = {
-	
+allJummahKhutbah = {
+#	'MckinneyJ' : 
 }
-allJummahKhutbah2 = {
-	
-}
+
 
 print mckinneyIqamahTiming
 
