@@ -74,7 +74,9 @@ mansfsoup = BeautifulSoup(mansfR, "html.parser")
 
 #MANSFIELD MASJID
 mansfIqamahTimingF = mansfsoup.findAll('th')
-print mansfIqamahTimingF[1]
+mansfIqamahTimingF = mansfsoup.findAll('td')
+z = mansfIqamahTimingF[1].strip()
+print z
 
 #MCKINNEY MASJID
 mckinneyIqamahTiming = mckinneysoup.findAll('td')
@@ -287,6 +289,7 @@ allFajr = {
 	'MYaseeni' : imyaseenFprayer,
 	'Mckinneya': Mckinneyf,
 	'Mckinneyi': mckinneyIqamahTiming[5].text,
+	'Mansfi': mansfIqamahTimingF[1].text
 
 }
 allDhur = {
