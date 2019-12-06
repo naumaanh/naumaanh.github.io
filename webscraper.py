@@ -52,7 +52,7 @@ icsHTML = icsR.text
 mmHTML = mmR.text
 #micHTML = micR.text
 myaseenHTML = myaseenR.text
-mckinneyHTML = mckinneyURL.text
+mckinneyHTML = mckinneyR.text
 
 icisoup = BeautifulSoup(iciHTML, "html.parser")
 vricsoup = BeautifulSoup(vricHTML, "html.parser")
