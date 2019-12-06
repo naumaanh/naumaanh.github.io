@@ -87,8 +87,6 @@ isdsoup = BeautifulSoup(isdR, "html.parser")
 
 #ISLAMIC CENTER OF DENTON
 isdIqamahTimings = isdsoup.findAll('td')
-print isdIqamahTimings[5]
-
 
 #ISLAMIC ASSOCIATION OF FORT WORTH DAR UN NOOR
 dncfwIqamahTimings = dncfwsoup.findAll('td')
@@ -323,6 +321,8 @@ allFajr = {
 	'Mansfi': mansF,
 	'Darelimaani': darelimanIqamahTimings[1].text,
 	'dncfwi': dncfwFprayer,
+	'isda': isdIqamahTimings[5].text,
+	'isdi': isdIqamahTimings[6].text,
 
 }
 allDhur = {
@@ -352,6 +352,8 @@ allDhur = {
 	'Mansfi': mansfIqamahTiming[1].text,
 	'Darelimaani': darelimanIqamahTimings[3].text,
 	'dncfwi': dncfwDprayer,
+	'isda': isdIqamahTimings[11].text,
+	'isdi': isdIqamahTimings[12].text,
 }
 allAsr = {
 	'ID': 3,
@@ -380,7 +382,8 @@ allAsr = {
 	'Mansfi': mansfIqamahTiming[3].text,
 	'Darelimaani': darelimanIqamahTimings[7].text,
 	'dncfwi': dncfwAprayer,
-
+	'isda': isdIqamahTimings[14].text,
+	'isdi': isdIqamahTimings[15].text,
 
 }
 allMaghrib = {
@@ -410,6 +413,8 @@ allMaghrib = {
 	'Mansfi': mansfIqamahTiming[5].text,
 	'Darelimaani': darelimanIqamahTimings[9].text,
 	'dncfwi': dncfwMprayer,
+	'isda': isdIqamahTimings[17].text,
+	'isdi': isdIqamahTimings[18].text,
 
 }
 allIsha = {
@@ -439,6 +444,8 @@ allIsha = {
 	'Mansfi': mansfIqamahTiming[7].text,
 	'Darelimaani': darelimanIqamahTimings[11].text,
 	'dncfwi': dncfwIprayer,
+	'isda': isdIqamahTimings[20].text,
+	'isdi': isdIqamahTimings[21].text,
 
 }
 
