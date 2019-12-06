@@ -32,7 +32,7 @@ darelimanURL = 'https://www.dareleman.org'
 maiURL = 'https://masjidalislam.org'
 dncfwURL = 'https://dncfw.org'
 isdURL = 'https://www.dentonmosque.com'
-flowerURL = 'http://ialfm.org'
+flowerURL = 'https://us.mohid.co/tx/dallas/ialfm/masjid/widget/api/index/?m=prayertimings'
 
 iciR = requests.get(iciURL)
 vricR = requests.get(vricURL)
@@ -92,11 +92,10 @@ flowersoup = BeautifulSoup(flowerHTML, "html.parser")
 
 
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMER MOUND
-flowerIqamahTimings = flowersoup.findAll('html')
-print flowerIqamahTimings
-#ialfmIqamahTimings = ialfmsoup.findAll('html')#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
-#ialfmAdhanTimings = ialfmsoup.findAll('div')#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
-#print ialfmIqamahTimings
+
+ialfmIqamahTimings = ialfmsoup.findAll('html')#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
+ialfmAdhanTimings = ialfmsoup.findAll('div')#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
+print ialfmIqamahTimings
 #ISLAMIC CENTER OF DENTON
 isdIqamahTimings = isdsoup.findAll('td')
 
