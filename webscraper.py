@@ -95,7 +95,7 @@ ialfmsoup = BeautifulSoup(ialfmHTML, "html.parser")
 icopsoup = BeautifulSoup(icopHTML, "html.parser")
 
 #ISLAMIC CENTER OF COPPELL
-icopIqamahTimings = icopsoup.findAll('html')
+icopIqamahTimings = icopsoup.findAll('div')
 print icopIqamahTimings
 
 
