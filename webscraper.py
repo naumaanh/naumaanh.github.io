@@ -76,7 +76,6 @@ darelimansoup = BeautifulSoup(darelimanR, "html.parser")
 
 #DAR EL IMAAN ARLINGTON 
 darelimanIqamahTimings = darelimansoup.findAll('td')
-print darelimanIqamahTimings
 
 #MANSFIELD MASJID
 mansfIqamahTimingF = mansfsoup.findAll('th')
