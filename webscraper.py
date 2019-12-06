@@ -316,6 +316,7 @@ allDhur = {
 	'MYaseeni' : imyaseenDprayer,
 	'Mckinneya': Mckinneyd,
 	'Mckinneyi': mckinneyIqamahTiming[8].text,
+	'Mansfi': mansfIqamahTiming[1],
 }
 allAsr = {
 	'ID': 3,
@@ -341,6 +342,8 @@ allAsr = {
 	'MYaseeni' : imyaseenAprayer,
 	'Mckinneya': Mckinneya,
 	'Mckinneyi': mckinneyIqamahTiming[11].text,
+	'Mansfi': mansfIqamahTiming[3],
+
 }
 allMaghrib = {
 	'ID': 4,
@@ -366,6 +369,8 @@ allMaghrib = {
 	'MYaseeni' : imyaseenMprayer,
 	'Mckinneya': Mckinneym,
 	'Mckinneyi': mckinneyIqamahTiming[14].text,
+	'Mansfi': mansfIqamahTiming[5],
+
 }
 allIsha = {
 	'ID': 5,
@@ -391,6 +396,8 @@ allIsha = {
 	'MYaseeni' : imyaseenIprayer,
 	'Mckinneya': Mckinneyi,
 	'Mckinneyi': mckinneyIqamahTiming[17].text,
+	'Mansfi': mansfIqamahTiming[7],
+
 
 }
 allJummahKhutbah = {
