@@ -27,6 +27,7 @@ mmURL = 'http://www.makkahmasjid.net'
 micURL = 'http://www.micmasjid.com'
 myaseenURL = 'http://masjidyaseen.org'
 mckinneyURL = 'http://www.mckinneymasjid.org'
+mansfURL = 'https://www.mansfieldmasjid.com'
 
 iciR = requests.get(iciURL)
 vricR = requests.get(vricURL)
@@ -40,6 +41,7 @@ mmR = requests.get(mmURL)
 micR = requests.get(micURL, headers=header).text
 myaseenR = requests.get(myaseenURL)
 mckinneyR = requests.get(mckinneyURL, headers=header).text
+mansfR = requests.get(mansfURL)
 
 iciHTML = iciR.text
 vricHTML = vricR.text
@@ -53,6 +55,7 @@ mmHTML = mmR.text
 #micHTML = micR.text
 myaseenHTML = myaseenR.text
 #mckinneyHTML = mckinneyR.text
+mansfHTML = mansfR.text
 
 icisoup = BeautifulSoup(iciHTML, "html.parser")
 vricsoup = BeautifulSoup(vricHTML, "html.parser")
@@ -66,6 +69,12 @@ mmsoup = BeautifulSoup(mmHTML, "html.parser")
 micsoup = BeautifulSoup(micR, "html.parser")
 myaseensoup = BeautifulSoup(myaseenHTML, "html.parser")
 mckinneysoup = BeautifulSoup(mckinneyR, "html.parser")
+mansfsoup = BeautifulSoup(mansfR, "html.parser")
+
+
+#MANSFIELD MASJID
+mansfIqamahTiming = mansfsoup.findAll('td')
+print mansfIqamahTiming
 
 #MCKINNEY MASJID
 mckinneyIqamahTiming = mckinneysoup.findAll('td')
@@ -385,8 +394,6 @@ allJummahKhutbah = {
 #	'MckinneyJ' : 
 }
 
-
-print mckinneyIqamahTiming
 
 outputer = [allFajr, allDhur, allAsr, allMaghrib, allIsha]
 z = json.dumps(outputer)
