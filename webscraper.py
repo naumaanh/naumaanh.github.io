@@ -29,6 +29,7 @@ myaseenURL = 'http://masjidyaseen.org'
 mckinneyURL = 'http://www.mckinneymasjid.org'
 mansfURL = 'https://www.mansfieldmasjid.com'
 darelimanURL = 'https://www.dareleman.org'
+maiURL = 'https://masjidalislam.org'
 
 iciR = requests.get(iciURL)
 vricR = requests.get(vricURL)
@@ -44,6 +45,7 @@ myaseenR = requests.get(myaseenURL)
 mckinneyR = requests.get(mckinneyURL, headers=header).text
 mansfR = requests.get(mansfURL, headers=header).text
 darelimanR = requests.get(darelimanURL, headers=header).text
+maiR = requests.get(maiURL)
 
 iciHTML = iciR.text
 vricHTML = vricR.text
@@ -58,6 +60,7 @@ mmHTML = mmR.text
 myaseenHTML = myaseenR.text
 #mckinneyHTML = mckinneyR.text
 #mansfHTML = mansfR.text
+maiHTML = maiR.text
 
 icisoup = BeautifulSoup(iciHTML, "html.parser")
 vricsoup = BeautifulSoup(vricHTML, "html.parser")
@@ -73,6 +76,11 @@ myaseensoup = BeautifulSoup(myaseenHTML, "html.parser")
 mckinneysoup = BeautifulSoup(mckinneyR, "html.parser")
 mansfsoup = BeautifulSoup(mansfR, "html.parser")
 darelimansoup = BeautifulSoup(darelimanR, "html.parser")
+maisoup = BeautifulSoup(maiHTML, "html.parser")
+
+#MASJID AL ISLAM
+maiIQamahTimings = maisoup.findAll('h3')
+print maiIQamahTimings
 
 #DAR EL IMAAN ARLINGTON 
 darelimanIqamahTimings = darelimansoup.findAll('td')
