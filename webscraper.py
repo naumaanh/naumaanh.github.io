@@ -247,8 +247,8 @@ icfAdhanTimings = icfsoup.findAll('div', attrs={"class": "prayer_azaan_div"})#ic
 #####################################################################################################
 #####################################################################################################
 
-Mc = mckinneyIqamahTiming[5].text.replace('\\n', '')
-Mc = mckinneyIqamahTiming[5].text.replace('\\t', '')
+Mc = mckinneyIqamahTiming[4].text.replace('\\n', '')
+Mc = mckinneyIqamahTiming[4].text.replace('\\t', '')
 allFajr = {
 	'ID': 1,
 	'VRICi': vricJSON['fajrIqamah'],
