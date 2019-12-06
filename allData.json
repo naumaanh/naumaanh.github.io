@@ -23,7 +23,8 @@
     "ID": 1, 
     "ICIa": "5:48 am", 
     "ICIi": "6:15 am", 
-    "Mansfi": "6:20 AM"
+    "Mansfi": "6:20 AM", 
+    "Darelimaani": "6:15 AM"
   }, 
   {
     "ICFi": "02:00 PM", 
@@ -49,7 +50,8 @@
     "ID": 2, 
     "ICIa": "12:24 pm", 
     "ICIi": "1:45 pm", 
-    "Mansfi": "1:15 PM"
+    "Mansfi": "1:15 PM", 
+    "Darelimaani": "1:00 PM"
   }, 
   {
     "ICFi": "04:00 PM", 
@@ -75,7 +77,8 @@
     "ID": 3, 
     "ICIa": "3:03 pm", 
     "ICIi": "3:45 pm", 
-    "Mansfi": "4:00 PM"
+    "Mansfi": "4:00 PM", 
+    "Darelimaani": "3:30 PM"
   }, 
   {
     "ICFi": "05:26 PM", 
@@ -101,7 +104,8 @@
     "ID": 4, 
     "ICIa": "5:23 pm", 
     "ICIi": "5:28 pm", 
-    "Mansfi": "Athan+10"
+    "Mansfi": "Athan+10", 
+    "Darelimaani": "Sunset + 10 Minutes"
   }, 
   {
     "ICFi": "07:45 PM", 
@@ -127,6 +131,7 @@
     "ID": 5, 
     "ICIa": "6:49 pm", 
     "ICIi": "7:45 pm", 
-    "Mansfi": "7:45 PM"
+    "Mansfi": "7:45 PM", 
+    "Darelimaani": "7:45 PM"
   }
 ]
