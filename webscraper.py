@@ -398,10 +398,6 @@ allIsha = {
 	'Mansfi': mansfIqamahTiming[7],
 
 }
-allJummahKhutbah = {
-#	'MckinneyJ' : 
-}
-
 
 outputer = [allFajr, allDhur, allAsr, allMaghrib, allIsha]
 z = json.dumps(outputer)
