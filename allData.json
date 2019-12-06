@@ -48,7 +48,8 @@
     "EPICa": "12:18 PM", 
     "ID": 2, 
     "ICIa": "12:24 pm", 
-    "ICIi": "1:45 pm"
+    "ICIi": "1:45 pm", 
+    "Mansfi": "1:15 PM"
   }, 
   {
     "ICFi": "04:00 PM", 
@@ -73,7 +74,8 @@
     "EPICa": "03:02 PM", 
     "ID": 3, 
     "ICIa": "3:03 pm", 
-    "ICIi": "3:45 pm"
+    "ICIi": "3:45 pm", 
+    "Mansfi": "4:00 PM"
   }, 
   {
     "ICFi": "05:26 PM", 
@@ -98,7 +100,8 @@
     "EPICa": "05:20 PM", 
     "ID": 4, 
     "ICIa": "5:23 pm", 
-    "ICIi": "5:28 pm"
+    "ICIi": "5:28 pm", 
+    "Mansfi": "Athan+10"
   }, 
   {
     "ICFi": "07:45 PM", 
@@ -123,6 +126,7 @@
     "EPICa": "06:34 PM", 
     "ID": 5, 
     "ICIa": "6:49 pm", 
-    "ICIi": "7:45 pm"
+    "ICIi": "7:45 pm", 
+    "Mansfi": "7:45 PM"
   }
 ]
