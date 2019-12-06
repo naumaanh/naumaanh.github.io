@@ -94,7 +94,7 @@ ialfmsoup = BeautifulSoup(ialfmHTML, "html.parser")
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMER MOUND
 ialfmIqamahTimings = ialfmsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
 ialfmAdhanTimings = ialfmsoup.findAll('div', attrs={"class": "prayer_azaan_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
-
+print ialfmIqamahTimings
 #ISLAMIC CENTER OF DENTON
 isdIqamahTimings = isdsoup.findAll('td')
 
