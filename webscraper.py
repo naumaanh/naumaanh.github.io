@@ -96,7 +96,7 @@ icopsoup = BeautifulSoup(icopHTML, "html.parser")
 
 #ISLAMIC CENTER OF COPPELL
 icopIqamahTimings = icopsoup.findAll('div', attrs={"class": "prayer_iqama_div"})
-print icopIqamahTimings
+icopAdhanTimings = icopsoup.findAll('div', attrs={"class": "prayer_azaan_div"})
 
 
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMER MOUND
@@ -344,6 +344,8 @@ allFajr = {
 	'isdi': isdIqamahTimings[6].text,
 	'ialfmi': ialfmIqamahTimings[1].text,
 	'ialfma': ialfmAdhanTimings[1].text,
+	'icopi': icopIqamahTimings[1].text,
+	'icopa': icopAdhanTimings[1].text,
 }
 allDhur = {
 	'ID': 2,
@@ -376,6 +378,8 @@ allDhur = {
 	'isdi': isdIqamahTimings[12].text,
 	'ialfmi': ialfmIqamahTimings[2].text,
 	'ialfma': ialfmAdhanTimings[2].text,
+	'icopi': icopIqamahTimings[2].text,
+	'icopa': icopAdhanTimings[2].text,
 }
 allAsr = {
 	'ID': 3,
@@ -408,6 +412,8 @@ allAsr = {
 	'isdi': isdIqamahTimings[15].text,
 	'ialfmi': ialfmIqamahTimings[3].text,
 	'ialfma': ialfmAdhanTimings[3].text,
+	'icopi': icopIqamahTimings[3].text,
+	'icopa': icopAdhanTimings[3].text,
 
 }
 allMaghrib = {
@@ -441,6 +447,8 @@ allMaghrib = {
 	'isdi': isdIqamahTimings[18].text,
 	'ialfmi': ialfmIqamahTimings[4].text,
 	'ialfma': ialfmAdhanTimings[4].text,
+	'icopi': icopIqamahTimings[4].text,
+	'icopa': icopAdhanTimings[4].text,
 
 }
 allIsha = {
@@ -474,6 +482,8 @@ allIsha = {
 	'isdi': isdIqamahTimings[21].text,
 	'ialfmi': ialfmIqamahTimings[5].text,
 	'ialfma': ialfmAdhanTimings[5].text,
+	'icopi': icopIqamahTimings[5].text,
+	'icopa': icopAdhanTimings[5].text,
 
 
 }
