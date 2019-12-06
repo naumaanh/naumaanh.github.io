@@ -69,7 +69,8 @@ mckinneysoup = BeautifulSoup(mckinneyR, "html.parser")
 
 #MCKINNEY MASJID
 mckinneyIqamahTiming = mckinneysoup.findAll('td')
-
+#	'Mckinneya': mckinneyIqamahTiming[].text,
+#	'Mckinneyi': mckinneyIqamahTiming[].text,
 
 #Masjid Yaseen
 myaseenIqamahTiming = myaseensoup.findAll('td', attrs={"style": "text-align:right"})
@@ -267,8 +268,6 @@ allFajr = {
 	'Mici' : micIqamahTimings[0].text,
 	'MYaseena' : amyaseenFprayer,
 	'MYaseeni' : imyaseenFprayer,
-	'Mckinneya': mckinneyIqamahTiming[].text,
-	'Mckinneyi': mckinneyIqamahTiming[].text,
 
 }
 allDhur = {
@@ -293,8 +292,7 @@ allDhur = {
 	'Mici' : micIqamahTimings[1].text,
 	'MYaseena' : amyaseenDprayer,
 	'MYaseeni' : imyaseenDprayer,
-	'Mckinneya': mckinneyIqamahTiming[].text,
-	'Mckinneyi': mckinneyIqamahTiming[].text,
+
 }
 allAsr = {
 	'ID': 3,
@@ -318,8 +316,6 @@ allAsr = {
 	'Mici' : micIqamahTimings[2].text,
 	'MYaseena' : amyaseenAprayer,
 	'MYaseeni' : imyaseenAprayer,
-	'Mckinneya': mckinneyIqamahTiming[].text,
-	'Mckinneyi': mckinneyIqamahTiming[].text,
 }
 allMaghrib = {
 	'ID': 4,
@@ -343,8 +339,6 @@ allMaghrib = {
 	'Mici' : micIqamahTimings[3].text,
 	'MYaseena' : amyaseenMprayer,
 	'MYaseeni' : imyaseenMprayer,
-	'Mckinneya': mckinneyIqamahTiming[].text,
-	'Mckinneyi': mckinneyIqamahTiming[].text,
 }
 allIsha = {
 	'ID': 5,
@@ -368,8 +362,6 @@ allIsha = {
 	'Mici' : micIqamahTimings[4].text,	
 	'MYaseena' : amyaseenIprayer,
 	'MYaseeni' : imyaseenIprayer,
-	'Mckinneya': mckinneyIqamahTiming[].text,
-	'Mckinneyi': mckinneyIqamahTiming[].text,
 
 }
 allJummahKhutbah1 = {
