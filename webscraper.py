@@ -32,7 +32,7 @@ darelimanURL = 'https://www.dareleman.org'
 maiURL = 'https://masjidalislam.org'
 dncfwURL = 'https://dncfw.org'
 isdURL = 'https://www.dentonmosque.com'
-ialfmURL = 'https://ialfm.org'
+ialfmURL = 'http://ialfm.org'
 
 iciR = requests.get(iciURL)
 vricR = requests.get(vricURL)
@@ -51,7 +51,7 @@ darelimanR = requests.get(darelimanURL, headers=header).text
 maiR = requests.get(maiURL)
 dncfwR = requests.get(dncfwURL, headers=header).text
 isdR = requests.get(isdURL, headers=header).text
-ialfmR = requests.get(ialfmURL, headers=header).text
+ialfmR = requests.get(ialfmURL)
 
 
 iciHTML = iciR.text
@@ -69,7 +69,7 @@ myaseenHTML = myaseenR.text
 #mansfHTML = mansfR.text
 maiHTML = maiR.text
 #dncfwHTML = dncfwR.text
-#ialfmHTML = ialfmR.text
+ialfmHTML = ialfmR.text
 
 icisoup = BeautifulSoup(iciHTML, "html.parser")
 vricsoup = BeautifulSoup(vricHTML, "html.parser")
@@ -88,7 +88,7 @@ darelimansoup = BeautifulSoup(darelimanR, "html.parser")
 maisoup = BeautifulSoup(maiHTML, "html.parser")
 dncfwsoup = BeautifulSoup(dncfwR, "html.parser")
 isdsoup = BeautifulSoup(isdR, "html.parser")
-ialfmsoup = BeautifulSoup(ialfmR, "html.parser")
+ialfmsoup = BeautifulSoup(ialfmHTML, "html.parser")
 
 
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMER MOUND
