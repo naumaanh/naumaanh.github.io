@@ -33,7 +33,7 @@ maiURL = 'https://masjidalislam.org'
 dncfwURL = 'https://dncfw.org'
 isdURL = 'https://www.dentonmosque.com'
 ialfmURL = 'https://us.mohid.co/tx/dallas/ialfm/masjid/widget/api/index/?m=prayertimings'
-icopURL = 'https://iccmasjid.org/'
+icopURL = 'https://us.mohid.co/tx/dallas/iccltx/masjid'
 
 iciR = requests.get(iciURL)
 vricR = requests.get(vricURL)
@@ -95,7 +95,7 @@ ialfmsoup = BeautifulSoup(ialfmHTML, "html.parser")
 icopsoup = BeautifulSoup(icopHTML, "html.parser")
 
 #ISLAMIC CENTER OF COPPELL
-icopIqamahTimings = icopsoup.findAll('div')
+icopIqamahTimings = icopsoup.findAll('div', attrs={"class": "prayer_iqama_div"})
 print icopIqamahTimings
 
 
