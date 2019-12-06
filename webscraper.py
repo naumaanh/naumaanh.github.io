@@ -333,8 +333,6 @@ allFajr = {
 	'dncfwi': dncfwFprayer,
 	'isda': isdIqamahTimings[5].text,
 	'isdi': isdIqamahTimings[6].text,
-	'ialfmi': ialfmIqamahTimings[1].text,
-	'ialfma': ialfmAdhanTimings[1].text,
 }
 allDhur = {
 	'ID': 2,
@@ -365,8 +363,6 @@ allDhur = {
 	'dncfwi': dncfwDprayer,
 	'isda': isdIqamahTimings[11].text,
 	'isdi': isdIqamahTimings[12].text,
-	'ialfmi': ialfmIqamahTimings[2].text,
-	'ialfma': ialfmAdhanTimings[2].text,
 }
 allAsr = {
 	'ID': 3,
@@ -397,8 +393,6 @@ allAsr = {
 	'dncfwi': dncfwAprayer,
 	'isda': isdIqamahTimings[14].text,
 	'isdi': isdIqamahTimings[15].text,
-	'ialfmi': ialfmIqamahTimings[3].text,
-	'ialfma': ialfmAdhanTimings[3].text,
 
 }
 allMaghrib = {
@@ -430,8 +424,6 @@ allMaghrib = {
 	'dncfwi': dncfwMprayer,
 	'isda': isdIqamahTimings[17].text,
 	'isdi': isdIqamahTimings[18].text,
-	'ialfmi': ialfmIqamahTimings[4].text,
-	'ialfma': ialfmAdhanTimings[4].text,
 
 }
 allIsha = {
@@ -463,8 +455,6 @@ allIsha = {
 	'dncfwi': dncfwIprayer,
 	'isda': isdIqamahTimings[20].text,
 	'isdi': isdIqamahTimings[21].text,
-	'ialfmi': ialfmIqamahTimings[5].text,
-	'ialfma': ialfmAdhanTimings[5].text,
 
 
 }
