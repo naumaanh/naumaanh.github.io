@@ -32,7 +32,7 @@ darelimanURL = 'https://www.dareleman.org'
 maiURL = 'https://masjidalislam.org'
 dncfwURL = 'https://dncfw.org'
 isdURL = 'https://www.dentonmosque.com'
-flowerURL = 'https://us.mohid.co/tx/dallas/ialfm/masjid/widget/api/index/?m=prayertimings'
+ialfmURL = 'https://us.mohid.co/tx/dallas/ialfm/masjid/widget/api/index/?m=prayertimings'
 
 iciR = requests.get(iciURL)
 vricR = requests.get(vricURL)
@@ -51,7 +51,7 @@ darelimanR = requests.get(darelimanURL, headers=header).text
 maiR = requests.get(maiURL)
 dncfwR = requests.get(dncfwURL, headers=header).text
 isdR = requests.get(isdURL, headers=header).text
-flowerR = requests.get(flowerURL)
+ialfmR = requests.get(ialfmURL)
 
 
 iciHTML = iciR.text
@@ -69,7 +69,7 @@ myaseenHTML = myaseenR.text
 #mansfHTML = mansfR.text
 maiHTML = maiR.text
 #dncfwHTML = dncfwR.text
-flowerHTML = flowerR.text
+ialfmHTML = ialfmR.text
 
 icisoup = BeautifulSoup(iciHTML, "html.parser")
 vricsoup = BeautifulSoup(vricHTML, "html.parser")
@@ -88,13 +88,12 @@ darelimansoup = BeautifulSoup(darelimanR, "html.parser")
 maisoup = BeautifulSoup(maiHTML, "html.parser")
 dncfwsoup = BeautifulSoup(dncfwR, "html.parser")
 isdsoup = BeautifulSoup(isdR, "html.parser")
-flowersoup = BeautifulSoup(flowerHTML, "html.parser")
+ialfmsoup = BeautifulSoup(ialfmHTML, "html.parser")
 
 
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMER MOUND
-
-ialfmIqamahTimings = ialfmsoup.findAll('html')#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
-ialfmAdhanTimings = ialfmsoup.findAll('div')#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
+ialfmIqamahTimings = ialfmsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
+ialfmAdhanTimings = ialfmsoup.findAll('div', attrs={"class": "prayer_azaan_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
 print ialfmIqamahTimings
 #ISLAMIC CENTER OF DENTON
 isdIqamahTimings = isdsoup.findAll('td')
@@ -334,6 +333,8 @@ allFajr = {
 	'dncfwi': dncfwFprayer,
 	'isda': isdIqamahTimings[5].text,
 	'isdi': isdIqamahTimings[6].text,
+	'ialfmi': ialfmIqamahTimings[1].text,
+	'ialfma': ialfmAdhanTimings[1].text,
 }
 allDhur = {
 	'ID': 2,
@@ -364,6 +365,8 @@ allDhur = {
 	'dncfwi': dncfwDprayer,
 	'isda': isdIqamahTimings[11].text,
 	'isdi': isdIqamahTimings[12].text,
+	'ialfmi': ialfmIqamahTimings[2].text,
+	'ialfma': ialfmAdhanTimings[2].text,
 }
 allAsr = {
 	'ID': 3,
@@ -394,6 +397,8 @@ allAsr = {
 	'dncfwi': dncfwAprayer,
 	'isda': isdIqamahTimings[14].text,
 	'isdi': isdIqamahTimings[15].text,
+	'ialfmi': ialfmIqamahTimings[3].text,
+	'ialfma': ialfmAdhanTimings[3].text,
 
 }
 allMaghrib = {
@@ -425,6 +430,8 @@ allMaghrib = {
 	'dncfwi': dncfwMprayer,
 	'isda': isdIqamahTimings[17].text,
 	'isdi': isdIqamahTimings[18].text,
+	'ialfmi': ialfmIqamahTimings[4].text,
+	'ialfma': ialfmAdhanTimings[4].text,
 
 }
 allIsha = {
@@ -456,6 +463,8 @@ allIsha = {
 	'dncfwi': dncfwIprayer,
 	'isda': isdIqamahTimings[20].text,
 	'isdi': isdIqamahTimings[21].text,
+	'ialfmi': ialfmIqamahTimings[5].text,
+	'ialfma': ialfmAdhanTimings[5].text,
 
 
 }

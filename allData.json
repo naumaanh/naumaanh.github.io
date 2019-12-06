@@ -24,7 +24,9 @@
     "IANTa": "06:04 AM", 
     "EPICa": "06:03 AM", 
     "ID": 1, 
+    "ialfma": "06:04 AM", 
     "ICIa": "5:48 am", 
+    "ialfmi": "06:30 AM", 
     "ICIi": "6:15 am", 
     "Mansfi": "6:20 AM", 
     "Darelimaani": "6:15 AM"
@@ -54,7 +56,9 @@
     "IANTa": "12:18 PM", 
     "EPICa": "12:18 PM", 
     "ID": 2, 
+    "ialfma": "12:19 PM", 
     "ICIa": "12:24 pm", 
+    "ialfmi": "01:00 PM", 
     "ICIi": "1:45 pm", 
     "Mansfi": "1:15 PM", 
     "Darelimaani": "1:00 PM"
@@ -84,7 +88,9 @@
     "IANTa": "03:02 PM", 
     "EPICa": "03:02 PM", 
     "ID": 3, 
+    "ialfma": "03:03 PM", 
     "ICIa": "3:03 pm", 
+    "ialfmi": "04:15 PM", 
     "ICIi": "3:45 pm", 
     "Mansfi": "4:00 PM", 
     "Darelimaani": "3:30 PM"
@@ -114,7 +120,9 @@
     "IANTa": "SUNSET", 
     "EPICa": "05:20 PM", 
     "ID": 4, 
+    "ialfma": "05:21 PM", 
     "ICIa": "5:23 pm", 
+    "ialfmi": "05:26 PM", 
     "ICIi": "5:28 pm", 
     "Mansfi": "Athan+10", 
     "Darelimaani": "Sunset + 10 Minutes"
@@ -144,7 +152,9 @@
     "IANTa": "06:33 PM", 
     "EPICa": "06:34 PM", 
     "ID": 5, 
+    "ialfma": "06:34 PM", 
     "ICIa": "6:49 pm", 
+    "ialfmi": "08:00 PM", 
     "ICIi": "7:45 pm", 
     "Mansfi": "7:45 PM", 
     "Darelimaani": "7:45 PM"
