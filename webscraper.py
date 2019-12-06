@@ -79,7 +79,7 @@ darelimansoup = BeautifulSoup(darelimanR, "html.parser")
 maisoup = BeautifulSoup(maiHTML, "html.parser")
 
 #MASJID AL ISLAM
-maiIQamahTimings = maisoup.findAll('h3')
+maiIQamahTimings = maisoup.findAll('h3', attrs={"class": "prayerTime"})
 print maiIQamahTimings
 
 #DAR EL IMAAN ARLINGTON 
