@@ -87,7 +87,7 @@ isdsoup = BeautifulSoup(isdR, "html.parser")
 
 #ISLAMIC CENTER OF DENTON
 isdIqamahTimings = isdsoup.findAll('td')
-print isdIqamahTimings
+print isdIqamahTimings[5]
 
 
 #ISLAMIC ASSOCIATION OF FORT WORTH DAR UN NOOR
