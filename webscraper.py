@@ -295,6 +295,7 @@ allFajr = {
 	'Mckinneya': Mckinneyf,
 	'Mckinneyi': mckinneyIqamahTiming[5].text,
 	'Mansfi': mansF,
+	'Darelimaani': darelimanIqamahTimings[1].text.
 
 }
 allDhur = {
@@ -322,6 +323,7 @@ allDhur = {
 	'Mckinneya': Mckinneyd,
 	'Mckinneyi': mckinneyIqamahTiming[8].text,
 	'Mansfi': mansfIqamahTiming[1].text,
+	'Darelimaani': darelimanIqamahTimings[3].text.
 }
 allAsr = {
 	'ID': 3,
@@ -348,6 +350,8 @@ allAsr = {
 	'Mckinneya': Mckinneya,
 	'Mckinneyi': mckinneyIqamahTiming[11].text,
 	'Mansfi': mansfIqamahTiming[3].text,
+	'Darelimaani': darelimanIqamahTimings[7].text.
+
 
 }
 allMaghrib = {
@@ -375,6 +379,7 @@ allMaghrib = {
 	'Mckinneya': Mckinneym,
 	'Mckinneyi': mckinneyIqamahTiming[14].text,
 	'Mansfi': mansfIqamahTiming[5].text,
+	'Darelimaani': darelimanIqamahTimings[9].text.
 
 }
 allIsha = {
@@ -402,6 +407,7 @@ allIsha = {
 	'Mckinneya': Mckinneyi,
 	'Mckinneyi': mckinneyIqamahTiming[17].text,
 	'Mansfi': mansfIqamahTiming[7].text,
+	'Darelimaani': darelimanIqamahTimings[11].text.
 
 }
 
