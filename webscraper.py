@@ -271,8 +271,8 @@ allFajr = {
 	'Mici' : micIqamahTimings[0].text,
 	'MYaseena' : amyaseenFprayer,
 	'MYaseeni' : imyaseenFprayer,
-	'Mckinneya': mckinneyIqamahTiming[4].text,
-	'Mckinneyi': Mc,
+	'Mckinneya': Mc,
+	'Mckinneyi': mckinneyIqamahTiming[5].text,
 
 }
 allDhur = {
