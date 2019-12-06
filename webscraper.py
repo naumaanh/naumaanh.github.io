@@ -39,7 +39,7 @@ icsR = requests.get(icsURL)
 mmR = requests.get(mmURL)
 micR = requests.get(micURL, headers=header).text
 myaseenR = requests.get(myaseenURL)
-mckinneyR = requests.get(mckinneyURL)
+mckinneyR = requests.get(mckinneyURL, headers=header).text
 
 iciHTML = iciR.text
 vricHTML = vricR.text
@@ -52,7 +52,7 @@ icsHTML = icsR.text
 mmHTML = mmR.text
 #micHTML = micR.text
 myaseenHTML = myaseenR.text
-mckinneyHTML = mckinneyR.text
+#mckinneyHTML = mckinneyR.text
 
 icisoup = BeautifulSoup(iciHTML, "html.parser")
 vricsoup = BeautifulSoup(vricHTML, "html.parser")
@@ -65,7 +65,7 @@ icssoup = BeautifulSoup(icsHTML, "html.parser")
 mmsoup = BeautifulSoup(mmHTML, "html.parser")
 micsoup = BeautifulSoup(micR, "html.parser")
 myaseensoup = BeautifulSoup(myaseenHTML, "html.parser")
-mckinneysoup = BeautifulSoup(mckinneyHTML, "html.parser")
+mckinneysoup = BeautifulSoup(mckinneyR, "html.parser")
 
 #MCKINNEY MASJID
 mckinneyIqamahTiming = mckinneysoup.findAll('td')
@@ -267,6 +267,8 @@ allFajr = {
 	'Mici' : micIqamahTimings[0].text,
 	'MYaseena' : amyaseenFprayer,
 	'MYaseeni' : imyaseenFprayer,
+	'Mckinneya': mckinneyIqamahTiming[].text,
+	'Mckinneyi': mckinneyIqamahTiming[].text,
 
 }
 allDhur = {
@@ -291,7 +293,8 @@ allDhur = {
 	'Mici' : micIqamahTimings[1].text,
 	'MYaseena' : amyaseenDprayer,
 	'MYaseeni' : imyaseenDprayer,
-
+	'Mckinneya': mckinneyIqamahTiming[].text,
+	'Mckinneyi': mckinneyIqamahTiming[].text,
 }
 allAsr = {
 	'ID': 3,
@@ -315,6 +318,8 @@ allAsr = {
 	'Mici' : micIqamahTimings[2].text,
 	'MYaseena' : amyaseenAprayer,
 	'MYaseeni' : imyaseenAprayer,
+	'Mckinneya': mckinneyIqamahTiming[].text,
+	'Mckinneyi': mckinneyIqamahTiming[].text,
 }
 allMaghrib = {
 	'ID': 4,
@@ -338,6 +343,8 @@ allMaghrib = {
 	'Mici' : micIqamahTimings[3].text,
 	'MYaseena' : amyaseenMprayer,
 	'MYaseeni' : imyaseenMprayer,
+	'Mckinneya': mckinneyIqamahTiming[].text,
+	'Mckinneyi': mckinneyIqamahTiming[].text,
 }
 allIsha = {
 	'ID': 5,
@@ -361,6 +368,8 @@ allIsha = {
 	'Mici' : micIqamahTimings[4].text,	
 	'MYaseena' : amyaseenIprayer,
 	'MYaseeni' : imyaseenIprayer,
+	'Mckinneya': mckinneyIqamahTiming[].text,
+	'Mckinneyi': mckinneyIqamahTiming[].text,
 
 }
 allJummahKhutbah1 = {
