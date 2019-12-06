@@ -69,7 +69,7 @@ mmsoup = BeautifulSoup(mmHTML, "html.parser")
 micsoup = BeautifulSoup(micR, "html.parser")
 myaseensoup = BeautifulSoup(myaseenHTML, "html.parser")
 mckinneysoup = BeautifulSoup(mckinneyR, "html.parser")
-mansfsoup = BeautifulSoup(mansfR, "html.parser")
+mansfsoup = BeautifulSoup(mansfHTML, "html.parser")
 
 
 #MANSFIELD MASJID
