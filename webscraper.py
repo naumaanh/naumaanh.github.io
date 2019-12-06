@@ -74,7 +74,7 @@ mansfsoup = BeautifulSoup(mansfR, "html.parser")
 
 #MANSFIELD MASJID
 mansfIqamahTiming = mansfsoup.findAll('tr')
-print mansfIqamahTiming
+print mansfIqamahTiming[0].strip()
 
 #MCKINNEY MASJID
 mckinneyIqamahTiming = mckinneysoup.findAll('td')
