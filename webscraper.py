@@ -71,6 +71,11 @@ mckinneysoup = BeautifulSoup(mckinneyR, "html.parser")
 mckinneyIqamahTiming = mckinneysoup.findAll('td')
 #	'Mckinneya': mckinneyIqamahTiming[].text,
 #	'Mckinneyi': mckinneyIqamahTiming[].text,
+Mckinneyf = mckinneyIqamahTiming[4].text.strip()
+Mckinneyd = mckinneyIqamahTiming[7].text.strip()
+Mckinneya = mckinneyIqamahTiming[10].text.strip()
+mckinneym = mckinneyIqamahTiming[13].text.strip()
+Mckinneyi = mckinneyIqamahTiming[16].text.strip()
 
 #Masjid Yaseen
 myaseenIqamahTiming = myaseensoup.findAll('td', attrs={"style": "text-align:right"})
@@ -247,7 +252,8 @@ icfAdhanTimings = icfsoup.findAll('div', attrs={"class": "prayer_azaan_div"})#ic
 #####################################################################################################
 #####################################################################################################
 
-Mc = mckinneyIqamahTiming[4].text.strip()
+
+
 allFajr = {
 	'ID': 1,
 	'VRICi': vricJSON['fajrIqamah'],
@@ -270,7 +276,7 @@ allFajr = {
 	'Mici' : micIqamahTimings[0].text,
 	'MYaseena' : amyaseenFprayer,
 	'MYaseeni' : imyaseenFprayer,
-	'Mckinneya': Mc,
+	'Mckinneya': Mckinneyf,
 	'Mckinneyi': mckinneyIqamahTiming[5].text,
 
 }
@@ -296,7 +302,7 @@ allDhur = {
 	'Mici' : micIqamahTimings[1].text,
 	'MYaseena' : amyaseenDprayer,
 	'MYaseeni' : imyaseenDprayer,
-	'Mckinneya': mckinneyIqamahTiming[7].text,
+	'Mckinneya': Mckinneyd,
 	'Mckinneyi': mckinneyIqamahTiming[8].text,
 }
 allAsr = {
@@ -321,7 +327,7 @@ allAsr = {
 	'Mici' : micIqamahTimings[2].text,
 	'MYaseena' : amyaseenAprayer,
 	'MYaseeni' : imyaseenAprayer,
-	'Mckinneya': mckinneyIqamahTiming[10].text,
+	'Mckinneya': Mckinneya,
 	'Mckinneyi': mckinneyIqamahTiming[11].text,
 }
 allMaghrib = {
@@ -346,7 +352,7 @@ allMaghrib = {
 	'Mici' : micIqamahTimings[3].text,
 	'MYaseena' : amyaseenMprayer,
 	'MYaseeni' : imyaseenMprayer,
-	'Mckinneya': mckinneyIqamahTiming[13].text,
+	'Mckinneya': Mckinneym,
 	'Mckinneyi': mckinneyIqamahTiming[14].text,
 }
 allIsha = {
@@ -371,7 +377,7 @@ allIsha = {
 	'Mici' : micIqamahTimings[4].text,	
 	'MYaseena' : amyaseenIprayer,
 	'MYaseeni' : imyaseenIprayer,
-	'Mckinneya': mckinneyIqamahTiming[16].text,
+	'Mckinneya': Mckinneyi,
 	'Mckinneyi': mckinneyIqamahTiming[17].text,
 
 }
