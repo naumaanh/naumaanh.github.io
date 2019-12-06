@@ -86,7 +86,11 @@ dncfwsoup = BeautifulSoup(dncfwR, "html.parser")
 
 #ISLAMIC ASSOCIATION OF FORT WORTH DAR UN NOOR
 dncfwIqamahTimings = dncfwsoup.findAll('td')
-print dncfwIqamahTimings
+dncfwFprayer = dncfwIqamahTimings[1].text.strip()
+dncfwDprayer = dncfwIqamahTimings[3].text.strip()
+dncfwAprayer = dncfwIqamahTimings[5].text.strip()
+dncfwMprayer = dncfwIqamahTimings[7].text.strip()
+dncfwIprayer = dncfwIqamahTimings[9].text.strip()
 
 #MASJID AL ISLAM
 maiIQamahTimings = maisoup.findAll('html')
@@ -312,6 +316,7 @@ allFajr = {
 	'Mckinneyi': mckinneyIqamahTiming[5].text,
 	'Mansfi': mansF,
 	'Darelimaani': darelimanIqamahTimings[1].text,
+	'dncfwi': dncfwFprayer,
 
 }
 allDhur = {
@@ -340,6 +345,7 @@ allDhur = {
 	'Mckinneyi': mckinneyIqamahTiming[8].text,
 	'Mansfi': mansfIqamahTiming[1].text,
 	'Darelimaani': darelimanIqamahTimings[3].text,
+	'dncfwi': dncfwDprayer,
 }
 allAsr = {
 	'ID': 3,
@@ -367,6 +373,7 @@ allAsr = {
 	'Mckinneyi': mckinneyIqamahTiming[11].text,
 	'Mansfi': mansfIqamahTiming[3].text,
 	'Darelimaani': darelimanIqamahTimings[7].text,
+	'dncfwi': dncfwAprayer,
 
 
 }
@@ -396,6 +403,7 @@ allMaghrib = {
 	'Mckinneyi': mckinneyIqamahTiming[14].text,
 	'Mansfi': mansfIqamahTiming[5].text,
 	'Darelimaani': darelimanIqamahTimings[9].text,
+	'dncfwi': dncfwMprayer,
 
 }
 allIsha = {
@@ -424,6 +432,7 @@ allIsha = {
 	'Mckinneyi': mckinneyIqamahTiming[17].text,
 	'Mansfi': mansfIqamahTiming[7].text,
 	'Darelimaani': darelimanIqamahTimings[11].text,
+	'dncfwi': dncfwIprayer,
 
 }
 
