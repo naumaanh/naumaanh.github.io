@@ -33,6 +33,7 @@ maiURL = 'https://masjidalislam.org'
 dncfwURL = 'https://dncfw.org'
 isdURL = 'https://www.dentonmosque.com'
 ialfmURL = 'https://us.mohid.co/tx/dallas/ialfm/masjid/widget/api/index/?m=prayertimings'
+icopURL = 'https://iccmasjid.org/'
 
 iciR = requests.get(iciURL)
 vricR = requests.get(vricURL)
@@ -52,6 +53,7 @@ maiR = requests.get(maiURL)
 dncfwR = requests.get(dncfwURL, headers=header).text
 isdR = requests.get(isdURL, headers=header).text
 ialfmR = requests.get(ialfmURL)
+icopR = requests.get(icopURL)
 
 
 iciHTML = iciR.text
@@ -70,6 +72,7 @@ myaseenHTML = myaseenR.text
 maiHTML = maiR.text
 #dncfwHTML = dncfwR.text
 ialfmHTML = ialfmR.text
+icopHTML = icopR.text
 
 icisoup = BeautifulSoup(iciHTML, "html.parser")
 vricsoup = BeautifulSoup(vricHTML, "html.parser")
@@ -89,12 +92,18 @@ maisoup = BeautifulSoup(maiHTML, "html.parser")
 dncfwsoup = BeautifulSoup(dncfwR, "html.parser")
 isdsoup = BeautifulSoup(isdR, "html.parser")
 ialfmsoup = BeautifulSoup(ialfmHTML, "html.parser")
+icopsoup = BeautifulSoup(icopHTML, "html.parser")
+
+#ISLAMIC CENTER OF COPPELL
+icopIqamahTimings = icopsoup.findAll('html')
+print icopIqamahTimings
 
 
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMER MOUND
 ialfmIqamahTimings = ialfmsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
 ialfmAdhanTimings = ialfmsoup.findAll('div', attrs={"class": "prayer_azaan_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
-print ialfmIqamahTimings
+
+
 #ISLAMIC CENTER OF DENTON
 isdIqamahTimings = isdsoup.findAll('td')
 
