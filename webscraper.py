@@ -356,7 +356,7 @@ allSunrise = {
 	'IACCi': vricJSON['sunrise'],
 	'IANTi': vricJSON['sunrise'],
 	'EPICi': vricJSON['sunrise'],
-	'Body': "      Sunrise ",
+	'Body': "Sunrise ",
 	'VRICa' : "",
 	'IANTa' : "",
 	'EPICa' : "",
