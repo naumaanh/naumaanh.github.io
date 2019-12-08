@@ -518,11 +518,21 @@ allIsha = {
 	'ialfma': ialfmAdhanTimings[5].text,
 	'icopi': icopIqamahTimings[5].text,
 	'icopa': icopAdhanTimings[5].text,
-
-
+}
+allJummahKhutba1 = {
+	'ID' : 7,
+	'Body' : "1st Jummah Khutbah: "
+	'VRICa': vricJSON['firstJummahAdhan']
+	'VRICi' : vricJSON['firstJummahIqamah'] 
+}
+allJummahKhutba2 = {
+	'ID' : 8,
+	'Body' : "2nd Jummah Khutbah: "
+	'VRICa': vricJSON['secondJummahAdhan']
+	'VRICi' : vricJSON['secondJummahIqamah'] 
 }
 
-outputer = [allFajr, allSunrise, allDhur, allAsr, allMaghrib, allIsha]
+outputer = [allFajr, allSunrise, allDhur, allAsr, allMaghrib, allIsha, allJummahKhutba1, allJummahKhutba2]
 z = json.dumps(outputer)
 with open('allData.json', 'w') as outfile:
 	json.dump(outputer,outfile, indent=2)	
