@@ -347,8 +347,42 @@ allFajr = {
 	'icopi': icopIqamahTimings[1].text,
 	'icopa': icopAdhanTimings[1].text,
 }
-allDhur = {
+allSunrise = {
 	'ID': 2,
+	'VRICi': vricJSON['sunrise'],
+	'ICIi': vricJSON['sunrise'],
+	'ICIa': "",
+	'ICFi': vricJSON['sunrise'],
+	'IACCi': vricJSON['sunrise'],
+	'IANTi': vricJSON['sunrise'],
+	'EPICi': vricJSON['sunrise'],
+	'Body': "Sunrise ",
+	'VRICa' : "",
+	'IANTa' : "",
+	'EPICa' : "",
+	'ICFa': "",
+	'Allena' : "",
+	'Alleni' : vricJSON['sunrise'],
+	'ICSi' : vricJSON['sunrise'],
+	'ICSa' : "",
+	'MMi' : vricJSON['sunrise'],
+	'Mici' : vricJSON['sunrise'],
+	'MYaseena' : "",
+	'MYaseeni' : vricJSON['sunrise'],
+	'Mckinneya': "",
+	'Mckinneyi': vricJSON['sunrise'],
+	'Mansfi': vricJSON['sunrise'],
+	'Darelimaani': vricJSON['sunrise'],
+	'dncfwi': vricJSON['sunrise'],
+	'isda': "",
+	'isdi': vricJSON['sunrise'],
+	'ialfmi': vricJSON['sunrise'],
+	'ialfma': "",
+	'icopi': vricJSON['sunrise'],
+	'icopa': "",
+}
+allDhur = {
+	'ID': 3,
 	'VRICi': vricJSON['duhrIqamah'],
 	'ICIi': iciIqamahTimings[1].text,
 	'ICIa': iciAdhanTimings[3].text,
@@ -382,7 +416,7 @@ allDhur = {
 	'icopa': icopAdhanTimings[2].text,
 }
 allAsr = {
-	'ID': 3,
+	'ID': 4,
 	'VRICi': vricJSON['asrIqamah'],
 	'ICIi': iciIqamahTimings[2].text,
 	'ICIa': iciAdhanTimings[5].text,
@@ -417,7 +451,7 @@ allAsr = {
 
 }
 allMaghrib = {
-	'ID': 4,
+	'ID': 5,
 	'VRICi': vricJSON['maghribIqamah'],
 	'ICIi': iciIqamahTimings[3].text,
 	'ICFi': icfIqamahTimings[4].text,
@@ -452,7 +486,7 @@ allMaghrib = {
 
 }
 allIsha = {
-	'ID': 5,
+	'ID': 6,
 	'VRICi': vricJSON['ishaIqamah'],
 	'ICIi': iciIqamahTimings[4].text,
 	'ICIa': iciAdhanTimings[9].text,
