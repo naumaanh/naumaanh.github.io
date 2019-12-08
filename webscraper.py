@@ -521,15 +521,15 @@ allIsha = {
 }
 allJummahKhutba1 = {
 	'ID' : 7,
-	'Body' : "1st Jummah Khutbah: "
-	'VRICa': vricJSON['firstJummahAdhan']
-	'VRICi' : vricJSON['firstJummahIqamah'] 
+	'Body' : "1st Jummah Khutbah: ",
+	'VRICa': vricJSON['firstJummahAdhan'],
+	'VRICi' : vricJSON['firstJummahIqamah'],
 }
 allJummahKhutba2 = {
 	'ID' : 8,
-	'Body' : "2nd Jummah Khutbah: "
-	'VRICa': vricJSON['secondJummahAdhan']
-	'VRICi' : vricJSON['secondJummahIqamah'] 
+	'Body' : "2nd Jummah Khutbah: ",
+	'VRICa': vricJSON['secondJummahAdhan'],
+	'VRICi' : vricJSON['secondJummahIqamah'],
 }
 
 outputer = [allFajr, allSunrise, allDhur, allAsr, allMaghrib, allIsha, allJummahKhutba1, allJummahKhutba2]
