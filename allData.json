@@ -202,17 +202,5 @@
     "MMi": "8:00pm", 
     "Darelimaani": "7:45 PM", 
     "ICSi": "08:00 PM"
-  }, 
-  {
-    "Body": "1st Jummah Khutbah: ", 
-    "VRICi": "01:30 PM", 
-    "VRICa": "01:00 PM", 
-    "ID": 7
-  }, 
-  {
-    "Body": "2nd Jummah Khutbah: ", 
-    "VRICi": "02:45 PM", 
-    "VRICa": "02:15 PM", 
-    "ID": 8
   }
 ]
