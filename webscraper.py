@@ -349,6 +349,8 @@ allFajr = {
 	'ialfma': ialfmAdhanTimings[1].text,
 	'icopi': icopIqamahTimings[1].text,
 	'icopa': icopAdhanTimings[1].text,
+	'time': timeLastRan,
+
 }
 allSunrise = {
 	'ID': 2,
@@ -524,7 +526,6 @@ allIsha = {
 }
 allTime = {
 	'ID' : 7, 
-	'time': timeLastRan,
 
 }
 allJummahKhutba1 = {
