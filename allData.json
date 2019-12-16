@@ -29,7 +29,6 @@
     "icopa": "06:10 AM", 
     "ICIi": "6:15 am", 
     "Mansfi": "6:20 AM", 
-    "time": "Last updated on 09:58PM on December 15, 2019", 
     "Darelimaani": "6:15 AM"
   }, 
   {
@@ -191,5 +190,9 @@
     "ICIi": "7:45 pm", 
     "Mansfi": "7:45 PM", 
     "Darelimaani": "7:45 PM"
+  }, 
+  {
+    "ID": 7, 
+    "time": "Last updated on 10:01PM on December 15, 2019"
   }
 ]
