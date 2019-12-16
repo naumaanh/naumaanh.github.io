@@ -528,7 +528,7 @@ allIsha = {
 }
 allTime = {
 	'ID' : 1, 
-	'time': timeLastRan,
+	'timeLastRan': timeLastRan,
 
 }
 allJummahKhutba1 = {
