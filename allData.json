@@ -12,6 +12,7 @@
     "Mckinneyi": "6:15", 
     "Mckinneya": "5:52", 
     "dncfwi": "6:30 AM", 
+    "timeLastRan": "Last updated on 10:24PM on December 15, 2019", 
     "ICSa": "06:40 AM", 
     "Mici": "6:45 am", 
     "ICSi": "06:45 AM", 
@@ -29,7 +30,6 @@
     "icopa": "06:10 AM", 
     "ICIi": "6:15 am", 
     "Mansfi": "6:20 AM", 
-    "time": "Last updated on 10:22PM on December 15, 2019", 
     "Darelimaani": "6:15 AM"
   }, 
   {
@@ -45,6 +45,7 @@
     "Mckinneyi": "07:23 AM", 
     "Mckinneya": "", 
     "dncfwi": "07:23 AM", 
+    "timeLastRan": "Last updated on 10:24PM on December 15, 2019", 
     "ICSa": "", 
     "Mici": "07:23 AM", 
     "ICSi": "07:23 AM", 
@@ -62,7 +63,6 @@
     "icopa": "", 
     "ICIi": "07:23 AM", 
     "Mansfi": "07:23 AM", 
-    "time": "Last updated on 10:22PM on December 15, 2019", 
     "Darelimaani": "07:23 AM"
   }, 
   {
@@ -78,6 +78,7 @@
     "Mckinneyi": "2:00", 
     "Mckinneya": "12:26", 
     "dncfwi": "1:30 PM", 
+    "timeLastRan": "Last updated on 10:24PM on December 15, 2019", 
     "ICSa": "01:40 PM", 
     "Mici": "1:45 pm", 
     "ICSi": "01:45 PM", 
@@ -95,7 +96,6 @@
     "icopa": "12:23 PM", 
     "ICIi": "1:45 pm", 
     "Mansfi": "1:15 PM", 
-    "time": "Last updated on 10:22PM on December 15, 2019", 
     "Darelimaani": "1:00 PM"
   }, 
   {
@@ -111,6 +111,7 @@
     "Mckinneyi": "4:00", 
     "Mckinneya": "3:03", 
     "dncfwi": "4:15 PM", 
+    "timeLastRan": "Last updated on 10:24PM on December 15, 2019", 
     "ICSa": "04:10 PM", 
     "Mici": "4:45 pm", 
     "ICSi": "04:15 PM", 
@@ -128,7 +129,6 @@
     "icopa": "03:05 PM", 
     "ICIi": "3:45 pm", 
     "Mansfi": "4:00 PM", 
-    "time": "Last updated on 10:22PM on December 15, 2019", 
     "Darelimaani": "3:30 PM"
   }, 
   {
@@ -144,6 +144,7 @@
     "Mckinneyi": "5:35", 
     "Mckinneya": "5:25", 
     "dncfwi": "Sunset + 5", 
+    "timeLastRan": "Last updated on 10:24PM on December 15, 2019", 
     "ICSa": "05:24 PM", 
     "Mici": "10 minutes after Athan", 
     "ICSi": "05:29 PM", 
@@ -161,7 +162,6 @@
     "icopa": "05:23 PM", 
     "ICIi": "5:30 pm", 
     "Mansfi": "Athan+10", 
-    "time": "Last updated on 10:22PM on December 15, 2019", 
     "Darelimaani": "Sunset + 10 Minutes"
   }, 
   {
@@ -177,6 +177,7 @@
     "Mckinneyi": "8:00", 
     "Mckinneya": "6:34", 
     "dncfwi": "7:30 PM", 
+    "timeLastRan": "Last updated on 10:24PM on December 15, 2019", 
     "ICSa": "07:55 PM", 
     "Mici": "8:15 pm", 
     "ICSi": "08:00 PM", 
@@ -194,7 +195,6 @@
     "icopa": "06:36 PM", 
     "ICIi": "7:45 pm", 
     "Mansfi": "7:45 PM", 
-    "time": "Last updated on 10:22PM on December 15, 2019", 
     "Darelimaani": "7:45 PM"
   }
 ]

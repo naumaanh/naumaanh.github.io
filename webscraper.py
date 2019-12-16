@@ -349,7 +349,7 @@ allFajr = {
 	'ialfma': ialfmAdhanTimings[1].text,
 	'icopi': icopIqamahTimings[1].text,
 	'icopa': icopAdhanTimings[1].text,
-	'time': timeLastRan,
+	'timeLastRan': timeLastRan,
 
 }
 allSunrise = {
@@ -385,7 +385,7 @@ allSunrise = {
 	'ialfma': "",
 	'icopi': vricJSON['sunrise'],
 	'icopa': "",
-	'time': timeLastRan,
+	'timeLastRan': timeLastRan,
 
 }
 allDhur = {
@@ -421,7 +421,7 @@ allDhur = {
 	'ialfma': ialfmAdhanTimings[2].text,
 	'icopi': icopIqamahTimings[2].text,
 	'icopa': icopAdhanTimings[2].text,
-	'time': timeLastRan,
+	'timeLastRan': timeLastRan,
 
 }
 allAsr = {
@@ -457,7 +457,7 @@ allAsr = {
 	'ialfma': ialfmAdhanTimings[3].text,
 	'icopi': icopIqamahTimings[3].text,
 	'icopa': icopAdhanTimings[3].text,
-	'time': timeLastRan,
+	'timeLastRan': timeLastRan,
 
 }
 allMaghrib = {
@@ -493,7 +493,7 @@ allMaghrib = {
 	'ialfma': ialfmAdhanTimings[4].text,
 	'icopi': icopIqamahTimings[4].text,
 	'icopa': icopAdhanTimings[4].text,
-	'time': timeLastRan,
+	'timeLastRan': timeLastRan,
 
 }
 allIsha = {
@@ -529,7 +529,7 @@ allIsha = {
 	'ialfma': ialfmAdhanTimings[5].text,
 	'icopi': icopIqamahTimings[5].text,
 	'icopa': icopAdhanTimings[5].text,
-	'time': timeLastRan,
+	'timeLastRan': timeLastRan,
 
 }
 allTime = {
