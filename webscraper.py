@@ -540,7 +540,7 @@ allJummahKhutba2 = {
 	'VRICi' : vricJSON['secondJummahIqamah'],
 }
 
-outputer = [allFajr, allSunrise, allDhur, allAsr, allMaghrib, allIsha, allTime]
+outputer = [allFajr, allSunrise, allDhur, allAsr, allMaghrib, allIsha]
 z = json.dumps(outputer)
 with open('allData.json', 'w') as outfile:
 	json.dump(outputer,outfile, indent=2)	
