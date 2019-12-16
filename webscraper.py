@@ -349,7 +349,6 @@ allFajr = {
 	'ialfma': ialfmAdhanTimings[1].text,
 	'icopi': icopIqamahTimings[1].text,
 	'icopa': icopAdhanTimings[1].text,
-	'timeLastRan': timeLastRan,
 
 }
 allSunrise = {
@@ -385,7 +384,6 @@ allSunrise = {
 	'ialfma': "",
 	'icopi': vricJSON['sunrise'],
 	'icopa': "",
-	'timeLastRan': timeLastRan,
 
 }
 allDhur = {
@@ -421,7 +419,6 @@ allDhur = {
 	'ialfma': ialfmAdhanTimings[2].text,
 	'icopi': icopIqamahTimings[2].text,
 	'icopa': icopAdhanTimings[2].text,
-	'timeLastRan': timeLastRan,
 
 }
 allAsr = {
@@ -457,7 +454,6 @@ allAsr = {
 	'ialfma': ialfmAdhanTimings[3].text,
 	'icopi': icopIqamahTimings[3].text,
 	'icopa': icopAdhanTimings[3].text,
-	'timeLastRan': timeLastRan,
 
 }
 allMaghrib = {
@@ -493,7 +489,6 @@ allMaghrib = {
 	'ialfma': ialfmAdhanTimings[4].text,
 	'icopi': icopIqamahTimings[4].text,
 	'icopa': icopAdhanTimings[4].text,
-	'timeLastRan': timeLastRan,
 
 }
 allIsha = {
@@ -529,11 +524,11 @@ allIsha = {
 	'ialfma': ialfmAdhanTimings[5].text,
 	'icopi': icopIqamahTimings[5].text,
 	'icopa': icopAdhanTimings[5].text,
-	'timeLastRan': timeLastRan,
 
 }
 allTime = {
-	'ID' : 7, 
+	'ID' : 1, 
+	'time': timeLastRan,
 
 }
 allJummahKhutba1 = {
@@ -552,4 +547,9 @@ allJummahKhutba2 = {
 outputer = [allFajr, allSunrise, allDhur, allAsr, allMaghrib, allIsha]
 z = json.dumps(outputer)
 with open('allData.json', 'w') as outfile:
-	json.dump(outputer,outfile, indent=2)	
+	json.dump(outputer,outfile, indent=2)
+
+outputer1 = [allTime]
+z = json.dumps(outputer1)
+with open('allTime.json', 'w') as outfile:
+	json.dump(outputer1,outfile, indent=2)	
