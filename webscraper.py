@@ -4,6 +4,9 @@ import requests
 import json
 import urllib
 import requests
+import datetime
+
+timeLastRan = datetime.datetime.now().strftime("Last updated on %I:%M%p on %B %d, %Y")
 
 class Object:
     def toJSON(self):
@@ -346,6 +349,7 @@ allFajr = {
 	'ialfma': ialfmAdhanTimings[1].text,
 	'icopi': icopIqamahTimings[1].text,
 	'icopa': icopAdhanTimings[1].text,
+	'time': timeLastRan,
 }
 allSunrise = {
 	'ID': 2,
