@@ -32,7 +32,7 @@ myaseenURL = 'http://masjidyaseen.org'
 mckinneyURL = 'http://www.mckinneymasjid.org'
 mansfURL = 'https://www.mansfieldmasjid.com'
 darelimanURL = 'https://www.dareleman.org'
-maiURL = 'https://masjidalislam.org'
+#maiURL = 'https://masjidalislam.org'
 dncfwURL = 'https://dncfw.org'
 isdURL = 'https://www.dentonmosque.com'
 ialfmURL = 'https://us.mohid.co/tx/dallas/ialfm/masjid/widget/api/index/?m=prayertimings'
@@ -52,7 +52,7 @@ myaseenR = requests.get(myaseenURL)
 mckinneyR = requests.get(mckinneyURL, headers=header).text
 mansfR = requests.get(mansfURL, headers=header).text
 darelimanR = requests.get(darelimanURL, headers=header).text
-maiR = requests.get(maiURL)
+#maiR = requests.get(maiURL)
 dncfwR = requests.get(dncfwURL, headers=header).text
 isdR = requests.get(isdURL, headers=header).text
 ialfmR = requests.get(ialfmURL)
@@ -72,7 +72,7 @@ mmHTML = mmR.text
 myaseenHTML = myaseenR.text
 #mckinneyHTML = mckinneyR.text
 #mansfHTML = mansfR.text
-maiHTML = maiR.text
+#maiHTML = maiR.text
 #dncfwHTML = dncfwR.text
 ialfmHTML = ialfmR.text
 icopHTML = icopR.text
@@ -91,8 +91,7 @@ myaseensoup = BeautifulSoup(myaseenHTML, "html.parser")
 mckinneysoup = BeautifulSoup(mckinneyR, "html.parser")
 mansfsoup = BeautifulSoup(mansfR, "html.parser")
 darelimansoup = BeautifulSoup(darelimanR, "html.parser")
-maisoup = BeautifulSoup(maiHTML, "html.parser")
-dncfwsoup = BeautifulSoup(dncfwR, "html.parser")
+#dncfwsoup = BeautifulSoup(dncfwR, "html.parser")
 isdsoup = BeautifulSoup(isdR, "html.parser")
 ialfmsoup = BeautifulSoup(ialfmHTML, "html.parser")
 icopsoup = BeautifulSoup(icopHTML, "html.parser")
