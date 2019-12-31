@@ -185,7 +185,7 @@ iallenIprayer = ((str(allenIqamahTimings[14].text)).strip()+' PM')
 
 iciIqamahTimings = icisoup.findAll('td', attrs={"class": "jamah"})
 iciAdhanTimings = icisoup.findAll('td')
-iciJummahTimings = ((str(icisoup.find('span', attrs={"style": "color: #ff0000;"}))))
+iciJummahTimings = ((str(icisoup.find('span', attrs={"style": "color: #ff0000;"})))
 iciJummahTimings2 = icisoup.find('span', attrs={"style": "color: #ff0000;"})
 
 iciJ1 = re.sub('(\d:\d\d)','', iciJummahTimings)
