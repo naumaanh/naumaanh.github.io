@@ -554,7 +554,7 @@ allJummahKhutba2 = {
 }
 
 
-outputer = [allFajr, allSunrise, allDhur, allAsr, allMaghrib, allIsha]#, allJummahKhutba1, allJummahKhutbah2]
+outputer = [allFajr, allSunrise, allDhur, allAsr, allMaghrib, allIsha, allJummahKhutba1, allJummahKhutbah2]
 z = json.dumps(outputer)
 with open('allData.json', 'w') as outfile:
 	json.dump(outputer,outfile, indent=2)
