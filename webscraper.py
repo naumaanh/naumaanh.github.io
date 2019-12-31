@@ -191,7 +191,7 @@ iciIqamahTimings = icisoup.findAll('td', attrs={"class": "jamah"})
 iciAdhanTimings = icisoup.findAll('td')
 iciJummahTimings = (icisoup.find('span', attrs={"style": "color: #ff0000;"}))
 iciJJ = ((str(iciJummahTimings.text)))
-iciJ2 = iciJJ.replace(u"\u2019", "'")
+iciJ = iciJJ.replace(u"\u2019", "'").replace("1st Jumm'a ". "")
 iciJ1 = iciJ2.split(" | ")
 
 #iciAdhanTimingsAsDictionary = {
