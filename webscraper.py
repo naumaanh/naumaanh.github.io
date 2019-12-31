@@ -187,9 +187,9 @@ iciIqamahTimings = icisoup.findAll('td', attrs={"class": "jamah"})
 iciAdhanTimings = icisoup.findAll('td')
 iciJummahTimings = ((str(icisoup.find('span', attrs={"style": "color: #ff0000;"})))
 
-iciJ1 = re.sub('(0-9:0-90-9)','', iciJummahTimings)
+iciJ1 = iciJummahTimings.split(" | ")
 
-print iciJ1
+print iciJ1[0]
 #iciAdhanTimingsAsDictionary = {
 #	"FajrAdhan": iciAdhanTimings[0].text,
 #	'DhurAdhan': iciAdhanTimings[3].text,
