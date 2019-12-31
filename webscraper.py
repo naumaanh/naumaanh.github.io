@@ -558,6 +558,7 @@ allJummahKhutba2 = {
 	'ICIa' : iciJ1[1],
 }
 
+print allJummahKhutba1
 
 outputer = [allFajr, allSunrise, allDhur, allAsr, allMaghrib, allIsha, allJummahKhutba1, allJummahKhutba2]
 z = json.dumps(outputer)
