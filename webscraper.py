@@ -553,7 +553,7 @@ allJummahKhutba1 = {
 	'ICIa' : iciJ1[0],
 	'IANTa' : iantIqamahTimings[27].text,
 	'IANTi' : "N/A",
-	'EPICa' : epicIqamahTimings[15].text,
+	#'EPICa' : epicIqamahTimings[15].text,
 	'EPICi' : "N/A",
 }
 allJummahKhutba2 = {
@@ -565,10 +565,10 @@ allJummahKhutba2 = {
 	'ICIa' : iciJ1[1],
 	'IANTi': "N/A",
 	'IANTa' : "N/A",
-	'EPICa' : epicIqamahTimings[17].text,
+#	'EPICa' : epicIqamahTimings[17].text,
 	'EPICi' : "N/A",
 }
-
+print epicIqamahTimings
 outputer = [allFajr, allSunrise, allDhur, allAsr, allMaghrib, allIsha, allJummahKhutba1, allJummahKhutba2]
 z = json.dumps(outputer)
 with open('allData.json', 'w') as outfile:
