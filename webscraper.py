@@ -189,7 +189,6 @@ iciJummahTimings = ((str(icisoup.find('span', attrs={"style": "color: #ff0000;"}
 
 iciJ1 = iciJummahTimings.split(" | ")
 
-print iciJ1[1].text
 #iciAdhanTimingsAsDictionary = {
 #	"FajrAdhan": iciAdhanTimings[0].text,
 #	'DhurAdhan': iciAdhanTimings[3].text,
@@ -542,12 +541,16 @@ allJummahKhutba1 = {
 	'Body' : "1st Jummah Khutbah: ",
 	'VRICa': vricJSON['firstJummahAdhan'],
 	'VRICi' : vricJSON['firstJummahIqamah'],
+	'ICIi' : "",
+	'ICIa' : iciJ1[0],
 }
 allJummahKhutba2 = {
 	'ID' : 8,
 	'Body' : "2nd Jummah Khutbah: ",
 	'VRICa': vricJSON['secondJummahAdhan'],
 	'VRICi' : vricJSON['secondJummahIqamah'],
+	'ICIi' : "",
+	'ICIa' : iciJ1[1],
 }
 
 
