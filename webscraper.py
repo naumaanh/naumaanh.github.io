@@ -242,9 +242,7 @@ vricIqamahTimingsAsDictionary = {
 
 #ISLAMIC ASSOCIATION OF NORTH TEXAS IANT
 iantIqamahTimings = iantsoup.findAll('td')#, attrs={"class": "i_labels a_left"})
-iantJummahTimings = iantsoup.findAll('td', attrs={"class": "i_labels"})
 
-print iantJummahTimings
 #iantAdhanTimingsAsDictionary = {
 #	'FajrAdhan': iantIqamahTimings[0].text+" AM",
 #	'DhurAdhan': iantIqamahTimings[2].text+" PM",
@@ -562,7 +560,7 @@ allJummahKhutba2 = {
 	'ICIi' : "",
 	'ICIa' : iciJ1[1],
 }
-
+print iantIqamahTimings[27]
 outputer = [allFajr, allSunrise, allDhur, allAsr, allMaghrib, allIsha, allJummahKhutba1, allJummahKhutba2]
 z = json.dumps(outputer)
 with open('allData.json', 'w') as outfile:
