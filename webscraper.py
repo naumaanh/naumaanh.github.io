@@ -192,6 +192,8 @@ iciAdhanTimings = icisoup.findAll('td')
 iciJummahTimings = (icisoup.find('span', attrs={"style": "color: #ff0000;"}))
 iciJJ = ((str(iciJummahTimings.text)))
 iciJ1 = iciJJ.split(" | ")
+iciJ1 = iciJ1.decode('ascii', 'ignore')
+
 
 #iciAdhanTimingsAsDictionary = {
 #	"FajrAdhan": iciAdhanTimings[0].text,
