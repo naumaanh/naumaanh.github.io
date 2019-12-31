@@ -1,10 +1,13 @@
 #!/usr/bin/python
+# -*- coding: utf-8 -*-
+
 from bs4 import BeautifulSoup
 import requests
 import json
 import urllib
 import requests
 import datetime
+import re
 
 timeLastRan = datetime.datetime.now().strftime("Last updated on %I:%M%p on %B %d, %Y")
 
@@ -182,7 +185,12 @@ iallenIprayer = ((str(allenIqamahTimings[14].text)).strip()+' PM')
 
 iciIqamahTimings = icisoup.findAll('td', attrs={"class": "jamah"})
 iciAdhanTimings = icisoup.findAll('td')
+iciJummahTimings = ((str(icisoup.find('span', attrs={"style": "color: #ff0000;"}))))
+iciJummahTimings2 = icisoup.find('span', attrs={"style": "color: #ff0000;"})
 
+iciJ1 = re.sub('(\d:\d\d)','', iciJummahTimings)
+
+print iciJ1
 #iciAdhanTimingsAsDictionary = {
 #	"FajrAdhan": iciAdhanTimings[0].text,
 #	'DhurAdhan': iciAdhanTimings[3].text,
@@ -306,7 +314,7 @@ icfAdhanTimings = icfsoup.findAll('div', attrs={"class": "prayer_azaan_div"})#ic
 #####################################################################################################
 #####################################################################################################
 #####################################################################################################
-###############______Code to actually create 5 layer JSON____________________########################
+###############______Code to actually create 8 layer JSON____________________########################
 #####################################################################################################
 #####################################################################################################
 #####################################################################################################
@@ -543,7 +551,6 @@ allJummahKhutba2 = {
 	'VRICi' : vricJSON['secondJummahIqamah'],
 }
 
-print iciIqamahTimings
 
 outputer = [allFajr, allSunrise, allDhur, allAsr, allMaghrib, allIsha]
 z = json.dumps(outputer)
