@@ -542,7 +542,7 @@ allJummahKhutba1 = {
 	'VRICa': vricJSON['firstJummahAdhan'],
 	'VRICi' : vricJSON['firstJummahIqamah'],
 	'ICIi' : "",
-	'ICIa' : iciJ1[0],
+	'ICIa' : iciJ1[0].text,
 }
 allJummahKhutba2 = {
 	'ID' : 8,
@@ -550,7 +550,7 @@ allJummahKhutba2 = {
 	'VRICa': vricJSON['secondJummahAdhan'],
 	'VRICi' : vricJSON['secondJummahIqamah'],
 	'ICIi' : "",
-	'ICIa' : iciJ1[1],
+	'ICIa' : iciJ1[1].text,
 }
 
 
