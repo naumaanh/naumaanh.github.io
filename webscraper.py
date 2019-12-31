@@ -183,11 +183,10 @@ iallenMprayer = ((str(allenIqamahTimings[11].text)).strip()+' PM')
 iallenIprayer = ((str(allenIqamahTimings[14].text)).strip()+' PM')
 
 #IRVING MASJID ICI
-iciSoup.i.decompose()
 iciIqamahTimings = icisoup.findAll('td', attrs={"class": "jamah"})
 iciAdhanTimings = icisoup.findAll('td')
-iciJummahTimings = ((str(icisoup.find('span', attrs={"style": "color: #ff0000;"}))))
-
+iciJummahTimings = (icisoup.find('span', attrs={"style": "color: #ff0000;"}))
+iciJummahTimings.extract()
 iciJ1 = iciJummahTimings.split(" | ")
 
 #iciAdhanTimingsAsDictionary = {
