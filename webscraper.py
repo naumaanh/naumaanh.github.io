@@ -186,8 +186,8 @@ iallenIprayer = ((str(allenIqamahTimings[14].text)).strip()+' PM')
 iciIqamahTimings = icisoup.findAll('td', attrs={"class": "jamah"})
 iciAdhanTimings = icisoup.findAll('td')
 iciJummahTimings = (icisoup.find('span', attrs={"style": "color: #ff0000;"}))
-iciJummahTimings.extract()
 iciJ1 = iciJummahTimings.split(" | ")
+iciJ1.extract()
 
 #iciAdhanTimingsAsDictionary = {
 #	"FajrAdhan": iciAdhanTimings[0].text,
