@@ -193,7 +193,8 @@ iciJummahTimings = (icisoup.find('span', attrs={"style": "color: #ff0000;"}))
 iciJJ = ((str(iciJummahTimings.text)))
 iciJ4 = iciJJ.replace(u"\u2019", "'")
 iciJ3 = iciJ4.replace("1st Jumm'a ", "")
-iciJ1 = iciJ3.split(" | ")
+iciJ2 = iciJ3.replace("2nd Jumm'a ", "")
+iciJ1 = iciJ2.split(" | ")
 
 #iciAdhanTimingsAsDictionary = {
 #	"FajrAdhan": iciAdhanTimings[0].text,
@@ -558,8 +559,6 @@ allJummahKhutba2 = {
 	'ICIi' : "",
 	'ICIa' : iciJ1[1],
 }
-
-print allJummahKhutba1
 
 outputer = [allFajr, allSunrise, allDhur, allAsr, allMaghrib, allIsha, allJummahKhutba1, allJummahKhutba2]
 z = json.dumps(outputer)
