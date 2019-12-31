@@ -242,6 +242,9 @@ vricIqamahTimingsAsDictionary = {
 
 #ISLAMIC ASSOCIATION OF NORTH TEXAS IANT
 iantIqamahTimings = iantsoup.findAll('td')#, attrs={"class": "i_labels a_left"})
+iantJummahTimings = iantsoup.findAll('td', attrs={"class": "i_labels"})
+
+print iantJummahTimings
 #iantAdhanTimingsAsDictionary = {
 #	'FajrAdhan': iantIqamahTimings[0].text+" AM",
 #	'DhurAdhan': iantIqamahTimings[2].text+" PM",
