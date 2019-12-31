@@ -189,7 +189,7 @@ iciJummahTimings = ((str(icisoup.find('span', attrs={"style": "color: #ff0000;"}
 
 iciJ1 = iciJummahTimings.split(" | ")
 
-print iciJ1[1]
+print iciJ1[1].text
 #iciAdhanTimingsAsDictionary = {
 #	"FajrAdhan": iciAdhanTimings[0].text,
 #	'DhurAdhan': iciAdhanTimings[3].text,
