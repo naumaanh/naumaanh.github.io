@@ -187,7 +187,7 @@ iciIqamahTimings = icisoup.findAll('td', attrs={"class": "jamah"})
 iciAdhanTimings = icisoup.findAll('td')
 iciJummahTimings = ((str(icisoup.find('span', attrs={"style": "color: #ff0000;"}))))
 
-iciJ1 = iciJummahTimings.split(" | ")
+iciJ1 = (str(iciJummahTimings.text).split(" | "))
 
 #iciAdhanTimingsAsDictionary = {
 #	"FajrAdhan": iciAdhanTimings[0].text,
@@ -542,7 +542,7 @@ allJummahKhutba1 = {
 	'VRICa': vricJSON['firstJummahAdhan'],
 	'VRICi' : vricJSON['firstJummahIqamah'],
 	'ICIi' : "",
-	'ICIa' : iciJ1[0].text,
+	'ICIa' : iciJ1[0],
 }
 allJummahKhutba2 = {
 	'ID' : 8,
@@ -550,7 +550,7 @@ allJummahKhutba2 = {
 	'VRICa': vricJSON['secondJummahAdhan'],
 	'VRICi' : vricJSON['secondJummahIqamah'],
 	'ICIi' : "",
-	'ICIa' : iciJ1[1].text,
+	'ICIa' : iciJ1[1],
 }
 
 
