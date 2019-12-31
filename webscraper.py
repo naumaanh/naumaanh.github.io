@@ -106,7 +106,8 @@ icopsoup = BeautifulSoup(icopHTML, "html.parser")
 #ISLAMIC CENTER OF COPPELL
 icopIqamahTimings = icopsoup.findAll('div', attrs={"class": "prayer_iqama_div"})
 icopAdhanTimings = icopsoup.findAll('div', attrs={"class": "prayer_azaan_div"})
-icopJummahTiming = icopsoup.find('div', attrs={"class": "num"})
+icopJummahTiming1 = icopsoup.find('div', attrs={"class": "num"})
+icopJummahTiming = ((str(icopJummahTiming1.text)).strip())
 
 
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMER MOUND
@@ -548,7 +549,7 @@ allTime = {
 }
 allJummahKhutba1 = {
 	'ID' : 7,
-	'Body' : "1st Jummah Khutbah: ",
+	'Body' : "1st Jummah: ",
 	'VRICa': vricJSON['firstJummahAdhan'],
 	'VRICi' : vricJSON['firstJummahIqamah'],
 	'ICIi' : "N/A",
@@ -576,13 +577,13 @@ allJummahKhutba1 = {
 	'dncfwi': dncfwJ1aprayer,
 	'ialfma': ialfmJ1a,
 	'ialfmi': ialfmJ1i,
-	'icopi' : icopJummahTiming.text,
+	'icopi' : icopJummahTiming,
 	'icopa' : "N/A"
 
 }
 allJummahKhutba2 = {
 	'ID' : 8,
-	'Body' : "2nd Jummah Khutbah: ",
+	'Body' : "2nd Jummah: ",
 	'VRICa': vricJSON['secondJummahAdhan'],
 	'VRICi' : vricJSON['secondJummahIqamah'],
 	'ICIi' : "N/A",
