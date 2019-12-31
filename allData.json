@@ -193,18 +193,22 @@
   }, 
   {
     "Body": "1st Jummah Khutbah: ", 
-    "ICIa": "1:30 PM", 
-    "ICIi": "", 
+    "IANTi": "N/A", 
     "VRICi": "01:30 PM", 
+    "ICIa": "1:30 PM", 
+    "IANTa": "01:45 PM", 
     "VRICa": "01:00 PM", 
-    "ID": 7
+    "ID": 7, 
+    "ICIi": "N/A"
   }, 
   {
     "Body": "2nd Jummah Khutbah: ", 
-    "ICIa": "2:30 PM", 
-    "ICIi": "", 
+    "IANTi": "N/A", 
     "VRICi": "02:45 PM", 
+    "ICIa": "2:30 PM", 
+    "IANTa": "N/A", 
     "VRICa": "02:15 PM", 
-    "ID": 8
+    "ID": 8, 
+    "ICIi": ""
   }
 ]

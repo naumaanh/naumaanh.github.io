@@ -549,8 +549,10 @@ allJummahKhutba1 = {
 	'Body' : "1st Jummah Khutbah: ",
 	'VRICa': vricJSON['firstJummahAdhan'],
 	'VRICi' : vricJSON['firstJummahIqamah'],
-	'ICIi' : "",
+	'ICIi' : "N/A",
 	'ICIa' : iciJ1[0],
+	'IANTa' : iantIqamahTimings[27].text,
+	'IANTi' : "N/A",
 }
 allJummahKhutba2 = {
 	'ID' : 8,
@@ -559,6 +561,8 @@ allJummahKhutba2 = {
 	'VRICi' : vricJSON['secondJummahIqamah'],
 	'ICIi' : "",
 	'ICIa' : iciJ1[1],
+	'IANTi': "N/A",
+	'IANTa' : "N/A",
 }
 print iantIqamahTimings[27]
 outputer = [allFajr, allSunrise, allDhur, allAsr, allMaghrib, allIsha, allJummahKhutba1, allJummahKhutba2]
