@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# -*- coding: utf-8 -*-
+# encoding=utf8
 
 from bs4 import BeautifulSoup
 import requests
@@ -8,6 +8,10 @@ import urllib
 import requests
 import datetime
 import re
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 
 timeLastRan = datetime.datetime.now().strftime("Last updated on %I:%M%p on %B %d, %Y")
 
