@@ -211,11 +211,7 @@ iciJ3 = iciJ4.replace("1st Jumm'a ", "")
 iciJ2 = iciJ3.replace("2nd Jumm'a ", "")
 iciJ1 = iciJ2.split(" | ")
 
-print iciIqamahTimings
-
-print iciAdhanTimings
-
-print iciJ1
+print iciJummahTimings
 
 #iciAdhanTimingsAsDictionary = {
 #	"FajrAdhan": iciAdhanTimings[0].text,
