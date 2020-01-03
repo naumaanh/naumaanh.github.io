@@ -205,14 +205,8 @@ iallenIprayer = ((str(allenIqamahTimings[14].text)).strip()+' PM')
 iciIqamahTimings = icisoup.findAll('td', attrs={"class": "jamah"})
 iciAdhanTimings = icisoup.findAll('td', attrs={"class": "begins"})
 iciJummahTimings = (icisoup.findAll('td', attrs={"colspan": "2"}))
-iciJJ = ((str(iciJummahTimings.text)))
-iciJ4 = iciJJ.replace(u"\u2019", "'")
-iciJ3 = iciJ4.replace("1st Jumm'a ", "")
-iciJ2 = iciJ3.replace("2nd Jumm'a ", "")
-iciJ1 = iciJ2.split(" | ")
 
-print iciJummahTimings
-
+print iciIqamahTimings
 #iciAdhanTimingsAsDictionary = {
 #	"FajrAdhan": iciAdhanTimings[0].text,
 #	'DhurAdhan': iciAdhanTimings[3].text,
