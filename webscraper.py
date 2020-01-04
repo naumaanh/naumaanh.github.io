@@ -401,7 +401,7 @@ allSunrise = {
 allDhur = {
 	'ID': 3,
 	'VRICi': vricJSON['duhrIqamah'],
-	'ICIi': iciIqamahTimings[1].text,
+	'ICIi': "N/A", #iciIqamahTimings[1].text,
 	'ICIa': iciAdhanTimings[3].text,
 	'ICFi': icfIqamahTimings[2].text,
 	'IACCi': iaccDprayer,
@@ -436,7 +436,7 @@ allDhur = {
 allAsr = {
 	'ID': 4,
 	'VRICi': vricJSON['asrIqamah'],
-	'ICIi': iciIqamahTimings[2].text,
+	'ICIi': iciIqamahTimings[1].text,
 	'ICIa': iciAdhanTimings[5].text,
 	'ICFi': icfIqamahTimings[3].text,
 	'IACCi': iaccAprayer,
@@ -471,7 +471,7 @@ allAsr = {
 allMaghrib = {
 	'ID': 5,
 	'VRICi': vricJSON['maghribIqamah'],
-	'ICIi': iciIqamahTimings[3].text,
+	'ICIi': iciIqamahTimings[2].text,
 	'ICFi': icfIqamahTimings[4].text,
 	'ICIa': iciAdhanTimings[7].text,
 	'IACCi': iaccMprayer,
@@ -506,7 +506,7 @@ allMaghrib = {
 allIsha = {
 	'ID': 6,
 	'VRICi': vricJSON['ishaIqamah'],
-	'ICIi': iciIqamahTimings[4].text,
+	'ICIi': iciIqamahTimings[3].text,
 	'ICIa': iciAdhanTimings[9].text,
 	'ICFi': icfIqamahTimings[5].text,
 	'IACCi': iaccIprayer,
