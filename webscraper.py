@@ -108,7 +108,7 @@ icopIqamahTimings = icopsoup.findAll('div', attrs={"class": "prayer_iqama_div"})
 icopAdhanTimings = icopsoup.findAll('div', attrs={"class": "prayer_azaan_div"})
 icopJummahTiming1 = icopsoup.find('div', attrs={"class": "num"})
 icopJummahTiming = ((str(icopJummahTiming1.text)).strip())
-
+print 
 
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMER MOUND
 ialfmIqamahTimings = ialfmsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
@@ -402,7 +402,7 @@ allDhur = {
 	'ID': 3,
 	'VRICi': vricJSON['duhrIqamah'],
 	'ICIi': "N/A", #iciIqamahTimings[1].text,
-	'ICIa': iciAdhanTimings[3].text,
+	'ICIa': "N/A", #iciAdhanTimings[3].text,
 	'ICFi': icfIqamahTimings[2].text,
 	'IACCi': iaccDprayer,
 	'IANTi': iantIqamahTimings[7].text,
@@ -437,7 +437,7 @@ allAsr = {
 	'ID': 4,
 	'VRICi': vricJSON['asrIqamah'],
 	'ICIi': iciIqamahTimings[1].text,
-	'ICIa': iciAdhanTimings[5].text,
+	'ICIa': iciAdhanTimings[1].text,
 	'ICFi': icfIqamahTimings[3].text,
 	'IACCi': iaccAprayer,
 	'IANTi': iantIqamahTimings[11].text,
@@ -473,7 +473,7 @@ allMaghrib = {
 	'VRICi': vricJSON['maghribIqamah'],
 	'ICIi': iciIqamahTimings[2].text,
 	'ICFi': icfIqamahTimings[4].text,
-	'ICIa': iciAdhanTimings[7].text,
+	'ICIa': iciAdhanTimings[2].text,
 	'IACCi': iaccMprayer,
 	'IANTi': iantIqamahTimings[15].text,
 	'EPICi': epicIqamahTimings[8].text,
@@ -507,7 +507,7 @@ allIsha = {
 	'ID': 6,
 	'VRICi': vricJSON['ishaIqamah'],
 	'ICIi': iciIqamahTimings[3].text,
-	'ICIa': iciAdhanTimings[9].text,
+	'ICIa': iciAdhanTimings[3].text,
 	'ICFi': icfIqamahTimings[5].text,
 	'IACCi': iaccIprayer,
 	'IANTi': iantIqamahTimings[19].text,
