@@ -108,7 +108,7 @@ icopIqamahTimings = icopsoup.findAll('div', attrs={"class": "prayer_iqama_div"})
 icopAdhanTimings = icopsoup.findAll('div', attrs={"class": "prayer_azaan_div"})
 icopJummahTiming1 = icopsoup.find('div', attrs={"class": "num"})
 icopJummahTiming = ((str(icopJummahTiming1.text)).strip())
-print 
+print icopIqamahTimings
 
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMER MOUND
 ialfmIqamahTimings = ialfmsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
@@ -206,7 +206,6 @@ iciIqamahTimings = icisoup.findAll('td', attrs={"class": "jamah"})
 iciAdhanTimings = icisoup.findAll('td', attrs={"class": "begins"})
 iciJummahTimings = (icisoup.findAll('td', attrs={"colspan": "2"}))
 
-print iciIqamahTimings
 #iciAdhanTimingsAsDictionary = {
 #	"FajrAdhan": iciAdhanTimings[0].text,
 #	'DhurAdhan': iciAdhanTimings[3].text,
