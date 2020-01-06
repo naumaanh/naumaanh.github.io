@@ -108,13 +108,14 @@ icopIqamahTimings = icopsoup.findAll('div', attrs={"class": "prayer_iqama_div"})
 icopAdhanTimings = icopsoup.findAll('div', attrs={"class": "prayer_azaan_div"})
 icopJummahTiming1 = icopsoup.find('div', attrs={"class": "num"})
 icopJummahTiming = ((str(icopJummahTiming1.text)).strip())
-print icopIqamahTimings
+#print icopIqamahTimings
 
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMER MOUND
 ialfmIqamahTimings = ialfmsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
 ialfmAdhanTimings = ialfmsoup.findAll('div', attrs={"class": "prayer_azaan_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
 ialfmJ1a = ialfmIqamahTimings[6].text.strip()
 ialfmJ1i = ialfmIqamahTimings[7].text.strip()
+
 #ISLAMIC CENTER OF DENTON
 isdIqamahTimings = isdsoup.findAll('td')
 
@@ -400,8 +401,8 @@ allSunrise = {
 allDhur = {
 	'ID': 3,
 	'VRICi': vricJSON['duhrIqamah'],
-	'ICIi': "N/A", #iciIqamahTimings[1].text,
-	'ICIa': "N/A", #iciAdhanTimings[3].text,
+	'ICIi': iciIqamahTimings[1].text,
+	'ICIa': iciAdhanTimings[3].text,
 	'ICFi': icfIqamahTimings[2].text,
 	'IACCi': iaccDprayer,
 	'IANTi': iantIqamahTimings[7].text,
@@ -435,8 +436,8 @@ allDhur = {
 allAsr = {
 	'ID': 4,
 	'VRICi': vricJSON['asrIqamah'],
-	'ICIi': iciIqamahTimings[1].text,
-	'ICIa': iciAdhanTimings[1].text,
+	'ICIi': iciIqamahTimings[2].text,
+	'ICIa': iciAdhanTimings[2].text,
 	'ICFi': icfIqamahTimings[3].text,
 	'IACCi': iaccAprayer,
 	'IANTi': iantIqamahTimings[11].text,
@@ -470,8 +471,8 @@ allAsr = {
 allMaghrib = {
 	'ID': 5,
 	'VRICi': vricJSON['maghribIqamah'],
-	'ICIi': iciIqamahTimings[2].text,
-	'ICFi': icfIqamahTimings[4].text,
+	'ICIi': iciIqamahTimings[3].text,
+	'ICFi': icfIqamahTimings[3].text,
 	'ICIa': iciAdhanTimings[2].text,
 	'IACCi': iaccMprayer,
 	'IANTi': iantIqamahTimings[15].text,
@@ -505,8 +506,8 @@ allMaghrib = {
 allIsha = {
 	'ID': 6,
 	'VRICi': vricJSON['ishaIqamah'],
-	'ICIi': iciIqamahTimings[3].text,
-	'ICIa': iciAdhanTimings[3].text,
+	'ICIi': iciIqamahTimings[4].text,
+	'ICIa': iciAdhanTimings[4].text,
 	'ICFi': icfIqamahTimings[5].text,
 	'IACCi': iaccIprayer,
 	'IANTi': iantIqamahTimings[19].text,
