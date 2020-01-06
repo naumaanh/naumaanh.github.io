@@ -592,7 +592,7 @@ allJummahKhutba2 = {
 	'VRICa': vricJSON['secondJummahAdhan'],
 	'VRICi' : vricJSON['secondJummahIqamah'],
 	'ICIi' : "N/A",
-	'ICIa' : "N/A",
+	'ICIa' : iciJ1[1],
 	'IANTi': "N/A",
 	'IANTa' : "N/A",
 	'EPICa' : epicIqamahTimings[13].text,
