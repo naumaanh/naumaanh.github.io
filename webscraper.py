@@ -210,7 +210,11 @@ iciJJ = ((str(iciJummahTimings)))
 iciJ4 = iciJJ.replace(u"\u2019", "'")
 iciJ3 = iciJ4.replace("1ST JUMUA ", "")
 iciJ3i = iciJ3.replace("     ", "")
-iciJ1 = iciJ3.split(" | ")
+
+iciJ5 = iciJ4.replace("2ND JUMUA ", "")
+iciJ5i = iciJ5.replace("     ", "")
+iciJ1s = iciJ5i.split(" | ")
+iciJ1 = iciJ1s.strip()
 print iciJ1
 #iciAdhanTimingsAsDictionary = {
 #	"FajrAdhan": iciAdhanTimings[0].text,
