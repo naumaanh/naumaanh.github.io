@@ -207,8 +207,8 @@ iciIqamahTimings = icisoup.findAll('td', attrs={"class": "jamah"})
 iciAdhanTimings = icisoup.findAll('td', attrs={"class": "begins"})
 iciJummahTimings = (icisoup.findAll('td', attrs={"colspan": "2"})[-1])
 iciJJ = ((str(iciJummahTimings)))
-iciJ4i = iciJJ.replace(u"\u2019", "'")
-iciJ4 = iciJ4i.replace(u"\u00a0", "'")
+iciJ4i = iciJJ.replace(u"\u2019", "")
+iciJ4 = iciJ4i.replace(u"\u00a0", "")
 
 iciJ3 = iciJ4.replace("1ST JUMUA ", "")
 iciJ3i = iciJ3.replace("     ", "")
@@ -560,7 +560,7 @@ allJummahKhutba1 = {
 	'VRICa': vricJSON['firstJummahAdhan'],
 	'VRICi' : vricJSON['firstJummahIqamah'],
 	'ICIi' : "N/A",
-	'ICIa' : iciJ1[0],
+	'ICIa' : iciJ1[0].text,
 	'IANTa' : iantIqamahTimings[27].text,
 	'IANTi' : "N/A",
 	'EPICa' : epicIqamahTimings[11].text,
@@ -594,7 +594,7 @@ allJummahKhutba2 = {
 	'VRICa': vricJSON['secondJummahAdhan'],
 	'VRICi' : vricJSON['secondJummahIqamah'],
 	'ICIi' : "N/A",
-	'ICIa' : iciJ1[1],
+	'ICIa' : iciJ1[1].text,
 	'IANTi': "N/A",
 	'IANTa' : "N/A",
 	'EPICa' : epicIqamahTimings[13].text,
