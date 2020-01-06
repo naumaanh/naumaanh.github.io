@@ -213,7 +213,7 @@ iciJ4 = iciJ4i.replace(u"\u00a0", "")
 iciJ3 = iciJ4.replace("1ST JUMUA ", "")
 iciJ3i = iciJ3.replace("     ", "")
 
-iciJ5 = iciJ3i.replace("2ND JUMUA ", "")
+iciJ5 = iciJ3i.replace("   2ND JUMUA ", "")
 iciJ5i = iciJ5.replace("     ", "")
 iciJ1 = iciJ5i.split(" | ")
 #iciJ1 = ((str(iciJ1s.strip())))
