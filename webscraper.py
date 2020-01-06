@@ -214,7 +214,7 @@ iciJ3i = iciJ3.replace("     ", "")
 iciJ5 = iciJ4.replace("2ND JUMUA ", "")
 iciJ5i = iciJ5.replace("     ", "")
 iciJ1s = iciJ5i.split(" | ")
-iciJ1 = ((striciJ1s.strip()))
+iciJ1 = ((str(iciJ1s.strip())))
 print iciJ1
 #iciAdhanTimingsAsDictionary = {
 #	"FajrAdhan": iciAdhanTimings[0].text,
