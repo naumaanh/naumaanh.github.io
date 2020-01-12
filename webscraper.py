@@ -483,7 +483,7 @@ allMaghrib = {
 	'ID': 5,
 	'VRICi': vricJSON['maghribIqamah'],
 	'ICIi': iciIqamahTimings[3].text,
-	'ICFi': icfIqamahTimings[3].text,
+	'ICFi': icfIqamahTimings[4].text,
 	'ICIa': iciAdhanTimings[2].text,
 	'IACCi': iaccMprayer,
 	'IANTi': iantIqamahTimings[15].text,
@@ -514,7 +514,6 @@ allMaghrib = {
 	'icopa': icopAdhanTimings[4].text,
 
 }
-print icopIqamahTimings
 
 allIsha = {
 	'ID': 6,
