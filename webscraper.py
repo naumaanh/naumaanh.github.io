@@ -409,7 +409,6 @@ allSunrise = {
 	'icopa': "",
 
 }
-print iciIqamahTimings
 allDhur = {
 	'ID': 3,
 	'VRICi': vricJSON['duhrIqamah'],
