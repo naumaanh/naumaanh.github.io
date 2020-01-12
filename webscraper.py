@@ -13,7 +13,7 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 
-timeLastRan = datetime.datetime.now().strftime("Last updated on %I:%M%p on %B %d, %Y")
+timeLastRan = datetime.datetime.now().strftime("Updated: %B %d, %Y at %I:%M%p")
 
 class Object:
     def toJSON(self):
