@@ -514,6 +514,8 @@ allMaghrib = {
 	'icopa': icopAdhanTimings[4].text,
 
 }
+print icopIqamahTimings
+
 allIsha = {
 	'ID': 6,
 	'VRICi': vricJSON['ishaIqamah'],
