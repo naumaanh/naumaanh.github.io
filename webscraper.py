@@ -206,7 +206,6 @@ iallenIprayer = ((str(allenIqamahTimings[14].text)).strip()+' PM')
 iciIqamahTimings = icisoup.findAll('td')
 iciAdhanTimings = icisoup.findAll('td')
 iciJummahTimings = (icisoup.findAll('td', attrs={"colspan": "6"})[-1])
-print iciIqamahTimings
 iciJJ = ((str(iciJummahTimings.text)))
 iciJ4i = iciJJ.replace(u"\u2019", "")
 iciJ4 = iciJ4i.replace(u"\u00a0", "")
@@ -217,6 +216,7 @@ iciJ3i = iciJ3.replace("     ", "")
 iciJ5 = iciJ3i.replace("   2ND JUMUA ", "")
 iciJ5i = iciJ5.replace("     ", "")
 iciJ1 = iciJ5i.split(" | ")
+
 #iciJ1 = ((str(iciJ1s.strip())))
 
 #iciAdhanTimingsAsDictionary = {
@@ -343,7 +343,7 @@ icfJ2i = ((str(icfIqamahTimings[9].text)).strip())
 allFajr = {
 	'ID': 1,
 	'VRICi': vricJSON['fajrIqamah'],
-	'ICIi': iciIqamahTimings[0].text,
+	'ICIi': iciIqamahTimings[6].text,
 	'ICIa': iciAdhanTimings[0].text,
 	'ICFi': icfIqamahTimings[1].text,
 	'IACCi': iaccFprayer,
@@ -413,8 +413,8 @@ allSunrise = {
 allDhur = {
 	'ID': 3,
 	'VRICi': vricJSON['duhrIqamah'],
-	'ICIi': iciIqamahTimings[1].text,
-	'ICIa': iciAdhanTimings[3].text,
+	'ICIi': iciIqamahTimings[7].text,
+	'ICIa': iciAdhanTimings[2].text,
 	'ICFi': icfIqamahTimings[2].text,
 	'IACCi': iaccDprayer,
 	'IANTi': iantIqamahTimings[7].text,
@@ -448,8 +448,8 @@ allDhur = {
 allAsr = {
 	'ID': 4,
 	'VRICi': vricJSON['asrIqamah'],
-	'ICIi': iciIqamahTimings[2].text,
-	'ICIa': iciAdhanTimings[2].text,
+	'ICIi': iciIqamahTimings[8].text,
+	'ICIa': iciAdhanTimings[3].text,
 	'ICFi': icfIqamahTimings[3].text,
 	'IACCi': iaccAprayer,
 	'IANTi': iantIqamahTimings[11].text,
@@ -483,7 +483,7 @@ allAsr = {
 allMaghrib = {
 	'ID': 5,
 	'VRICi': vricJSON['maghribIqamah'],
-	'ICIi': iciIqamahTimings[3].text,
+	'ICIi': iciIqamahTimings[9].text,
 	'ICFi': icfIqamahTimings[4].text,
 	'ICIa': iciAdhanTimings[2].text,
 	'IACCi': iaccMprayer,
@@ -519,8 +519,8 @@ allMaghrib = {
 allIsha = {
 	'ID': 6,
 	'VRICi': vricJSON['ishaIqamah'],
-	'ICIi': iciIqamahTimings[4].text,
-	'ICIa': iciAdhanTimings[4].text,
+	'ICIi': iciIqamahTimings[10].text,
+	'ICIa': iciAdhanTimings[5].text,
 	'ICFi': icfIqamahTimings[5].text,
 	'IACCi': iaccIprayer,
 	'IANTi': iantIqamahTimings[19].text,
