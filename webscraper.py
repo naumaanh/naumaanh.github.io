@@ -599,7 +599,7 @@ allJummahKhutba2 = {
 	'ICIa' : iciJ1[1],
 	'IANTi': "N/A",
 	'IANTa' : "N/A",
-	'EPICa' : "N/A", #epicIqamahTimings[13].text,
+	'EPICa' : epicIqamahTimings[13].text,
 	'EPICi' : "N/A",
 	'IACCi' : "N/A",
 	'IACCa' : iaccJ2prayer,
