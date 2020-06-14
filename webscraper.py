@@ -137,7 +137,7 @@ darelimanIqamahTimings = darelimansoup.findAll('td')
 #MANSFIELD MASJID
 mansfIqamahTimingF = mansfsoup.findAll('th')
 mansfIqamahTiming = mansfsoup.findAll('td')
-mansF = ((str(mansfIqamahTimingF[1].text)).strip())
+#mansF = ((str(mansfIqamahTimingF[1].text)).strip())
 
 #MCKINNEY MASJID
 mckinneyIqamahTiming = mckinneysoup.findAll('td')
@@ -259,9 +259,6 @@ vricIqamahTimingsAsDictionary = {
 #vricPrayerJSON = json.dumps(vricIqamahTimingsAsList)
 #with open('vric.json', 'w') as outfile:
 #	json.dump(vricIqamahTimingsAsList, outfile)
-	
-
-
 
 #ISLAMIC ASSOCIATION OF NORTH TEXAS IANT
 iantIqamahTimings = iantsoup.findAll('td')
@@ -364,7 +361,7 @@ allFajr = {
 	'MYaseeni' : imyaseenFprayer,
 	'Mckinneya': Mckinneyf,
 	'Mckinneyi': mckinneyIqamahTiming[5].text,
-	'Mansfi': mansF,
+#	'Mansfi': mansF,
 	'Darelimaani': darelimanIqamahTimings[1].text,
 	'dncfwi': dncfwFprayer,
 #	'isda': isdIqamahTimings[5].text,
@@ -399,7 +396,7 @@ allSunrise = {
 	'MYaseeni' : vricJSON['sunrise'],
 	'Mckinneya': "",
 	'Mckinneyi': vricJSON['sunrise'],
-	'Mansfi': vricJSON['sunrise'],
+#	'Mansfi': vricJSON['sunrise'],
 	'Darelimaani': vricJSON['sunrise'],
 	'dncfwi': vricJSON['sunrise'],
 #	'isda': "",
@@ -434,7 +431,7 @@ allDhur = {
 	'MYaseeni' : imyaseenDprayer,
 	'Mckinneya': Mckinneyd,
 	'Mckinneyi': mckinneyIqamahTiming[8].text,
-	'Mansfi': mansfIqamahTiming[1].text,
+#	'Mansfi': mansfIqamahTiming[1].text,
 	'Darelimaani': darelimanIqamahTimings[3].text,
 	'dncfwi': dncfwDprayer,
 #	'isda': isdIqamahTimings[11].text,
@@ -469,7 +466,7 @@ allAsr = {
 	'MYaseeni' : imyaseenAprayer,
 	'Mckinneya': Mckinneya,
 	'Mckinneyi': mckinneyIqamahTiming[11].text,
-	'Mansfi': mansfIqamahTiming[3].text,
+#	'Mansfi': mansfIqamahTiming[3].text,
 	'Darelimaani': darelimanIqamahTimings[7].text,
 	'dncfwi': dncfwAprayer,
 #	'isda': isdIqamahTimings[14].text,
@@ -504,7 +501,7 @@ allMaghrib = {
 	'MYaseeni' : imyaseenMprayer,
 	'Mckinneya': Mckinneym,
 	'Mckinneyi': mckinneyIqamahTiming[14].text,
-	'Mansfi': mansfIqamahTiming[5].text,
+#	'Mansfi': mansfIqamahTiming[5].text,
 	'Darelimaani': darelimanIqamahTimings[9].text,
 	'dncfwi': dncfwMprayer,
 #	'isda': isdIqamahTimings[17].text,
@@ -540,7 +537,7 @@ allIsha = {
 	'MYaseeni' : imyaseenIprayer,
 	'Mckinneya': Mckinneyi,
 	'Mckinneyi': mckinneyIqamahTiming[17].text,
-	'Mansfi': mansfIqamahTiming[7].text,
+#	'Mansfi': mansfIqamahTiming[7].text,
 	'Darelimaani': darelimanIqamahTimings[11].text,
 	'dncfwi': dncfwIprayer,
 #	'isda': isdIqamahTimings[20].text,
@@ -581,7 +578,7 @@ allJummahKhutba1 = {
 	'MYaseena' : myaseenJ1prayer,
 	'Mckinneya' : MckinneyJ1,
 	'Mckinneyi' : "N/A",	
-	'Mansfi': mansfIqamahTiming[9].text,
+#	'Mansfi': mansfIqamahTiming[9].text,
 	'Darelimaani': darelimanIqamahTimings[5].text,
 	'dncfwi': dncfwJ1aprayer,
 	'ialfma': ialfmJ1a,
@@ -615,7 +612,7 @@ allJummahKhutba2 = {
 	'MYaseena' : myaseenJ2prayer,		
 	'Mckinneya' : MckinneyJ2,
 	'Mckinneyi' : "N/A",
-	'Mansfi': mansfIqamahTiming[11].text,
+#	'Mansfi': mansfIqamahTiming[11].text,
 	'Darelimaani': "N/A",
 	'dncfwi': "N/A",
 	'ialfmi': "N/A",
