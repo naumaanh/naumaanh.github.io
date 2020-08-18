@@ -182,8 +182,8 @@ mmIqamahTimings = mmsoup.findAll('td')
 icsIqamahTimings = icssoup.findAll('div', attrs={"class": "prayer_iqama_div"})
 icsAdhanTimings = icssoup.findAll('div', attrs={"class": "prayer_azaan_div"})
 icsJummahTiming = icssoup.findAll('div', attrs={"class": "num"})
-icsJ1a = ((str(icsJummahTiming[0].text)).strip())
-icsJ1i = ((str(icsJummahTiming[1].text)).strip())
+#icsJ1a = ((str(icsJummahTiming[0].text)).strip())
+#icsJ1i = ((str(icsJummahTiming[1].text)).strip())
 
 # ALLEN MASJID
 allenIqamahTimings = allensoup.findAll('td')
