@@ -26,5 +26,61 @@
     "MaghribIqamah": "5:i55",
     "IshaAdhan": "7:0i0",
     "IshaIqamah": "7:4i5"
+  },
+   {
+    "ID": 3, 
+    "name": "ICF",
+    "FajrAdhan": "6:30i",
+    "FajrIqamah": "6:45i",
+    "DhurAdhan": "1:3i0",
+    "DhurIqamah": "1:4i5",
+    "AsrAdhan": "4:0i0",
+    "AsrIqamah": "4:3i0",
+    "MaghribAdhan": "5:i40",
+    "MaghribIqamah": "5:i55",
+    "IshaAdhan": "7:0i0",
+    "IshaIqamah": "7:4i5"
+  },
+   {
+    "ID": 4, 
+    "name": "IANT",
+    "FajrAdhan": "6:30i",
+    "FajrIqamah": "6:45i",
+    "DhurAdhan": "1:3i0",
+    "DhurIqamah": "1:4i5",
+    "AsrAdhan": "4:0i0",
+    "AsrIqamah": "4:3i0",
+    "MaghribAdhan": "5:i40",
+    "MaghribIqamah": "5:i55",
+    "IshaAdhan": "7:0i0",
+    "IshaIqamah": "7:4i5"
+  },
+   {
+    "ID": 5, 
+    "name": "EPIC",
+    "FajrAdhan": "6:30i",
+    "FajrIqamah": "6:45i",
+    "DhurAdhan": "1:3i0",
+    "DhurIqamah": "1:4i5",
+    "AsrAdhan": "4:0i0",
+    "AsrIqamah": "4:3i0",
+    "MaghribAdhan": "5:i40",
+    "MaghribIqamah": "5:i55",
+    "IshaAdhan": "7:0i0",
+    "IshaIqamah": "7:4i5"
+  },
+   {
+    "ID": 6, 
+    "name": "IALFM",
+    "FajrAdhan": "6:30i",
+    "FajrIqamah": "6:45i",
+    "DhurAdhan": "1:3i0",
+    "DhurIqamah": "1:4i5",
+    "AsrAdhan": "4:0i0",
+    "AsrIqamah": "4:3i0",
+    "MaghribAdhan": "5:i40",
+    "MaghribIqamah": "5:i55",
+    "IshaAdhan": "7:0i0",
+    "IshaIqamah": "7:4i5"
   } 
 ]
