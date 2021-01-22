@@ -2,6 +2,7 @@
   {
     "ID": 1, 
     "name": "VRIC",
+    "fullName": "Valley Ranch Islamic Center",
     "FajrAdhan": "6:30",
     "FajrIqamah": "6:45",
     "DhurAdhan": "1:30",
@@ -16,6 +17,7 @@
    {
     "ID": 2, 
     "name": "ICI",
+    "fullName": "VIslamic Center of Irving",
     "FajrAdhan": "6:30i",
     "FajrIqamah": "6:45i",
     "DhurAdhan": "1:3i0",
@@ -30,6 +32,7 @@
    {
     "ID": 3, 
     "name": "ICF",
+    "fullName": "Islamic Center of Frisco",
     "FajrAdhan": "6:30i",
     "FajrIqamah": "6:45i",
     "DhurAdhan": "1:3i0",
@@ -44,6 +47,7 @@
    {
     "ID": 4, 
     "name": "IANT",
+    "fullName": "Islamic Association of North Texas",
     "FajrAdhan": "6:30i",
     "FajrIqamah": "6:45i",
     "DhurAdhan": "1:3i0",
@@ -58,6 +62,7 @@
    {
     "ID": 5, 
     "name": "EPIC",
+    "fullName": "East Plano Islamic Center",
     "FajrAdhan": "6:30i",
     "FajrIqamah": "6:45i",
     "DhurAdhan": "1:3i0",
@@ -72,6 +77,7 @@
    {
     "ID": 6, 
     "name": "IALFM",
+    "fullName": "Islamic Association of Lewisville & Flower Mound",
     "FajrAdhan": "6:30i",
     "FajrIqamah": "6:45i",
     "DhurAdhan": "1:3i0",
