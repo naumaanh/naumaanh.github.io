@@ -1,19 +1,14 @@
-#!/usr/bin/python
+#!/Users/NaumaanHassan/Documents/GitHub/naumaanh.github.io/tutorial-env/bin/python3  
 # encoding=utf8
-
 from bs4 import BeautifulSoup
-import requests
 import json
-import urllib
+import urllib.request
 import requests
 import datetime
 import re
-import importlib
-from importlib import reload
-import sys
-reload(sys)
-#sys.setdefaultencoding('utf8')
+import ssl
 
+ssl._create_default_https_context = ssl._create_unverified_context
 
 timeLastRan = datetime.datetime.now().strftime("Updated: %B %d, %Y at %I:%M%p")
 
@@ -34,7 +29,6 @@ epicURL = 'https://www.epicmasjid.org'
 iaccURL = 'https://planomasjid.org'
 icfURL = 'https://us.mohid.co/tx/dallas/icf/masjid/widget/api/index/?m=prayertimings'
 allenURL = 'https://allenmasjid.com'
-icsURL = 'https://us.mohid.co/tx/dallas/ics/masjid'
 mmURL = 'http://www.makkahmasjid.net'
 micURL = 'http://www.micmasjid.com'
 myaseenURL = 'http://masjidyaseen.org'
@@ -43,7 +37,6 @@ mansfURL = 'https://www.mansfieldmasjid.com'
 darelimanURL = 'https://www.dareleman.org'
 maiURL = 'https://masjidalislam.org/prayer-times/'
 dncfwURL = 'https://dncfw.org'
-isdURL = 'https://www.dentonmosque.com'
 ialfmURL = 'https://us.mohid.co/tx/dallas/ialfm/masjid/widget/api/index/?m=prayertimings'
 icopURL = 'https://us.mohid.co/tx/dallas/iccltx/masjid'
 
@@ -54,7 +47,6 @@ epicR = requests.get(epicURL)
 iaccR = requests.get(iaccURL)
 icfR = requests.get(icfURL)
 allenR = requests.get(allenURL, headers=header).text
-icsR = requests.get(icsURL)
 mmR = requests.get(mmURL)
 micR = requests.get(micURL, headers=header).text
 myaseenR = requests.get(myaseenURL)
@@ -63,7 +55,6 @@ mansfR = requests.get(mansfURL, headers=header).text
 darelimanR = requests.get(darelimanURL, headers=header).text
 maiR = requests.get(maiURL)
 dncfwR = requests.get(dncfwURL, headers=header).text
-isdR = requests.get(isdURL, headers=header).text
 ialfmR = requests.get(ialfmURL)
 icopR = requests.get(icopURL)
 
@@ -75,7 +66,6 @@ epicHTML = epicR.text
 iaccHTML = iaccR.text
 icfHTML = icfR.text
 #allenHTML = allenR.text
-icsHTML = icsR.text
 mmHTML = mmR.text
 #micHTML = micR.text
 myaseenHTML = myaseenR.text
@@ -93,7 +83,7 @@ epicsoup = BeautifulSoup(epicHTML, "html.parser")
 iaccsoup = BeautifulSoup(iaccHTML, "html.parser")
 icfsoup = BeautifulSoup(icfHTML, "html.parser")
 allensoup = BeautifulSoup(allenR, "html.parser")
-icssoup = BeautifulSoup(icsHTML, "html.parser")
+#icssoup = BeautifulSoup(icsHTML, "html.parser")
 mmsoup = BeautifulSoup(mmHTML, "html.parser")
 micsoup = BeautifulSoup(micR, "html.parser")
 myaseensoup = BeautifulSoup(myaseenHTML, "html.parser")
@@ -101,25 +91,8 @@ mckinneysoup = BeautifulSoup(mckinneyR, "html.parser")
 mansfsoup = BeautifulSoup(mansfR, "html.parser")
 darelimansoup = BeautifulSoup(darelimanR, "html.parser")
 dncfwsoup = BeautifulSoup(dncfwR, "html.parser")
-isdsoup = BeautifulSoup(isdR, "html.parser")
 ialfmsoup = BeautifulSoup(ialfmHTML, "html.parser")
 icopsoup = BeautifulSoup(icopHTML, "html.parser")
-
-#ISLAMIC CENTER OF COPPELL
-icopIqamahTimings = icopsoup.findAll('div', attrs={"class": "prayer_iqama_div"})
-icopAdhanTimings = icopsoup.findAll('div', attrs={"class": "prayer_azaan_div"})
-icopJummahTiming1 = icopsoup.find('div', attrs={"class": "num"})
-icopJummahTiming = ((str(icopJummahTiming1.text)).strip())
-#print icopIqamahTimings
-
-#ISLAMIC ASSOCIATION OF LEWIVILLE FARMERS MOUND
-ialfmIqamahTimings = ialfmsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
-ialfmAdhanTimings = ialfmsoup.findAll('div', attrs={"class": "prayer_azaan_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
-ialfmJ1a = ialfmIqamahTimings[6].text.strip()
-ialfmJ1i = ialfmIqamahTimings[7].text.strip()
-
-#ISLAMIC CENTER OF DENTON
-isdIqamahTimings = isdsoup.findAll('td')
 
 #ISLAMIC ASSOCIATION OF FORT WORTH DAR UN NOOR
 dncfwIqamahTimings = dncfwsoup.findAll('td')
@@ -141,428 +114,255 @@ mansfIqamahTimingF = mansfsoup.findAll('th')
 mansfIqamahTiming = mansfsoup.findAll('td')
 #mansF = ((str(mansfIqamahTimingF[1].text)).strip())
 
-#MCKINNEY MASJID
-mckinneyIqamahTiming = mckinneysoup.findAll('td')
-#	'Mckinneya': mckinneyIqamahTiming[].text,
-#	'Mckinneyi': mckinneyIqamahTiming[].text,
-Mckinneyf = mckinneyIqamahTiming[4].text.strip()
-Mckinneyd = mckinneyIqamahTiming[7].text.strip()
-Mckinneya = mckinneyIqamahTiming[10].text.strip()
-Mckinneym = mckinneyIqamahTiming[13].text.strip()
-Mckinneyi = mckinneyIqamahTiming[16].text.strip()
-MckinneyJ1 = mckinneyIqamahTiming[19].text.strip()
-MckinneyJ2 = mckinneyIqamahTiming[21].text.strip()
-
+#ISLAMIC CENTER OF COPPELL
+icopIqamahTimings = icopsoup.findAll('div', attrs={"class": "prayer_iqama_div"})
+icopAdhanTimings = icopsoup.findAll('div', attrs={"class": "prayer_azaan_div"})
+icopJummahTiming1 = icopsoup.find('div', attrs={"class": "num"})
+#print icopIqamahTimings
+allICC = {
+	'ID': 13,
+	'name': "ICC",
+	'fullName': "Islamic Center of Coppell",
+	'FajrAdhan': icopAdhanTimings[1].text,
+	'FajrIqamah': icopIqamahTimings[1].text,
+	'DhurAdhan': icopAdhanTimings[2].text,
+	'DhurIqamah': icopIqamahTimings[2].text,
+	'AsrAdhan': icopAdhanTimings[3].text,
+	'AsrIqamah': icopIqamahTimings[3].text,
+	'MaghribAdhan': icopAdhanTimings[4].text,
+	'MaghribIqamah': icopIqamahTimings[4].text,
+	'IshaAdhan': icopAdhanTimings[5].text,
+	'IshaIqamah': icopIqamahTimings[5].text
+}
 
 #Masjid Yaseen
 myaseenIqamahTiming = myaseensoup.findAll('td', attrs={"style": "text-align:right"})
-amyaseenFprayer = ((str(myaseenIqamahTiming[0].text)).strip())
-amyaseenDprayer = ((str(myaseenIqamahTiming[2].text)).strip())
-amyaseenAprayer = ((str(myaseenIqamahTiming[4].text)).strip())
-amyaseenMprayer = ((str(myaseenIqamahTiming[6].text)).strip())
-amyaseenIprayer = ((str(myaseenIqamahTiming[8].text)).strip())
+allMY = {
+	'ID': 12,
+	'name': "IAA",
+	'fullName': "Masjid Yaseen",
+	'FajrAdhan': ((str(myaseenIqamahTiming[0].text)).strip()),
+	'FajrIqamah': ((str(myaseenIqamahTiming[1].text)).strip()),
+	'DhurAdhan': ((str(myaseenIqamahTiming[2].text)).strip()),
+	'DhurIqamah': ((str(myaseenIqamahTiming[3].text)).strip()),
+	'AsrAdhan': ((str(myaseenIqamahTiming[4].text)).strip()),
+	'AsrIqamah': ((str(myaseenIqamahTiming[5].text)).strip()),
+	'MaghribAdhan': ((str(myaseenIqamahTiming[6].text)).strip()),
+	'MaghribIqamah': ((str(myaseenIqamahTiming[7].text)).strip()),
+	'IshaAdhan': ((str(myaseenIqamahTiming[8].text)).strip()),
+	'IshaIqamah': ((str(myaseenIqamahTiming[9].text)).strip())
+}
 
-myaseenJ1prayer = ((str(myaseenIqamahTiming[10].text)).strip())
-myaseenJ2prayer = ((str(myaseenIqamahTiming[11].text)).strip())
-
-imyaseenFprayer = ((str(myaseenIqamahTiming[1].text)).strip())
-imyaseenDprayer = ((str(myaseenIqamahTiming[3].text)).strip())
-imyaseenAprayer = ((str(myaseenIqamahTiming[5].text)).strip())
-imyaseenMprayer = ((str(myaseenIqamahTiming[7].text)).strip())
-imyaseenIprayer = ((str(myaseenIqamahTiming[9].text)).strip())
-
+#ISLAMIC ASSOCIATION OF LEWIVILLE FARMERS MOUND
+ialfmIqamahTimings = ialfmsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
+ialfmAdhanTimings = ialfmsoup.findAll('div', attrs={"class": "prayer_azaan_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
+allIALFM = {
+	'ID': 11,
+	'name': "IALFM",
+	'fullName': "Islamic Association of Lewisville & Flower Mound",
+	'FajrAdhan': ialfmAdhanTimings[1].text,
+	'FajrIqamah': ialfmIqamahTimings[1].text,
+	'DhurAdhan': ialfmAdhanTimings[2].text,
+	'DhurIqamah': ialfmIqamahTimings[2].text,
+	'AsrAdhan': ialfmAdhanTimings[3].text,
+	'AsrIqamah': ialfmIqamahTimings[3].text,
+	'MaghribAdhan': ialfmAdhanTimings[4].text,
+	'MaghribIqamah': ialfmIqamahTimings[4].text,
+	'IshaAdhan': ialfmAdhanTimings[5].text,
+	'IshaIqamah': ialfmIqamahTimings[5].text
+}
 
 #Mesquite Masjid
 micIqamahTimings = micsoup.findAll('div', attrs={"class": "time"})
+allMIC = {
+	'ID': 10,
+	'name': "MIC",
+	'fullName': "Mesquite Islamic Center",
+	'FajrAdhan': "N/A",
+	'FajrIqamah': micIqamahTimings[0].text,
+	'DhurAdhan': "N/A",
+	'DhurIqamah': micIqamahTimings[1].text,
+	'AsrAdhan': "N/A",
+	'AsrIqamah': micIqamahTimings[2].text,
+	'MaghribAdhan': "N/A",
+	'MaghribIqamah': micIqamahTimings[3].text,
+	'IshaAdhan': "N/A",
+	'IshaIqamah': micIqamahTimings[4].text,
+}
 
-
-#MAKKAH MASJID GARLAND
-mmIqamahTimings = mmsoup.findAll('td')
-
-
-#SOUTHLAKE MASJID
-icsIqamahTimings = icssoup.findAll('div', attrs={"class": "prayer_iqama_div"})
-icsAdhanTimings = icssoup.findAll('div', attrs={"class": "prayer_azaan_div"})
-icsJummahTiming = icssoup.findAll('div', attrs={"class": "num"})
-#icsJ1a = ((str(icsJummahTiming[0].text)).strip())
-#icsJ1i = ((str(icsJummahTiming[1].text)).strip())
+#MCKINNEY MASJID
+mckinneyIqamahTiming = mckinneysoup.findAll('td')
+allMIA = {
+	'ID': 9,
+	'name': "MIA",
+	'fullName': "McKinney Islamic Association",
+	'FajrAdhan': mckinneyIqamahTiming[4].text.strip(),
+	'FajrIqamah': mckinneyIqamahTiming[5].text,
+	'DhurAdhan': mckinneyIqamahTiming[7].text.strip(),
+	'DhurIqamah': mckinneyIqamahTiming[8].text,
+	'AsrAdhan': mckinneyIqamahTiming[10].text.strip(),
+	'AsrIqamah': mckinneyIqamahTiming[11].text,
+	'MaghribAdhan': mckinneyIqamahTiming[13].text.strip(),
+	'MaghribIqamah': mckinneyIqamahTiming[14].text,
+	'IshaAdhan': mckinneyIqamahTiming[16].text.strip(),
+	'IshaIqamah': mckinneyIqamahTiming[17].text
+}
 
 # ALLEN MASJID
 allenIqamahTimings = allensoup.findAll('td')
-aallenFprayer = ((str(allenIqamahTimings[1].text)).strip()+' AM')
-aallenDprayer = ((str(allenIqamahTimings[4].text)).strip()+' PM')
-aallenAprayer = ((str(allenIqamahTimings[7].text)).strip()+' PM')
-aallenMprayer = ((str(allenIqamahTimings[10].text)).strip()+' PM')
-aallenIprayer = ((str(allenIqamahTimings[13].text)).strip()+' PM')
+allAllen = {
+	'ID': 8,
+	'name': "IAA",
+	'fullName': "Islamic Association of Allen",
+	'FajrAdhan': ((str(allenIqamahTimings[1].text)).strip()+' AM'),
+	'FajrIqamah': ((str(allenIqamahTimings[2].text)).strip()+' AM'),
+	'DhurAdhan': ((str(allenIqamahTimings[4].text)).strip()+' AM'),
+	'DhurIqamah': ((str(allenIqamahTimings[5].text)).strip()+' AM'),
+	'AsrAdhan': ((str(allenIqamahTimings[7].text)).strip()+' AM'),
+	'AsrIqamah': ((str(allenIqamahTimings[8].text)).strip()+' AM'),
+	'MaghribAdhan': ((str(allenIqamahTimings[10].text)).strip()+' AM'),
+	'MaghribIqamah': ((str(allenIqamahTimings[11].text)).strip()+' AM'),
+	'IshaAdhan': ((str(allenIqamahTimings[13].text)).strip()+' AM'),
+	'IshaIqamah': ((str(allenIqamahTimings[14].text)).strip()+' AM')
+}
 
-aallenJ1prayer = ((str(allenIqamahTimings[16].text)).strip())
-aallenJ2prayer = ((str(allenIqamahTimings[18].text)).strip())
+#MAKKAH MASJID GARLAND
+mmIqamahTimings = mmsoup.findAll('td')
+allMM = {
+	'ID': 7,
+	'name': "IDEA",
+	'fullName': "Makkah Masjid",
+	'FajrAdhan': "N/A",
+	'FajrIqamah': mmIqamahTimings[1].text,
+	'DhurAdhan': "N/A",
+	'DhurIqamah': mmIqamahTimings[3].text,
+	'AsrAdhan': "N/A",
+	'AsrIqamah': mmIqamahTimings[5].text,
+	'MaghribAdhan': "N/A",
+	'MaghribIqamah': mmIqamahTimings[7].text,
+	'IshaAdhan': "N/A",
+	'IshaIqamah': mmIqamahTimings[9].text,
+}
 
-iallenFprayer = ((str(allenIqamahTimings[2].text)).strip()+' AM')
-iallenDprayer = ((str(allenIqamahTimings[5].text)).strip()+' PM')
-iallenAprayer = ((str(allenIqamahTimings[8].text)).strip()+' PM')
-iallenMprayer = ((str(allenIqamahTimings[11].text)).strip()+' PM')
-iallenIprayer = ((str(allenIqamahTimings[14].text)).strip()+' PM')
+#ISLAMIC ASSOCIATION OF NORTH TEXAS IANT
+iantIqamahTimings = iantsoup.findAll('td')
+allIANT = {
+	'ID': 6,
+	'name': "IANT",
+	'fullName': "Islamic Association of North Texas",
+	'FajrAdhan': iantIqamahTimings[0].text,
+	'FajrIqamah': iantIqamahTimings[1].text,
+	'DhurAdhan': iantIqamahTimings[3].text,
+	'DhurIqamah': iantIqamahTimings[4].text,
+	'AsrAdhan': iantIqamahTimings[5].text,
+	'AsrIqamah': iantIqamahTimings[6].text,
+	'MaghribAdhan': iantIqamahTimings[7].text,
+	'MaghribIqamah': iantIqamahTimings[8].text,
+	'IshaAdhan': iantIqamahTimings[9].text,
+	'IshaIqamah': iantIqamahTimings[10].text
+}
+
+#ISLAMIC ASSOCIATION OF COLLIN COUNTY IACC
+iaccIqamahTimings = iaccsoup.findAll('td', attrs={"style": "text-align:right"})
+allIACC = {
+	'ID': 5,
+	'name': "IACC",
+	'fullName': "Islamic Association of Collin County",
+	'FajrAdhan': "N/A",
+	'FajrIqamah': ((str(iaccIqamahTimings[0].text)).strip()+' AM'),
+	'DhurAdhan': "N/A",
+	'DhurIqamah': ((str(iaccIqamahTimings[2].text)).strip()+' PM'),
+	'AsrAdhan': "N/A",
+	'AsrIqamah': ((str(iaccIqamahTimings[3].text)).strip()+' PM'),
+	'MaghribAdhan': "N/A",
+	'MaghribIqamah': ((str(iaccIqamahTimings[4].text)).strip()+' PM'),
+	'IshaAdhan': "N/A",
+	'IshaIqamah': ((str(iaccIqamahTimings[5].text)).strip()+' PM')
+} 
+
+#ISLAMIC CENTER OF FRISCO ICF
+icfIqamahTimings = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
+icfAdhanTimings = icfsoup.findAll('div', attrs={"class": "prayer_azaan_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
+
+allICF = {
+	'ID': 4,
+	'name': "ICF",
+	'fullName': "Islamic Center of Frisco",
+	'FajrAdhan': icfAdhanTimings[1].text,
+	'FajrIqamah': icfIqamahTimings[1].text,
+	'DhurAdhan': icfAdhanTimings[2].text,
+	'DhurIqamah': icfIqamahTimings[2].text,
+	'AsrAdhan': icfAdhanTimings[3].text,
+	'AsrIqamah': icfIqamahTimings[3].text,
+	'MaghribAdhan': icfAdhanTimings[4].text,
+	'MaghribIqamah': icfIqamahTimings[4].text,
+	'IshaAdhan': icfAdhanTimings[5].text,
+	'IshaIqamah': icfIqamahTimings[5].text
+}
+
+#EAST PLANO ISLAMIC CENTER EPIC
+epicIqamahTimings = epicsoup.findAll('td', attrs={"class": "subtext"})
+allEPIC = {
+	'ID': 3,
+	'name': "EPIC",
+	'fullName': "East Plano Islamic Center",
+	'FajrAdhan': epicIqamahTimings[0].text,
+	'FajrIqamah': epicIqamahTimings[1].text,
+	'DhurAdhan': epicIqamahTimings[3].text,
+	'DhurIqamah': epicIqamahTimings[4].text,
+	'AsrAdhan': epicIqamahTimings[5].text,
+	'AsrIqamah': epicIqamahTimings[6].text,
+	'MaghribAdhan': epicIqamahTimings[7].text,
+	'MaghribIqamah': epicIqamahTimings[8].text,
+	'IshaAdhan': epicIqamahTimings[9].text,
+	'IshaIqamah': epicIqamahTimings[10].text
+}
 
 #IRVING MASJID ICI
 iciIqamahTimings = icisoup.findAll('td')
 iciAdhanTimings = icisoup.findAll('td')
 iciJummahTimings = (icisoup.findAll('td', attrs={"colspan": "6"})[-1])
-iciJJ = ((str(iciJummahTimings.text)))
-iciJ4i = iciJJ.replace(u"\u2019", "")
-iciJ4 = iciJ4i.replace(u"\u00a0", "")
-
-iciJ3 = iciJ4.replace("1ST JUMUA ", "")
-iciJ3i = iciJ3.replace("     ", "")
-
-iciJ5 = iciJ3i.replace("   2ND JUMUA ", "")
-iciJ5i = iciJ5.replace("     ", "")
-iciJ1 = iciJ5i.split(" | ")
+allICI = {
+	'ID': 2,
+	'name': "ICI",
+	'fullName': "Islamic Center of Irving",
+	'FajrAdhan': iciAdhanTimings[0].text,
+	'FajrIqamah': iciIqamahTimings[6].text,
+	'DhurAdhan': iciAdhanTimings[2].text,
+	'DhurIqamah': iciIqamahTimings[7].text,
+	'AsrAdhan': iciAdhanTimings[3].text,
+	'AsrIqamah': iciIqamahTimings[8].text,
+	'MaghribAdhan': iciAdhanTimings[4].text,
+	'MaghribIqamah': iciIqamahTimings[9].text,
+	'IshaAdhan': iciAdhanTimings[5].text,
+	'IshaIqamah': iciIqamahTimings[10].text,
+}
 
 #VALLEY RANCH ISLAMIC CENTER VRIC
 with urllib.request.urlopen(vricURL) as url:
 	vricResponse = url.read()
 vricJSON = json.loads(vricResponse)
-vricAdhanTimingsAsDictionary = {
-	'FajrAdhan': vricJSON['fajrAdhan'],
-	'DhurAdhan': vricJSON['duhrAdhan'],
-	'AsrAdhan': vricJSON['asrAdhan'],
-	'MaghribAdhan': vricJSON['maghribAdhan'],
-	'IshaAdhan': vricJSON['ishaAdhan'],
-}
-vricIqamahTimingsAsDictionary = {
-	'FajrIqamah': vricJSON['fajrIqamah'],
-	'DhurIqamah': vricJSON['duhrIqamah'],
-	'AsrIqamah': vricJSON['asrIqamah'],
-	'MaghribIqamah': vricJSON['maghribIqamah'],
-	'IshaIqamah': vricJSON['ishaIqamah'],
-}
 
-#ISLAMIC ASSOCIATION OF NORTH TEXAS IANT
-iantIqamahTimings = iantsoup.findAll('td')
-
-
-
-#EAST PLANO ISLAMIC CENTER EPIC
-epicIqamahTimings = epicsoup.findAll('td', attrs={"class": "subtext"})
-
-
-#ISLAMIC ASSOCIATION OF COLLIN COUNTY IACC
-iaccIqamahTimings = iaccsoup.findAll('td', attrs={"style": "text-align:right"})
-iaccFprayer = ((str(iaccIqamahTimings[0].text)).strip()+' AM')
-iaccDprayer = ((str(iaccIqamahTimings[2].text)).strip()+' PM')
-iaccAprayer = ((str(iaccIqamahTimings[3].text)).strip()+' PM')
-iaccMprayer = ((str(iaccIqamahTimings[4].text)).strip()+' PM')
-iaccIprayer = ((str(iaccIqamahTimings[5].text)).strip()+' PM')
-iaccJ1prayer = ((str(iaccIqamahTimings[6].text)).strip())
-iaccJ2prayer = ((str(iaccIqamahTimings[7].text)).strip())
-
-
-#ISLAMIC CENTER OF FRISCO ICF
-icfIqamahTimings = icfsoup.findAll('div', attrs={"class": "prayer_iqama_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
-icfAdhanTimings = icfsoup.findAll('div', attrs={"class": "prayer_azaan_div"})#icfsoup.findAll('body')#, {"class": "prayer_iqama_div"})
-icfJ1a = ((str(icfIqamahTimings[6].text)).strip())
-icfJ1i = ((str(icfIqamahTimings[7].text)).strip())
-icfJ2a = ((str(icfIqamahTimings[8].text)).strip())
-icfJ2i = ((str(icfIqamahTimings[9].text)).strip())
-
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-###############______Code to actually create 8 layer JSON____________________########################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-#####################################################################################################
-
-
-
-allFajr = {
+allVRIC = {
 	'ID': 1,
-	'VRICi': vricJSON['fajrIqamah'],
-	'ICIi': iciIqamahTimings[6].text,
-	'ICIa': iciAdhanTimings[0].text,
-	'ICFi': icfIqamahTimings[1].text,
-	'IACCi': iaccFprayer,
-	'IANTi': iantIqamahTimings[3].text,
-	'EPICi': epicIqamahTimings[1].text,
-	'Body': "Fajr: ",
-	'VRICa' : vricJSON['fajrAdhan'],
-	'IANTa' : iantIqamahTimings[2].text,
-	'EPICa' : epicIqamahTimings[0].text,
-	'ICFa': icfAdhanTimings[1].text,
-	'Allena' : aallenFprayer,
-	'Alleni' : iallenFprayer,
-	#'ICSi' : icsIqamahTimings[1].text,
-	#'ICSa' : icsAdhanTimings[1].text,
-	'MMi' : mmIqamahTimings[1].text,
-	'Mici' : micIqamahTimings[0].text,
-	'MYaseena' : amyaseenFprayer,
-	'MYaseeni' : imyaseenFprayer,
-	'Mckinneya': Mckinneyf,
-	'Mckinneyi': mckinneyIqamahTiming[5].text,
-#	'Mansfi': mansF,
-	'Darelimaani': darelimanIqamahTimings[1].text,
-	'dncfwi': dncfwFprayer,
-#	'isda': isdIqamahTimings[5].text,
-#	'isdi': isdIqamahTimings[6].text,
-	'ialfmi': ialfmIqamahTimings[1].text,
-	'ialfma': ialfmAdhanTimings[1].text,
-	'icopi': icopIqamahTimings[1].text,
-	'icopa': icopAdhanTimings[1].text,
-
-}
-allSunrise = {
-	'ID': 2,
-	'VRICi': vricJSON['sunrise'],
-	'ICIi': vricJSON['sunrise'],
-	'ICIa': "",
-	'ICFi': vricJSON['sunrise'],
-	'IACCi': vricJSON['sunrise'],
-	'IANTi': vricJSON['sunrise'],
-	'EPICi': vricJSON['sunrise'],
-	'Body': "Sunrise ",
-	'VRICa' : "",
-	'IANTa' : "",
-	'EPICa' : "",
-	'ICFa': "",
-	'Allena' : "",
-	'Alleni' : vricJSON['sunrise'],
-	#'ICSi' : vricJSON['sunrise'],
-	#'ICSa' : "",
-	'MMi' : vricJSON['sunrise'],
-	'Mici' : vricJSON['sunrise'],
-	'MYaseena' : "",
-	'MYaseeni' : vricJSON['sunrise'],
-	'Mckinneya': "",
-	'Mckinneyi': vricJSON['sunrise'],
-#	'Mansfi': vricJSON['sunrise'],
-	'Darelimaani': vricJSON['sunrise'],
-	'dncfwi': vricJSON['sunrise'],
-#	'isda': "",
-#	'isdi': vricJSON['sunrise'],
-	'ialfmi': vricJSON['sunrise'],
-	'ialfma': "",
-	'icopi': vricJSON['sunrise'],
-	'icopa': "",
-
-}
-allDhur = {
-	'ID': 3,
-	'VRICi': vricJSON['duhrIqamah'],
-	'ICIi': iciIqamahTimings[7].text,
-	'ICIa': iciAdhanTimings[2].text,
-	'ICFi': icfIqamahTimings[2].text,
-	'IACCi': iaccDprayer,
-	'IANTi': iantIqamahTimings[7].text,
-	'EPICi': epicIqamahTimings[4].text,
-	'Body': "Dhur: ",
-	'VRICa': vricJSON['duhrAdhan'],
-	'IANTa': iantIqamahTimings[6].text,
-	'EPICa': epicIqamahTimings[3].text,
-	'ICFa': icfAdhanTimings[2].text,
-	'Allena' : aallenDprayer,
-	'Alleni' : iallenDprayer,
-	#'ICSi' : icsIqamahTimings[2].text,
-	#'ICSa' : icsAdhanTimings[2].text,
-	'MMi' : mmIqamahTimings[3].text,
-	'Mici' : micIqamahTimings[1].text,
-	'MYaseena' : amyaseenDprayer,
-	'MYaseeni' : imyaseenDprayer,
-	'Mckinneya': Mckinneyd,
-	'Mckinneyi': mckinneyIqamahTiming[8].text,
-#	'Mansfi': mansfIqamahTiming[1].text,
-	'Darelimaani': darelimanIqamahTimings[3].text,
-	'dncfwi': dncfwDprayer,
-#	'isda': isdIqamahTimings[11].text,
-#	'isdi': isdIqamahTimings[12].text,
-	'ialfmi': ialfmIqamahTimings[2].text,
-	'ialfma': ialfmAdhanTimings[2].text,
-	'icopi': icopIqamahTimings[2].text,
-	'icopa': icopAdhanTimings[2].text,
-
-}
-allAsr = {
-	'ID': 4,
-	'VRICi': vricJSON['asrIqamah'],
-	'ICIi': iciIqamahTimings[8].text,
-	'ICIa': iciAdhanTimings[3].text,
-	'ICFi': icfIqamahTimings[3].text,
-	'IACCi': iaccAprayer,
-	'IANTi': iantIqamahTimings[11].text,
-	'EPICi': epicIqamahTimings[6].text,
-	'Body': "Asr: ",
-	'VRICa': vricJSON['asrAdhan'],
-	'IANTa': iantIqamahTimings[10].text,
-	'EPICa': epicIqamahTimings[5].text,
-	'ICFa': icfAdhanTimings[3].text,
-	'Allena' : aallenAprayer,
-	'Alleni' : iallenAprayer,
-	#'ICSi' : icsIqamahTimings[3].text,
-	#'ICSa' : icsAdhanTimings[3].text,
-	'MMi' : mmIqamahTimings[5].text,
-	'Mici' : micIqamahTimings[2].text,
-	'MYaseena' : amyaseenAprayer,
-	'MYaseeni' : imyaseenAprayer,
-	'Mckinneya': Mckinneya,
-	'Mckinneyi': mckinneyIqamahTiming[11].text,
-#	'Mansfi': mansfIqamahTiming[3].text,
-	'Darelimaani': darelimanIqamahTimings[7].text,
-	'dncfwi': dncfwAprayer,
-#	'isda': isdIqamahTimings[14].text,
-#	'isdi': isdIqamahTimings[15].text,
-	'ialfmi': ialfmIqamahTimings[3].text,
-	'ialfma': ialfmAdhanTimings[3].text,
-	'icopi': icopIqamahTimings[3].text,
-	'icopa': icopAdhanTimings[3].text,
-
-}
-allMaghrib = {
-	'ID': 5,
-	'VRICi': vricJSON['maghribIqamah'],
-	'ICIi': iciIqamahTimings[9].text,
-	'ICFi': icfIqamahTimings[4].text,
-	'ICIa': iciAdhanTimings[4].text,
-	'IACCi': iaccMprayer,
-	'IANTi': iantIqamahTimings[15].text,
-	'EPICi': epicIqamahTimings[8].text,
-	'Body': "Maghrib: ",
-	'VRICa': vricJSON['maghribAdhan'],
-	'IANTa': iantIqamahTimings[14].text,
-	'EPICa': epicIqamahTimings[7].text,
-	'ICFa': icfAdhanTimings[4].text,
-	'Allena' : aallenMprayer,
-	'Alleni' : iallenMprayer,
-	#'ICSi' : icsIqamahTimings[4].text,
-	#'ICSa' : icsAdhanTimings[4].text,
-	'MMi' : mmIqamahTimings[7].text,
-	'Mici' : micIqamahTimings[3].text,
-	'MYaseena' : amyaseenMprayer,
-	'MYaseeni' : imyaseenMprayer,
-	'Mckinneya': Mckinneym,
-	'Mckinneyi': mckinneyIqamahTiming[14].text,
-#	'Mansfi': mansfIqamahTiming[5].text,
-	'Darelimaani': darelimanIqamahTimings[9].text,
-	'dncfwi': dncfwMprayer,
-#	'isda': isdIqamahTimings[17].text,
-#	'isdi': isdIqamahTimings[18].text,
-	'ialfmi': ialfmIqamahTimings[4].text,
-	'ialfma': ialfmAdhanTimings[4].text,
-	'icopi': icopIqamahTimings[4].text,
-	'icopa': icopAdhanTimings[4].text,
-
-}
-
-allIsha = {
-	'ID': 6,
-	'VRICi': vricJSON['ishaIqamah'],
-	'ICIi': iciIqamahTimings[10].text,
-	'ICIa': iciAdhanTimings[5].text,
-	'ICFi': icfIqamahTimings[5].text,
-	'IACCi': iaccIprayer,
-	'IANTi': iantIqamahTimings[19].text,
-	'EPICi': epicIqamahTimings[10].text,
-	'Body': "Isha: ",
-	'VRICa': vricJSON['ishaAdhan'],
-	'IANTa': iantIqamahTimings[18].text,
-	'EPICa': epicIqamahTimings[9].text,
-	'ICFa': icfAdhanTimings[5].text,
-	'Allena' : aallenIprayer,
-	'Alleni' : iallenIprayer,
-	#'ICSi' : icsIqamahTimings[5].text,
-	#'ICSa' : icsAdhanTimings[5].text,
-	'MMi' : mmIqamahTimings[9].text,
-	'Mici' : micIqamahTimings[4].text,	
-	'MYaseena' : amyaseenIprayer,
-	'MYaseeni' : imyaseenIprayer,
-	'Mckinneya': Mckinneyi,
-	'Mckinneyi': mckinneyIqamahTiming[17].text,
-#	'Mansfi': mansfIqamahTiming[7].text,
-	'Darelimaani': darelimanIqamahTimings[11].text,
-	'dncfwi': dncfwIprayer,
-#	'isda': isdIqamahTimings[20].text,
-#	'isdi': isdIqamahTimings[21].text,
-	'ialfmi': ialfmIqamahTimings[5].text,
-	'ialfma': ialfmAdhanTimings[5].text,
-	'icopi': icopIqamahTimings[5].text,
-	'icopa': icopAdhanTimings[5].text,
-
+	'name': "VRIC",
+	'fullName': "Valley Ranch Islamic Center",
+	'FajrAdhan': vricJSON['fajrAdhan'],
+	'FajrIqamah': vricJSON['fajrIqamah'],
+	'DhurAdhan': vricJSON['duhrAdhan'],
+	'DhurIqamah': vricJSON['duhrIqamah'],
+	'AsrAdhan': vricJSON['asrAdhan'],
+	'AsrIqamah': vricJSON['asrIqamah'],
+	'MaghribAdhan': vricJSON['maghribAdhan'],
+	'MaghribIqamah': vricJSON['maghribIqamah'],
+	'IshaAdhan': vricJSON['ishaAdhan'],
+	'IshaIqamah': vricJSON['ishaIqamah']
 }
 allTime = {
 	'ID' : 1, 
 	'timeLastRan': timeLastRan,
-
 }
-allJummahKhutba1 = {
-	'ID' : 7,
-	'Body' : "1st Jummah: ",
-	'VRICa': vricJSON['firstJummahAdhan'],
-	'VRICi' : vricJSON['firstJummahIqamah'],
-	'ICIi' : "N/A",
-	'ICIa' : iciJ1[0],
-	'IANTa' : iantIqamahTimings[27].text,
-	'IANTi' : "N/A",
-	'EPICa' : epicIqamahTimings[11].text,
-	'EPICi' : "N/A",
-	'IACCi' : "N/A",
-	'IACCa' : iaccJ1prayer,
-	'ICFa': icfJ1a,
-	'ICFi': icfJ1i,
-	'Allena' : aallenJ1prayer,
-	'Alleni' : "N/A",
-	#'ICSa' : icsJ1a,
-	#'ICSi' : icsJ1i,
-	'MMi' : mmIqamahTimings[11].text,
-	'Mici' : micIqamahTimings[6].text + " (Arabic)",
-	'MYaseeni' : "N/A",
-	'MYaseena' : myaseenJ1prayer,
-	'Mckinneya' : MckinneyJ1,
-	'Mckinneyi' : "N/A",	
-#	'Mansfi': mansfIqamahTiming[9].text,
-	'Darelimaani': darelimanIqamahTimings[5].text,
-	'dncfwi': dncfwJ1aprayer,
-	'ialfma': ialfmJ1a,
-	'ialfmi': ialfmJ1i,
-	'icopi' : icopJummahTiming,
-	'icopa' : "N/A"
-
-}
-allJummahKhutba2 = {
-	'ID' : 8,
-	'Body' : "2nd Jummah: ",
-	'VRICa': vricJSON['secondJummahAdhan'],
-	'VRICi' : vricJSON['secondJummahIqamah'],
-	'ICIi' : "N/A",
-	'ICIa' : iciJ1[1],
-	'IANTi': "N/A",
-	'IANTa' : "N/A",
-	'EPICa' : epicIqamahTimings[13].text,
-	'EPICi' : "N/A",
-	'IACCi' : "N/A",
-	'IACCa' : iaccJ2prayer,
-	'ICFa': icfJ2a,
-	'ICFi': icfJ2i,
-	'Allena' : aallenJ2prayer,
-	'Alleni' : "N/A",
-	'ICSa' : "N/A",
-	'ICSi' : "N/A",
-	'MMi' : "N/A", 
-	'Mici' : micIqamahTimings[7].text + " (English)",
-	'MYaseeni' : "N/A",
-	'MYaseena' : myaseenJ2prayer,		
-	'Mckinneya' : MckinneyJ2,
-	'Mckinneyi' : "N/A",
-#	'Mansfi': mansfIqamahTiming[11].text,
-	'Darelimaani': "N/A",
-	'dncfwi': "N/A",
-	'ialfmi': "N/A",
-	'ialfma': "N/A",
-	'icopi' : "N/A",
-	'icopa' : "N/A"
-
-}
-outputer = [allFajr, allSunrise, allDhur, allAsr, allMaghrib, allIsha, allJummahKhutba1, allJummahKhutba2]
+outputer = [allVRIC, allICI, allEPIC, allICF, allIACC, allIANT, allMM, allAllen, allMIA, allMIC, allIALFM, allMY, allICC]
 z = json.dumps(outputer)
 with open('allData.json', 'w') as outfile:
 	json.dump(outputer,outfile, indent=2)
