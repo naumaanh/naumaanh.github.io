@@ -140,7 +140,7 @@ allICC = {
 myaseenIqamahTiming = myaseensoup.findAll('td', attrs={"style": "text-align:right"})
 allMY = {
 	'ID': 12,
-	'name': "IAA",
+	'name': "MY",
 	'fullName': "Masjid Yaseen",
 	'FajrAdhan': ((str(myaseenIqamahTiming[0].text)).strip()),
 	'FajrIqamah': ((str(myaseenIqamahTiming[1].text)).strip()),
