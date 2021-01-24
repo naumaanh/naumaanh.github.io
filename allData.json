@@ -60,7 +60,8 @@
     "MaghribAdhan": "05:53 PM",
     "MaghribIqamah": "05:58 PM",
     "IshaAdhan": "07:15 PM",
-    "IshaIqamah": "07:45 PM"
+    "IshaIqamah": "07:45 PM",
+    "masjidPic": ""
   },
   {
     "ID": 5,
@@ -107,7 +108,8 @@
     "MaghribAdhan": "N/A",
     "MaghribIqamah": "Sunset",
     "IshaAdhan": "N/A",
-    "IshaIqamah": "8:00pm"
+    "IshaIqamah": "8:00pm",
+    "masjidPic": ""
   },
   {
     "ID": 8,

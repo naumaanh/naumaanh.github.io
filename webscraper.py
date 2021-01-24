@@ -248,6 +248,7 @@ allMM = {
 	'MaghribIqamah': mmIqamahTimings[7].text,
 	'IshaAdhan': "N/A",
 	'IshaIqamah': mmIqamahTimings[9].text,
+	'masjidPic': ""
 }
 
 #ISLAMIC ASSOCIATION OF NORTH TEXAS IANT
@@ -305,7 +306,8 @@ allICF = {
 	'MaghribAdhan': icfAdhanTimings[4].text,
 	'MaghribIqamah': icfIqamahTimings[4].text,
 	'IshaAdhan': icfAdhanTimings[5].text,
-	'IshaIqamah': icfIqamahTimings[5].text
+	'IshaIqamah': icfIqamahTimings[5].text,
+	'masjidPic': ""
 }
 
 #EAST PLANO ISLAMIC CENTER EPIC
