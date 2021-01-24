@@ -132,7 +132,8 @@ allICC = {
 	'MaghribAdhan': icopAdhanTimings[4].text,
 	'MaghribIqamah': icopIqamahTimings[4].text,
 	'IshaAdhan': icopAdhanTimings[5].text,
-	'IshaIqamah': icopIqamahTimings[5].text
+	'IshaIqamah': icopIqamahTimings[5].text,
+	'masjidPic': ""
 }
 
 #Masjid Yaseen
@@ -150,7 +151,8 @@ allMY = {
 	'MaghribAdhan': ((str(myaseenIqamahTiming[6].text)).strip()),
 	'MaghribIqamah': ((str(myaseenIqamahTiming[7].text)).strip()),
 	'IshaAdhan': ((str(myaseenIqamahTiming[8].text)).strip()),
-	'IshaIqamah': ((str(myaseenIqamahTiming[9].text)).strip())
+	'IshaIqamah': ((str(myaseenIqamahTiming[9].text)).strip()),
+	'masjidPic': ""
 }
 
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMERS MOUND
@@ -169,7 +171,8 @@ allIALFM = {
 	'MaghribAdhan': ialfmAdhanTimings[4].text,
 	'MaghribIqamah': ialfmIqamahTimings[4].text,
 	'IshaAdhan': ialfmAdhanTimings[5].text,
-	'IshaIqamah': ialfmIqamahTimings[5].text
+	'IshaIqamah': ialfmIqamahTimings[5].text,
+	'masjidPic': ""
 }
 
 #Mesquite Masjid
@@ -188,6 +191,7 @@ allMIC = {
 	'MaghribIqamah': micIqamahTimings[3].text,
 	'IshaAdhan': "N/A",
 	'IshaIqamah': micIqamahTimings[4].text,
+	'masjidPic': ""
 }
 
 #MCKINNEY MASJID
@@ -205,7 +209,8 @@ allMIA = {
 	'MaghribAdhan': mckinneyIqamahTiming[13].text.strip(),
 	'MaghribIqamah': mckinneyIqamahTiming[14].text,
 	'IshaAdhan': mckinneyIqamahTiming[16].text.strip(),
-	'IshaIqamah': mckinneyIqamahTiming[17].text
+	'IshaIqamah': mckinneyIqamahTiming[17].text,
+	'masjidPic': ""
 }
 
 # ALLEN MASJID
@@ -223,7 +228,8 @@ allAllen = {
 	'MaghribAdhan': ((str(allenIqamahTimings[10].text)).strip()+' AM'),
 	'MaghribIqamah': ((str(allenIqamahTimings[11].text)).strip()+' AM'),
 	'IshaAdhan': ((str(allenIqamahTimings[13].text)).strip()+' AM'),
-	'IshaIqamah': ((str(allenIqamahTimings[14].text)).strip()+' AM')
+	'IshaIqamah': ((str(allenIqamahTimings[14].text)).strip()+' AM'),
+	'masjidPic': ""
 }
 
 #MAKKAH MASJID GARLAND
@@ -259,7 +265,8 @@ allIANT = {
 	'MaghribAdhan': iantIqamahTimings[7].text,
 	'MaghribIqamah': iantIqamahTimings[8].text,
 	'IshaAdhan': iantIqamahTimings[9].text,
-	'IshaIqamah': iantIqamahTimings[10].text
+	'IshaIqamah': iantIqamahTimings[10].text,
+	'masjidPic': ""
 }
 
 #ISLAMIC ASSOCIATION OF COLLIN COUNTY IACC
@@ -277,7 +284,8 @@ allIACC = {
 	'MaghribAdhan': "N/A",
 	'MaghribIqamah': ((str(iaccIqamahTimings[4].text)).strip()+' PM'),
 	'IshaAdhan': "N/A",
-	'IshaIqamah': ((str(iaccIqamahTimings[5].text)).strip()+' PM')
+	'IshaIqamah': ((str(iaccIqamahTimings[5].text)).strip()+' PM'),
+	'masjidPic': ""
 } 
 
 #ISLAMIC CENTER OF FRISCO ICF
@@ -315,7 +323,8 @@ allEPIC = {
 	'MaghribAdhan': epicIqamahTimings[7].text,
 	'MaghribIqamah': epicIqamahTimings[8].text,
 	'IshaAdhan': epicIqamahTimings[9].text,
-	'IshaIqamah': epicIqamahTimings[10].text
+	'IshaIqamah': epicIqamahTimings[10].text,
+	'masjidPic': ""
 }
 
 #IRVING MASJID ICI
@@ -336,6 +345,7 @@ allICI = {
 	'MaghribIqamah': iciIqamahTimings[9].text,
 	'IshaAdhan': iciAdhanTimings[5].text,
 	'IshaIqamah': iciIqamahTimings[10].text,
+	'masjidPic': ""
 }
 
 #VALLEY RANCH ISLAMIC CENTER VRIC
@@ -356,7 +366,8 @@ allVRIC = {
 	'MaghribAdhan': vricJSON['maghribAdhan'],
 	'MaghribIqamah': vricJSON['maghribIqamah'],
 	'IshaAdhan': vricJSON['ishaAdhan'],
-	'IshaIqamah': vricJSON['ishaIqamah']
+	'IshaIqamah': vricJSON['ishaIqamah'],
+	'masjidPic': ""
 }
 allTime = {
 	'ID' : 1, 

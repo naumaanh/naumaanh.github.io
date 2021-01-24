@@ -12,7 +12,8 @@
     "MaghribAdhan": "05:52 PM",
     "MaghribIqamah": "05:57 PM",
     "IshaAdhan": "07:03 PM",
-    "IshaIqamah": "07:45 PM"
+    "IshaIqamah": "07:45 PM",
+    "masjidPic": ""
   },
   {
     "ID": 2,
@@ -27,7 +28,8 @@
     "MaghribAdhan": "5:55 pm",
     "MaghribIqamah": "6:00 pm",
     "IshaAdhan": "7:04 pm",
-    "IshaIqamah": "7:45 pm"
+    "IshaIqamah": "7:45 pm",
+    "masjidPic": ""
   },
   {
     "ID": 3,
@@ -42,7 +44,8 @@
     "MaghribAdhan": "05:51 PM",
     "MaghribIqamah": "05:56 PM",
     "IshaAdhan": "07:02 PM",
-    "IshaIqamah": "08:00 PM"
+    "IshaIqamah": "08:00 PM",
+    "masjidPic": ""
   },
   {
     "ID": 4,
@@ -72,7 +75,8 @@
     "MaghribAdhan": "N/A",
     "MaghribIqamah": "5:58 PM",
     "IshaAdhan": "N/A",
-    "IshaIqamah": "7:45 PM"
+    "IshaIqamah": "7:45 PM",
+    "masjidPic": ""
   },
   {
     "ID": 6,
@@ -87,7 +91,8 @@
     "MaghribAdhan": "5:52 PM",
     "MaghribIqamah": "6:02 PM",
     "IshaAdhan": "7:03 PM",
-    "IshaIqamah": "8:00 PM"
+    "IshaIqamah": "8:00 PM",
+    "masjidPic": ""
   },
   {
     "ID": 7,
@@ -117,7 +122,8 @@
     "MaghribAdhan": "5:54 AM",
     "MaghribIqamah": "5:59 AM",
     "IshaAdhan": "7:16 AM",
-    "IshaIqamah": "7:45 AM"
+    "IshaIqamah": "7:45 AM",
+    "masjidPic": ""
   },
   {
     "ID": 9,
@@ -132,7 +138,8 @@
     "MaghribAdhan": "6:00 PM",
     "MaghribIqamah": "Isha",
     "IshaAdhan": "8:00 PM",
-    "IshaIqamah": "Jumuah"
+    "IshaIqamah": "Jumuah",
+    "masjidPic": ""
   },
   {
     "ID": 10,
@@ -147,7 +154,8 @@
     "MaghribAdhan": "N/A",
     "MaghribIqamah": "10 minutes after Athan",
     "IshaAdhan": "N/A",
-    "IshaIqamah": "8:00 pm"
+    "IshaIqamah": "8:00 pm",
+    "masjidPic": ""
   },
   {
     "ID": 11,
@@ -162,7 +170,8 @@
     "MaghribAdhan": "05:52 PM",
     "MaghribIqamah": "05:57 PM",
     "IshaAdhan": "07:03 PM",
-    "IshaIqamah": "08:00 PM"
+    "IshaIqamah": "08:00 PM",
+    "masjidPic": ""
   },
   {
     "ID": 12,
@@ -177,7 +186,8 @@
     "MaghribAdhan": "Sunset",
     "MaghribIqamah": "Sunset",
     "IshaAdhan": "7:15 PM.",
-    "IshaIqamah": "7:30 PM."
+    "IshaIqamah": "7:30 PM.",
+    "masjidPic": ""
   },
   {
     "ID": 13,
@@ -192,6 +202,7 @@
     "MaghribAdhan": "05:51 PM",
     "MaghribIqamah": "05:56 PM",
     "IshaAdhan": "07:02 PM",
-    "IshaIqamah": "07:45 PM"
+    "IshaIqamah": "07:45 PM",
+    "masjidPic": ""
   }
 ]
