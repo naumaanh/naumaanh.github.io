@@ -114,7 +114,7 @@ dncfwJ1aprayer = dncfwIqamahTimings[1].text.strip()#dncfwIqamahTimings[11].text.
 #maiIQamahTimings = maisoup.findAll('html')
 
 #DAR EL IMAAN ARLINGTON 
-darelimanIqamahTimings = darelimansoup.findAll('td')
+darelimanIqamahTimings = darelimansoup.findAll('span style')
 
 #MANSFIELD MASJID
 mansfIqamahTimingF = mansfsoup.findAll('th')
