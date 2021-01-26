@@ -98,7 +98,7 @@ icopsoup = BeautifulSoup(icopHTML, "html.parser")
 iacsoup = BeautifulSoup(iacHTML, "html.parser")
 
 #Masjid AR RAHMAN ISLAMIC ASSOCIATION OF CARROLLTON IAC
-iacTimings = iacsoup.findAll('td')
+iacTimings = iacsoup.findAll('span style')
 print(iacTimings)
 
 #ISLAMIC ASSOCIATION OF FORT WORTH DAR UN NOOR
