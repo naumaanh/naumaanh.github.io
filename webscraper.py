@@ -39,6 +39,7 @@ maiURL = 'https://masjidalislam.org/prayer-times/'
 dncfwURL = 'https://dncfw.org'
 ialfmURL = 'https://us.mohid.co/tx/dallas/ialfm/masjid/widget/api/index/?m=prayertimings'
 icopURL = 'https://us.mohid.co/tx/dallas/iccltx/masjid'
+iacURL = 'https://www.masjidal-rahman.org/'
 
 iciR = requests.get(iciURL)
 vricR = requests.get(vricURL)
@@ -57,7 +58,7 @@ maiR = requests.get(maiURL)
 dncfwR = requests.get(dncfwURL, headers=header).text
 ialfmR = requests.get(ialfmURL)
 icopR = requests.get(icopURL)
-
+iacR = requests.get(iacURL)
 
 iciHTML = iciR.text
 vricHTML = vricR.text
@@ -75,6 +76,7 @@ myaseenHTML = myaseenR.text
 #dncfwHTML = dncfwR.text
 ialfmHTML = ialfmR.text
 icopHTML = icopR.text
+iacHTML = iacR.text
 
 icisoup = BeautifulSoup(iciHTML, "html.parser")
 vricsoup = BeautifulSoup(vricHTML, "html.parser")
@@ -93,6 +95,11 @@ darelimansoup = BeautifulSoup(darelimanR, "html.parser")
 dncfwsoup = BeautifulSoup(dncfwR, "html.parser")
 ialfmsoup = BeautifulSoup(ialfmHTML, "html.parser")
 icopsoup = BeautifulSoup(icopHTML, "html.parser")
+iacsoup = BeautifulSoup(iacHTML, "html.parser")
+
+#Masjid AR RAHMAN ISLAMIC ASSOCIATION OF CARROLLTON IAC
+iacTimings = iacsoup.findAll('td')
+print(iacTimings)
 
 #ISLAMIC ASSOCIATION OF FORT WORTH DAR UN NOOR
 dncfwIqamahTimings = dncfwsoup.findAll('td')
