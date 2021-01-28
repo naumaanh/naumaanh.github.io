@@ -140,7 +140,8 @@ allICC = {
 	'MaghribIqamah': icopIqamahTimings[4].text,
 	'IshaAdhan': icopAdhanTimings[5].text,
 	'IshaIqamah': icopIqamahTimings[5].text,
-	'masjidPic': ""
+	'masjidPic': "",
+	'URL': 'https://iccmasjid.org/'
 }
 
 #Masjid Yaseen
@@ -159,7 +160,8 @@ allMY = {
 	'MaghribIqamah': ((str(myaseenIqamahTiming[7].text)).strip()),
 	'IshaAdhan': ((str(myaseenIqamahTiming[8].text)).strip()),
 	'IshaIqamah': ((str(myaseenIqamahTiming[9].text)).strip()),
-	'masjidPic': ""
+	'masjidPic': "",
+	'URL': "http://masjidyaseen.org/"
 }
 
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMERS MOUND
@@ -179,7 +181,8 @@ allIALFM = {
 	'MaghribIqamah': ialfmIqamahTimings[4].text,
 	'IshaAdhan': ialfmAdhanTimings[5].text,
 	'IshaIqamah': ialfmIqamahTimings[5].text,
-	'masjidPic': ""
+	'masjidPic': "",
+	'masjidPic': 'https://www.ialfm.org/'
 }
 
 #Mesquite Masjid
@@ -198,7 +201,8 @@ allMIC = {
 	'MaghribIqamah': micIqamahTimings[3].text,
 	'IshaAdhan': "N/A",
 	'IshaIqamah': micIqamahTimings[4].text,
-	'masjidPic': ""
+	'masjidPic': "",
+	'URL': 'https://www.micmasjid.com/'
 }
 
 #MCKINNEY MASJID
@@ -217,7 +221,8 @@ allMIA = {
 	'MaghribIqamah': mckinneyIqamahTiming[14].text,
 	'IshaAdhan': mckinneyIqamahTiming[16].text.strip(),
 	'IshaIqamah': mckinneyIqamahTiming[17].text,
-	'masjidPic': ""
+	'masjidPic': "",
+	'URL': 'https://www.mckinneymasjid.org/'
 }
 
 # ALLEN MASJID
@@ -236,7 +241,8 @@ allAllen = {
 	'MaghribIqamah': ((str(allenIqamahTimings[11].text)).strip()+' AM'),
 	'IshaAdhan': ((str(allenIqamahTimings[13].text)).strip()+' AM'),
 	'IshaIqamah': ((str(allenIqamahTimings[14].text)).strip()+' AM'),
-	'masjidPic': ""
+	'masjidPic': "",
+	'URL': 'https://allenmasjid.com/'
 }
 
 #MAKKAH MASJID GARLAND
@@ -255,7 +261,8 @@ allMM = {
 	'MaghribIqamah': mmIqamahTimings[7].text,
 	'IshaAdhan': "N/A",
 	'IshaIqamah': mmIqamahTimings[9].text,
-	'masjidPic': ""
+	'masjidPic': "",
+	'URL': 'http://www.makkahmasjid.net/'
 }
 
 #ISLAMIC ASSOCIATION OF NORTH TEXAS IANT
@@ -274,7 +281,8 @@ allIANT = {
 	'MaghribIqamah': iantIqamahTimings[8].text,
 	'IshaAdhan': iantIqamahTimings[9].text,
 	'IshaIqamah': iantIqamahTimings[10].text,
-	'masjidPic': ""
+	'masjidPic': "",
+	'URL': 'https://iant.com/'
 }
 
 #ISLAMIC ASSOCIATION OF COLLIN COUNTY IACC
@@ -293,7 +301,8 @@ allIACC = {
 	'MaghribIqamah': ((str(iaccIqamahTimings[4].text)).strip()+' PM'),
 	'IshaAdhan': "N/A",
 	'IshaIqamah': ((str(iaccIqamahTimings[5].text)).strip()+' PM'),
-	'masjidPic': ""
+	'masjidPic': "",
+	'URL': 'https://planomasjid.org/'
 } 
 
 #ISLAMIC CENTER OF FRISCO ICF
@@ -314,7 +323,8 @@ allICF = {
 	'MaghribIqamah': icfIqamahTimings[4].text,
 	'IshaAdhan': icfAdhanTimings[5].text,
 	'IshaIqamah': icfIqamahTimings[5].text,
-	'masjidPic': ""
+	'masjidPic': "",
+	'URL': 'https://friscomasjid.org/'
 }
 
 #EAST PLANO ISLAMIC CENTER EPIC
@@ -333,7 +343,8 @@ allEPIC = {
 	'MaghribIqamah': epicIqamahTimings[8].text,
 	'IshaAdhan': epicIqamahTimings[9].text,
 	'IshaIqamah': epicIqamahTimings[10].text,
-	'masjidPic': ""
+	'masjidPic': "",
+	'URL': 'https://epicmasjid.org/'
 }
 
 #IRVING MASJID ICI
@@ -354,7 +365,8 @@ allICI = {
 	'MaghribIqamah': iciIqamahTimings[9].text,
 	'IshaAdhan': iciAdhanTimings[5].text,
 	'IshaIqamah': iciIqamahTimings[10].text,
-	'masjidPic': ""
+	'masjidPic': "",
+	'URL': 'https://irvingmasjid.org/'
 }
 
 #VALLEY RANCH ISLAMIC CENTER VRIC
@@ -376,7 +388,8 @@ allVRIC = {
 	'MaghribIqamah': vricJSON['maghribIqamah'],
 	'IshaAdhan': vricJSON['ishaAdhan'],
 	'IshaIqamah': vricJSON['ishaIqamah'],
-	'masjidPic': ""
+	'masjidPic': "",
+	'URL': 'https://vric.org/'
 }
 allTime = {
 	'ID' : 1, 

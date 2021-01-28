@@ -13,7 +13,8 @@
     "MaghribIqamah": "06:02 PM",
     "IshaAdhan": "07:07 PM",
     "IshaIqamah": "07:45 PM",
-    "masjidPic": ""
+    "masjidPic": "",
+    "URL": "https://vric.org/"
   },
   {
     "ID": 2,
@@ -29,7 +30,8 @@
     "MaghribIqamah": "6:05 pm",
     "IshaAdhan": "7:08 pm",
     "IshaIqamah": "7:45 pm",
-    "masjidPic": ""
+    "masjidPic": "",
+    "URL": "https://irvingmasjid.org/"
   },
   {
     "ID": 3,
@@ -45,7 +47,8 @@
     "MaghribIqamah": "06:01 PM",
     "IshaAdhan": "07:07 PM",
     "IshaIqamah": "08:00 PM",
-    "masjidPic": ""
+    "masjidPic": "",
+    "URL": "https://epicmasjid.org/"
   },
   {
     "ID": 4,
@@ -61,7 +64,8 @@
     "MaghribIqamah": "06:03 PM",
     "IshaAdhan": "07:19 PM",
     "IshaIqamah": "07:45 PM",
-    "masjidPic": ""
+    "masjidPic": "",
+    "URL": "https://friscomasjid.org/"
   },
   {
     "ID": 5,
@@ -77,7 +81,8 @@
     "MaghribIqamah": "6:03 PM",
     "IshaAdhan": "N/A",
     "IshaIqamah": "7:45 PM",
-    "masjidPic": ""
+    "masjidPic": "",
+    "URL": "https://planomasjid.org/"
   },
   {
     "ID": 6,
@@ -93,7 +98,8 @@
     "MaghribIqamah": "6:07 PM",
     "IshaAdhan": "7:07 PM",
     "IshaIqamah": "8:00 PM",
-    "masjidPic": ""
+    "masjidPic": "",
+    "URL": "https://iant.com/"
   },
   {
     "ID": 7,
@@ -109,7 +115,8 @@
     "MaghribIqamah": "Sunset",
     "IshaAdhan": "N/A",
     "IshaIqamah": "8:00pm",
-    "masjidPic": ""
+    "masjidPic": "",
+    "URL": "http://www.makkahmasjid.net/"
   },
   {
     "ID": 8,
@@ -125,7 +132,8 @@
     "MaghribIqamah": "6:03 AM",
     "IshaAdhan": "7:20 AM",
     "IshaIqamah": "7:45 AM",
-    "masjidPic": ""
+    "masjidPic": "",
+    "URL": "https://allenmasjid.com/"
   },
   {
     "ID": 9,
@@ -141,7 +149,8 @@
     "MaghribIqamah": "Isha",
     "IshaAdhan": "8:00 PM",
     "IshaIqamah": "Jumuah",
-    "masjidPic": ""
+    "masjidPic": "",
+    "URL": "https://www.mckinneymasjid.org/"
   },
   {
     "ID": 10,
@@ -157,7 +166,8 @@
     "MaghribIqamah": "10 minutes after Athan",
     "IshaAdhan": "N/A",
     "IshaIqamah": "8:00 pm",
-    "masjidPic": ""
+    "masjidPic": "",
+    "URL": "https://www.micmasjid.com/"
   },
   {
     "ID": 11,
@@ -173,7 +183,7 @@
     "MaghribIqamah": "06:02 PM",
     "IshaAdhan": "07:07 PM",
     "IshaIqamah": "08:00 PM",
-    "masjidPic": ""
+    "masjidPic": "https://www.ialfm.org/"
   },
   {
     "ID": 12,
@@ -189,7 +199,8 @@
     "MaghribIqamah": "Sunset",
     "IshaAdhan": "7:15 PM.",
     "IshaIqamah": "7:30 PM.",
-    "masjidPic": ""
+    "masjidPic": "",
+    "URL": "http://masjidyaseen.org/"
   },
   {
     "ID": 13,
@@ -205,6 +216,7 @@
     "MaghribIqamah": "06:01 PM",
     "IshaAdhan": "07:07 PM",
     "IshaIqamah": "07:45 PM",
-    "masjidPic": ""
+    "masjidPic": "",
+    "URL": "https://iccmasjid.org/"
   }
 ]
