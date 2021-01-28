@@ -183,7 +183,8 @@
     "MaghribIqamah": "06:02 PM",
     "IshaAdhan": "07:07 PM",
     "IshaIqamah": "08:00 PM",
-    "masjidPic": "https://www.ialfm.org/"
+    "masjidPic": "",
+    "URL": "https://www.ialfm.org/"
   },
   {
     "ID": 12,

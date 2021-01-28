@@ -182,7 +182,7 @@ allIALFM = {
 	'IshaAdhan': ialfmAdhanTimings[5].text,
 	'IshaIqamah': ialfmIqamahTimings[5].text,
 	'masjidPic': "",
-	'masjidPic': 'https://www.ialfm.org/'
+	'URL': 'https://www.ialfm.org/'
 }
 
 #Mesquite Masjid
