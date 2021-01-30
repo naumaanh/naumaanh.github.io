@@ -15,8 +15,7 @@
     "IshaIqamah": "07:45 PM",
     "masjidPic": "",
     "URL": "https://vric.org/",
-    "latitude": 32.917265,
-    "longitude": -96.948097
+    "address": "351 Ranchview Dr, Irving, TX 75063"
   },
   {
     "ID": 2,
@@ -34,8 +33,7 @@
     "IshaIqamah": "",
     "masjidPic": "",
     "URL": "https://irvingmasjid.org/",
-    "latitude": 32.843514,
-    "longitude": -97.010609
+    "address": "2555 Esters Rd, Irving, TX 75062"
   },
   {
     "ID": 3,
@@ -53,8 +51,7 @@
     "IshaIqamah": "08:00 PM",
     "masjidPic": "",
     "URL": "https://epicmasjid.org/",
-    "latitude": 33.010194,
-    "longitude": -96.646658
+    "address": "4700 14th St, Plano, TX 75074"
   },
   {
     "ID": 4,
@@ -72,8 +69,7 @@
     "IshaIqamah": "07:45 PM",
     "masjidPic": "",
     "URL": "https://friscomasjid.org/",
-    "latitude": 33.172561,
-    "longitude": -96.834773
+    "address": "11137 Frisco St, Frisco, TX 75033"
   },
   {
     "ID": 5,
@@ -91,8 +87,7 @@
     "IshaIqamah": "7:45 PM",
     "masjidPic": "",
     "URL": "https://planomasjid.org/",
-    "latitude": 33.059832,
-    "longitude": -96.751554
+    "address": "6401 Independence Pkwy, Plano, TX 75023"
   },
   {
     "ID": 6,
@@ -110,8 +105,7 @@
     "IshaIqamah": "6:14 AM",
     "masjidPic": "",
     "URL": "https://iant.com/",
-    "latitude": 32.939422,
-    "longitude": -96.730911
+    "address": "840 Abrams Rd, Richardson, TX 75081"
   },
   {
     "ID": 7,
@@ -129,8 +123,7 @@
     "IshaIqamah": "8:00pm",
     "masjidPic": "",
     "URL": "http://www.makkahmasjid.net/",
-    "latitude": 32.931817,
-    "longitude": -96.679314
+    "address": "3301 W Buckingham Rd, Garland, TX 75042"
   },
   {
     "ID": 8,
@@ -148,8 +141,7 @@
     "IshaIqamah": "7:45 AM",
     "masjidPic": "",
     "URL": "https://allenmasjid.com/",
-    "latitude": 33.09719,
-    "longitude": -96.683529
+    "address": "909 Allen Central Dr, Allen, TX 75013"
   },
   {
     "ID": 9,
@@ -167,8 +159,7 @@
     "IshaIqamah": "Jumuah",
     "masjidPic": "",
     "URL": "https://www.mckinneymasjid.org/",
-    "latitude": 33.169022,
-    "longitude": -96.663064
+    "address": "2940 W Eldorado Pkwy, McKinney, TX 75070"
   },
   {
     "ID": 10,
@@ -186,8 +177,7 @@
     "IshaIqamah": "8:00 pm",
     "masjidPic": "",
     "URL": "https://www.micmasjid.com/",
-    "latitude": 32.796484,
-    "longitude": -96.617984
+    "address": "2403 Franklin Dr, Mesquite, TX 75150"
   },
   {
     "ID": 11,
@@ -205,8 +195,7 @@
     "IshaIqamah": "08:00 PM",
     "masjidPic": "",
     "URL": "https://www.ialfm.org/",
-    "latitude": 33.034412,
-    "longitude": -97.083097
+    "address": "3430 Peters Colony Rd, Flower Mound, TX 75022"
   },
   {
     "ID": 12,
@@ -224,8 +213,7 @@
     "IshaIqamah": "7:30 PM.",
     "masjidPic": "",
     "URL": "http://masjidyaseen.org/",
-    "latitude": 32.983145,
-    "longitude": -96.650791
+    "address": "1601 W Campbell Rd, Garland, TX 75044"
   },
   {
     "ID": 13,
@@ -243,7 +231,6 @@
     "IshaIqamah": "07:45 PM",
     "masjidPic": "",
     "URL": "https://iccmasjid.org/",
-    "latitude": 32.96996,
-    "longitude": -96.975986
+    "address": "612 E Sandy Lake Rd #100, Coppell, TX 75019"
   }
 ]

@@ -142,8 +142,7 @@ allICC = {
 	'IshaIqamah': icopIqamahTimings[5].text,
 	'masjidPic': "",
 	'URL': 'https://iccmasjid.org/',
-	'latitude': 32.969960, 
-	'longitude': -96.975986,
+	'address': "612 E Sandy Lake Rd #100, Coppell, TX 75019", 
 }
 
 #Masjid Yaseen
@@ -164,8 +163,7 @@ allMY = {
 	'IshaIqamah': ((str(myaseenIqamahTiming[9].text)).strip()),
 	'masjidPic': "",
 	'URL': "http://masjidyaseen.org/",
-	'latitude': 32.983145, 
-	'longitude': -96.650791,
+	'address': "1601 W Campbell Rd, Garland, TX 75044", 
 }
 
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMERS MOUND
@@ -187,8 +185,7 @@ allIALFM = {
 	'IshaIqamah': ialfmIqamahTimings[5].text,
 	'masjidPic': "",
 	'URL': 'https://www.ialfm.org/',
-	'latitude': 33.034412, 
-	'longitude': -97.083097,
+	'address': "3430 Peters Colony Rd, Flower Mound, TX 75022", 
 }
 
 #Mesquite Masjid
@@ -209,8 +206,7 @@ allMIC = {
 	'IshaIqamah': micIqamahTimings[4].text,
 	'masjidPic': "",
 	'URL': 'https://www.micmasjid.com/',
-	'latitude': 32.796484, 
-	'longitude': -96.617984,
+	'address': "2403 Franklin Dr, Mesquite, TX 75150", 
 }
 
 #MCKINNEY MASJID
@@ -231,8 +227,7 @@ allMIA = {
 	'IshaIqamah': mckinneyIqamahTiming[17].text,
 	'masjidPic': "",
 	'URL': 'https://www.mckinneymasjid.org/',
-	'latitude': 33.169022, 
-	'longitude': -96.663064
+	'address': "2940 W Eldorado Pkwy, McKinney, TX 75070", 
 }
 
 # ALLEN MASJID
@@ -253,8 +248,7 @@ allAllen = {
 	'IshaIqamah': ((str(allenIqamahTimings[14].text)).strip()+' AM'),
 	'masjidPic': "",
 	'URL': 'https://allenmasjid.com/',
-	'latitude': 33.097190, 
-	'longitude': -96.683529,
+	'address': "909 Allen Central Dr, Allen, TX 75013", 
 }
 
 #MAKKAH MASJID GARLAND
@@ -275,8 +269,7 @@ allMM = {
 	'IshaIqamah': mmIqamahTimings[9].text,
 	'masjidPic': "",
 	'URL': 'http://www.makkahmasjid.net/',
-	'latitude': 32.931817, 
-	'longitude': -96.679314
+	'address': "3301 W Buckingham Rd, Garland, TX 75042", 
 }
 
 #ISLAMIC ASSOCIATION OF NORTH TEXAS IANT
@@ -297,8 +290,7 @@ allIANT = {
 	'IshaIqamah': iantIqamahTimings[10].text,
 	'masjidPic': "",
 	'URL': 'https://iant.com/',
-	'latitude': 32.939422, 
-	'longitude': -96.730911,
+	'address': "840 Abrams Rd, Richardson, TX 75081", 
 }
 
 #ISLAMIC ASSOCIATION OF COLLIN COUNTY IACC
@@ -319,8 +311,7 @@ allIACC = {
 	'IshaIqamah': ((str(iaccIqamahTimings[5].text)).strip()+' PM'),
 	'masjidPic': "",
 	'URL': 'https://planomasjid.org/',
-	'latitude': 33.059832, 
-	'longitude': -96.751554,
+	'address': "6401 Independence Pkwy, Plano, TX 75023", 
 } 
 
 #ISLAMIC CENTER OF FRISCO ICF
@@ -343,8 +334,7 @@ allICF = {
 	'IshaIqamah': icfIqamahTimings[5].text,
 	'masjidPic': "",
 	'URL': 'https://friscomasjid.org/',
-	'latitude': 33.172561, 
-	'longitude': -96.834773,
+	'address': "11137 Frisco St, Frisco, TX 75033", 
 }
 
 #EAST PLANO ISLAMIC CENTER EPIC
@@ -365,8 +355,7 @@ allEPIC = {
 	'IshaIqamah': epicIqamahTimings[10].text,
 	'masjidPic': "",
 	'URL': 'https://epicmasjid.org/',
-	'latitude': 33.010194, 
-	'longitude': -96.646658,
+	'address': "4700 14th St, Plano, TX 75074", 
 }
 
 #IRVING MASJID ICI
@@ -389,8 +378,7 @@ allICI = {
 	'IshaIqamah': "",# iciIqamahTimings[10].text,
 	'masjidPic': "",
 	'URL': 'https://irvingmasjid.org/',
-	'latitude': 32.843514, 
-	'longitude': -97.010609,
+	'address': "2555 Esters Rd, Irving, TX 75062", 
 }
 
 #VALLEY RANCH ISLAMIC CENTER VRIC
@@ -414,8 +402,7 @@ allVRIC = {
 	'IshaIqamah': vricJSON['ishaIqamah'],
 	'masjidPic': "",
 	'URL': 'https://vric.org/',
-	'latitude': 32.917265, 
-	'longitude': -96.948097,
+	'address': "351 Ranchview Dr, Irving, TX 75063", 
 }
 allTime = {
 	'ID' : 1, 
