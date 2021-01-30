@@ -143,7 +143,7 @@ allICC = {
 	'masjidPic': "",
 	'URL': 'https://iccmasjid.org/',
 	'latitude': 32.969960, 
-	'longitude': -96.975986,
+	'longitude': -96.975986
 }
 
 #Masjid Yaseen
@@ -165,7 +165,7 @@ allMY = {
 	'masjidPic': "",
 	'URL': "http://masjidyaseen.org/",
 	'latitude': 32.983145, 
-	'longitude': -96.650791,
+	'longitude': -96.650791
 }
 
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMERS MOUND
@@ -188,7 +188,7 @@ allIALFM = {
 	'masjidPic': "",
 	'URL': 'https://www.ialfm.org/',
 	'latitude': 33.034412, 
-	'longitude': -97.083097,
+	'longitude': -97.083097
 }
 
 #Mesquite Masjid
@@ -210,7 +210,7 @@ allMIC = {
 	'masjidPic': "",
 	'URL': 'https://www.micmasjid.com/',
 	'latitude': 32.796484, 
-	'longitude': -96.617984,
+	'longitude': -96.617984
 }
 
 #MCKINNEY MASJID
@@ -254,7 +254,7 @@ allAllen = {
 	'masjidPic': "",
 	'URL': 'https://allenmasjid.com/',
 	'latitude': 33.097190, 
-	'longitude': -96.683529,
+	'longitude': -96.683529
 }
 
 #MAKKAH MASJID GARLAND
@@ -298,7 +298,7 @@ allIANT = {
 	'masjidPic': "",
 	'URL': 'https://iant.com/',
 	'latitude': 32.939422, 
-	'longitude': -96.730911,
+	'longitude': -96.730911
 }
 
 #ISLAMIC ASSOCIATION OF COLLIN COUNTY IACC
@@ -320,7 +320,7 @@ allIACC = {
 	'masjidPic': "",
 	'URL': 'https://planomasjid.org/',
 	'latitude': 33.059832, 
-	'longitude': -96.751554,
+	'longitude': -96.751554
 } 
 
 #ISLAMIC CENTER OF FRISCO ICF
@@ -344,7 +344,7 @@ allICF = {
 	'masjidPic': "",
 	'URL': 'https://friscomasjid.org/',
 	'latitude': 33.172561, 
-	'longitude': -96.834773,
+	'longitude': -96.834773
 }
 
 #EAST PLANO ISLAMIC CENTER EPIC
@@ -366,7 +366,7 @@ allEPIC = {
 	'masjidPic': "",
 	'URL': 'https://epicmasjid.org/',
 	'latitude': 33.010194, 
-	'longitude': -96.646658,
+	'longitude': -96.646658
 }
 
 #IRVING MASJID ICI
@@ -390,7 +390,7 @@ allICI = {
 	'masjidPic': "",
 	'URL': 'https://irvingmasjid.org/',
 	'latitude': 32.843514, 
-	'longitude': -97.010609,
+	'longitude': -97.010609
 }
 
 #VALLEY RANCH ISLAMIC CENTER VRIC
@@ -415,7 +415,7 @@ allVRIC = {
 	'masjidPic': "",
 	'URL': 'https://vric.org/',
 	'latitude': 32.917265, 
-	'longitude': -96.948097,
+	'longitude': -96.948097
 }
 allTime = {
 	'ID' : 1, 
