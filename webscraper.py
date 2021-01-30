@@ -10,7 +10,7 @@ import ssl
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
-timeLastRan = datetime.datetime.now().strftime("Updated: %B %d, %Y at %I:%M%p")
+timeLastRan = datetime.datetime.now().strftime("Last updated: %B %d, %Y at %I:%M%p")
 
 class Object:
     def toJSON(self):
@@ -141,7 +141,9 @@ allICC = {
 	'IshaAdhan': icopAdhanTimings[5].text,
 	'IshaIqamah': icopIqamahTimings[5].text,
 	'masjidPic': "",
-	'URL': 'https://iccmasjid.org/'
+	'URL': 'https://iccmasjid.org/',
+	'latitude': 32.969960, 
+	'longitude': -96.975986,
 }
 
 #Masjid Yaseen
@@ -161,7 +163,9 @@ allMY = {
 	'IshaAdhan': ((str(myaseenIqamahTiming[8].text)).strip()),
 	'IshaIqamah': ((str(myaseenIqamahTiming[9].text)).strip()),
 	'masjidPic': "",
-	'URL': "http://masjidyaseen.org/"
+	'URL': "http://masjidyaseen.org/",
+	'latitude': 32.983145, 
+	'longitude': -96.650791,
 }
 
 #ISLAMIC ASSOCIATION OF LEWIVILLE FARMERS MOUND
@@ -182,7 +186,9 @@ allIALFM = {
 	'IshaAdhan': ialfmAdhanTimings[5].text,
 	'IshaIqamah': ialfmIqamahTimings[5].text,
 	'masjidPic': "",
-	'URL': 'https://www.ialfm.org/'
+	'URL': 'https://www.ialfm.org/',
+	'latitude': 33.034412, 
+	'longitude': -97.083097,
 }
 
 #Mesquite Masjid
@@ -202,7 +208,9 @@ allMIC = {
 	'IshaAdhan': "N/A",
 	'IshaIqamah': micIqamahTimings[4].text,
 	'masjidPic': "",
-	'URL': 'https://www.micmasjid.com/'
+	'URL': 'https://www.micmasjid.com/',
+	'latitude': 32.796484, 
+	'longitude': -96.617984,
 }
 
 #MCKINNEY MASJID
@@ -222,7 +230,9 @@ allMIA = {
 	'IshaAdhan': mckinneyIqamahTiming[16].text.strip(),
 	'IshaIqamah': mckinneyIqamahTiming[17].text,
 	'masjidPic': "",
-	'URL': 'https://www.mckinneymasjid.org/'
+	'URL': 'https://www.mckinneymasjid.org/',
+	'latitude': 33.169022, 
+	'longitude': -96.663064
 }
 
 # ALLEN MASJID
@@ -242,7 +252,9 @@ allAllen = {
 	'IshaAdhan': ((str(allenIqamahTimings[13].text)).strip()+' AM'),
 	'IshaIqamah': ((str(allenIqamahTimings[14].text)).strip()+' AM'),
 	'masjidPic': "",
-	'URL': 'https://allenmasjid.com/'
+	'URL': 'https://allenmasjid.com/',
+	'latitude': 33.097190, 
+	'longitude': -96.683529,
 }
 
 #MAKKAH MASJID GARLAND
@@ -262,7 +274,9 @@ allMM = {
 	'IshaAdhan': "N/A",
 	'IshaIqamah': mmIqamahTimings[9].text,
 	'masjidPic': "",
-	'URL': 'http://www.makkahmasjid.net/'
+	'URL': 'http://www.makkahmasjid.net/',
+	'latitude': 32.931817, 
+	'longitude': -96.679314
 }
 
 #ISLAMIC ASSOCIATION OF NORTH TEXAS IANT
@@ -282,7 +296,9 @@ allIANT = {
 	'IshaAdhan': iantIqamahTimings[9].text,
 	'IshaIqamah': iantIqamahTimings[10].text,
 	'masjidPic': "",
-	'URL': 'https://iant.com/'
+	'URL': 'https://iant.com/',
+	'latitude': 32.939422, 
+	'longitude': -96.730911,
 }
 
 #ISLAMIC ASSOCIATION OF COLLIN COUNTY IACC
@@ -302,7 +318,9 @@ allIACC = {
 	'IshaAdhan': "N/A",
 	'IshaIqamah': ((str(iaccIqamahTimings[5].text)).strip()+' PM'),
 	'masjidPic': "",
-	'URL': 'https://planomasjid.org/'
+	'URL': 'https://planomasjid.org/',
+	'latitude': 33.059832, 
+	'longitude': -96.751554,
 } 
 
 #ISLAMIC CENTER OF FRISCO ICF
@@ -324,7 +342,9 @@ allICF = {
 	'IshaAdhan': icfAdhanTimings[5].text,
 	'IshaIqamah': icfIqamahTimings[5].text,
 	'masjidPic': "",
-	'URL': 'https://friscomasjid.org/'
+	'URL': 'https://friscomasjid.org/',
+	'latitude': 33.172561, 
+	'longitude': -96.834773,
 }
 
 #EAST PLANO ISLAMIC CENTER EPIC
@@ -344,13 +364,15 @@ allEPIC = {
 	'IshaAdhan': epicIqamahTimings[9].text,
 	'IshaIqamah': epicIqamahTimings[10].text,
 	'masjidPic': "",
-	'URL': 'https://epicmasjid.org/'
+	'URL': 'https://epicmasjid.org/',
+	'latitude': 33.010194, 
+	'longitude': -96.646658,
 }
 
 #IRVING MASJID ICI
 iciIqamahTimings = icisoup.findAll('td')
 iciAdhanTimings = icisoup.findAll('td')
-iciJummahTimings = (icisoup.findAll('td', attrs={"colspan": "6"})[-1])
+#iciJummahTimings = (icisoup.findAll('td', attrs={"colspan": "6"})[-1])
 allICI = {
 	'ID': 2,
 	'name': "ICI",
@@ -364,9 +386,11 @@ allICI = {
 	'MaghribAdhan': iciAdhanTimings[4].text,
 	'MaghribIqamah': iciIqamahTimings[9].text,
 	'IshaAdhan': iciAdhanTimings[5].text,
-	'IshaIqamah': iciIqamahTimings[10].text,
+	'IshaIqamah': "",# iciIqamahTimings[10].text,
 	'masjidPic': "",
-	'URL': 'https://irvingmasjid.org/'
+	'URL': 'https://irvingmasjid.org/',
+	'latitude': 32.843514, 
+	'longitude': -97.010609,
 }
 
 #VALLEY RANCH ISLAMIC CENTER VRIC
@@ -389,7 +413,9 @@ allVRIC = {
 	'IshaAdhan': vricJSON['ishaAdhan'],
 	'IshaIqamah': vricJSON['ishaIqamah'],
 	'masjidPic': "",
-	'URL': 'https://vric.org/'
+	'URL': 'https://vric.org/',
+	'latitude': 32.917265, 
+	'longitude': -96.948097,
 }
 allTime = {
 	'ID' : 1, 
